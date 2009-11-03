@@ -1,0 +1,1 @@
+pref("extensions.{5c17eb1d-edfa-5f58-3a64-a49f2071713c}.description", "chrome://character-palette/locale/characterpalette.properties");

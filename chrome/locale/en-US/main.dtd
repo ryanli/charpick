@@ -1,0 +1,8 @@
+<!ENTITY about "About">
+<!ENTITY characterpalette "Character Palette">
+<!ENTITY characterpalette.toolbar "Character Palette Toolbar">
+<!ENTITY clear "Clear">
+<!ENTITY clear.field.contents "Clear Field Contents">
+<!ENTITY copy "Copy">
+<!ENTITY copy.to.clipboard "Copy To Clipboard">
+<!ENTITY help "Help">

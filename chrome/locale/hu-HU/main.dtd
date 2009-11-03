@@ -1,0 +1,8 @@
+<!ENTITY about "Névjegy">
+<!ENTITY characterpalette "Karaktertábla">
+<!ENTITY characterpalette.toolbar "Karaktertábla eszköztár">
+<!ENTITY clear "Törlés">
+<!ENTITY clear.field.contents "Beviteli mező törlése">
+<!ENTITY copy "Másolás">
+<!ENTITY copy.to.clipboard "Másolás a vágólapra">
+<!ENTITY help "Súgó">

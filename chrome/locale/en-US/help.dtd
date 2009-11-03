@@ -1,0 +1,6 @@
+<!ENTITY help.characterpalette "Character Palette Usage Help">
+<!ENTITY help.content.1 "Select the palette which contains the character you want">
+<!ENTITY help.content.2 "Click on the button corresponding and the character will be appended to the input field on the right.">
+<!ENTITY help.content.3 "Repeat Step 2. until satisfied.">
+<!ENTITY help.content.4 "Copy or clear them as you wish.">
+<!ENTITY help.title "Help on Character Palette">

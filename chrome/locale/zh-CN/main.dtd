@@ -1,0 +1,8 @@
+<!ENTITY about "关于">
+<!ENTITY characterpalette "Character Palette">
+<!ENTITY characterpalette.toolbar "Character Palette 工具栏">
+<!ENTITY clear "清除">
+<!ENTITY clear.field.contents "清除框中内容">
+<!ENTITY copy "复制">
+<!ENTITY copy.to.clipboard "复制到剪贴板">
+<!ENTITY help "帮助">

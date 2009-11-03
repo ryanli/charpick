@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/help.dtd">
+<?xml-stylesheet href="chrome://character-palette/content/help.css" type="text/css"?>
+
+<dialog buttons="accept" id="characterpalette-help-dialog"
+	title="&help.characterpalette;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<vbox id="characterpalette-help-details">
+		<caption>&help.title;</caption>
+		
+		<description>1. &help.content.1;</description>
+		<description>2. &help.content.2;</description>
+		<description>3. &help.content.3;</description>
+		<description>4. &help.content.4;</description>
+		
+	</vbox>
+	<separator class="groove"/>
+	
+</dialog>

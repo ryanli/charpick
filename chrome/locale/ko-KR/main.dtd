@@ -1,0 +1,8 @@
+<!ENTITY about "정보">
+<!ENTITY characterpalette "Character Palette">
+<!ENTITY characterpalette.toolbar "Character Palette 도구막대">
+<!ENTITY clear "청소">
+<!ENTITY clear.field.contents "필드 내용 청소">
+<!ENTITY copy "복사">
+<!ENTITY copy.to.clipboard "클립보드로 복사">
+<!ENTITY help "도움말">

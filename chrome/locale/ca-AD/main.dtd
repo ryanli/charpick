@@ -1,0 +1,8 @@
+<!ENTITY about "Sobre">
+<!ENTITY characterpalette "Paleta de Caràcters">
+<!ENTITY characterpalette.toolbar "Barra d'Eines Paleta de Caràcters">
+<!ENTITY clear "Neteja">
+<!ENTITY clear.field.contents "Neteja el contingut dels camps">
+<!ENTITY copy "Copia">
+<!ENTITY copy.to.clipboard "Copia al Portapapers">
+<!ENTITY help "Ajuda">

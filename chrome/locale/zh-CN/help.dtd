@@ -1,0 +1,6 @@
+<!ENTITY help.characterpalette "Character Palette使用帮助">
+<!ENTITY help.content.1 "选择包含你想要的字符的字符版">
+<!ENTITY help.content.2 "单击相对应的按钮, 该字符会被添加在右侧的输入框内.">
+<!ENTITY help.content.3 "重复第2步直到满意为止.">
+<!ENTITY help.content.4 "你可以复制或者清除这些字符.">
+<!ENTITY help.title "Character Palette帮助">

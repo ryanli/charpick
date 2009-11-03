@@ -1,0 +1,48 @@
+* Version 0.2.2, 3 Nov 2009
+
+- Fixed the bug that menus are displayed in red when using themes.
+Thanks for Alan Martin who points out this bug.
+
+- Homepage URL also changed to the AMO one.
+
+- Translator's name get listed in about dialog.
+
+
+* Version 0.2.1, 8 Oct 2009
+
+- Missing hu-HU declarating in chrome.manifest also fixed.
+Thanks Cashman at BabelZilla for mentioning this.
+
+- New locales for ru-RU and sr-RS.
+
+
+* Version 0.2, 28 January 2009
+
+Sorry for this late update.
+
+- User interface improved, with a input field containing the characters you want and easy to copy.
+
+- Along with it comes fresh new locales, ca-AD, de-DE, hu-HU, nl-NL, pl-PL, pt-BR, tr-TR and uk-UA, although some are not updated to this newest version.
+- A brief introduction is added.
+
+- The bug that some characters were improperly displayed, esp. under GNOME, solved.
+
+
+* Version 0.1.1, 16 July 2008
+
+- Added zh-CN, ja-JP, ko-KR, fr-FR altogether 4 locales.
+- Description at extension manager localized.
+
+
+* Version 0.1, 16 July 2008
+
+- Fixed the incompability with form controls with tag name 'textarea'.
+
+
+* Version 0.0, 16 July 2008
+
+- The first version of Character Palette.
+
+------------------------------
+Ryan Li
+ryan@ryanium.com

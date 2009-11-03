@@ -1,0 +1,8 @@
+<!ENTITY about "О расширении">
+<!ENTITY characterpalette "Палитра символов">
+<!ENTITY characterpalette.toolbar "Палитра символов">
+<!ENTITY clear "Очистить">
+<!ENTITY clear.field.contents "Очистить поле">
+<!ENTITY copy "Копировать">
+<!ENTITY copy.to.clipboard "Копировать в буфер">
+<!ENTITY help "Помощь">

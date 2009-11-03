@@ -1,0 +1,6 @@
+<!ENTITY help.characterpalette "Karaktertábla - Hogyan használjam?">
+<!ENTITY help.content.1 "Válassza ki a karaktertáblát, amely a keresett karaktert tartalmazza.">
+<!ENTITY help.content.2 "A megfelelő gombra kattintva a karakter a beviteli mezőhöz adódik.">
+<!ENTITY help.content.3 "Ismételje meg a 2. pontot kívánsága szerint.">
+<!ENTITY help.content.4 "A beviteli mező tartalmát átmásolhatja a vágólapra vagy törölheti.">
+<!ENTITY help.title "Karaktertábla (Character Palette) súgó">

@@ -1,0 +1,8 @@
+<!ENTITY about "Über...">
+<!ENTITY characterpalette "Zeichensatzpalette">
+<!ENTITY characterpalette.toolbar "Zeichensatzpalette-Symbolleiste">
+<!ENTITY clear "Löschen">
+<!ENTITY clear.field.contents "Inhalt des Eingabefeldes löschen">
+<!ENTITY copy "Kopieren">
+<!ENTITY copy.to.clipboard "In Zwischenablage kopieren">
+<!ENTITY help "Hilfe">

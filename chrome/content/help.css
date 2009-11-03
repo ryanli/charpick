@@ -1,0 +1,26 @@
+@import url("chrome://global/skin/");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+description
+{
+	margin-right: 5px !important;
+}
+
+separator, #characterpalette-help-dialog
+{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+caption
+{
+	margin: 5px !important;
+}
+
+#characterpalette-help-details
+{
+	background-color: #ffffff !important;
+	color: #000000 !important;
+	padding: 0.5em !important;
+	margin-right, margin-left: 3em !important;
+}

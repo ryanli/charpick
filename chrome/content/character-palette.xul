@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://character-palette/locale/main.dtd">
+<?xml-stylesheet href="chrome://character-palette/content/style.css" type="text/css"?>
+
+<overlay id="character-palette" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
+
+<stringbundleset id="stringbundleset">
+	<stringbundle id="characterpalette-Strings" src="chrome://character-palette/locale/characterpalette.properties" />
+</stringbundleset>
+
+<toolbox id="navigator-toolbox">
+	<toolbar class="chromeclass-toolbar" collapsed="false" customizable="false"
+	context="toolbar-context-menu" label="&characterpalette;" grippytooltiptext="&characterpalette;"
+	id="characterpalette-toolbar" toolbarname="&characterpalette.toolbar;">
+		<toolbarbutton type="menu" label="&characterpalette;">
+			<menupopup>
+				<menuitem id="char_upper_a" class="charset" group="charset" label="ÁÀĂÂǍÄÃȀÅĀ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_lower_A" class="charset" group="charset" label="áàăâǎäãȁåā" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_Ccn" class="charset" group="charset" label="ĆćĈĉČčÇç¢ñ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_Ee" class="charset" group="charset" label="ÉéÈèĔĕÊêĚě" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_upper_I" class="charset" group="charset" label="ÍÌĬÎǏÏĮĨĪȈ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_lower_i" class="charset" group="charset" label="íìĭîǐïįĩīȉ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_upper_OYye" class="charset" group="charset" label="ǑȌÝýỲỳŶŷ¥£" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_lower_o" class="charset" group="charset" label="óòŏôǒöőõøȍ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_upper_U" class="charset" group="charset" label="ÚÙŬÛǓŮÜŰŨŪ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				<menuitem id="char_upper_U" class="charset" group="charset" label="úùŭûǔůüűũū" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
+				
+				<menuseparator id="characterpalette-menu-seperator" />
+				
+				<menuitem id="char_help" label="&help;" oncommand="window.openDialog('chrome://character-palette/content/help.xul', 'characterpalette-help-dialog', 'centerscreen,chrome,modal');" />
+				<menuitem id="char_about" label="&about;" oncommand="window.openDialog('chrome://character-palette/content/about.xul', 'characterpalette-about-dialog', 'centerscreen,chrome,modal');" />
+				
+			</menupopup>
+		</toolbarbutton>
+		<toolbarbutton id="characterpalette0" label="á" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette1" label="à" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette2" label="ă" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette3" label="â" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette4" label="ǎ" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette5" label="ä" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette6" label="ã" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette7" label="ȁ" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette8" label="å" oncommand="characterpalette_append(this);" />
+		<toolbarbutton id="characterpalette9" label="ā" oncommand="characterpalette_append(this);" />
+		
+		<textbox id="charbox" />
+		<toolbarbutton id="copy_to_clipboard" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copyToClipboard(document.getElementById('charbox').value);" />
+		<toolbarbutton id="clear_field_contents" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="document.getElementById('charbox').value='';" />
+		
+	</toolbar>
+</toolbox>
+</overlay>

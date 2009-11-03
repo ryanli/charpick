@@ -1,0 +1,8 @@
+<!ENTITY about "Sobre">
+<!ENTITY characterpalette "Character Palette">
+<!ENTITY characterpalette.toolbar "Barra de Ferramentas do Character Palette">
+<!ENTITY clear "Limpar">
+<!ENTITY clear.field.contents "Limpar Conteúdo dos Campos">
+<!ENTITY copy "Copiar">
+<!ENTITY copy.to.clipboard "Copiar para Área de Transferência">
+<!ENTITY help "Ajuda">

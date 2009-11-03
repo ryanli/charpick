@@ -1,0 +1,8 @@
+<!ENTITY about "À propos">
+<!ENTITY characterpalette "Palette de caractères">
+<!ENTITY characterpalette.toolbar "Barre de la palette de caractères">
+<!ENTITY clear "Effacer">
+<!ENTITY clear.field.contents "Effacer le contenu du champ">
+<!ENTITY copy "Copier">
+<!ENTITY copy.to.clipboard "Copier dans le presse-papiers">
+<!ENTITY help "Aide">
