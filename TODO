@@ -1,0 +1,12 @@
+This file contains the unachieved features that will improve this software,
+and confirmed bugs.
+If you want to request for a new feature or two, you are welcomed, but I will
+not assured that it will be added.
+
+---
+Ryan Li <ryan@ryanium.com>
+
+Functionality
+-----------------------------
+- Provide the customization of each row of characters.
+- Better way for handling character input, like middle key click.
