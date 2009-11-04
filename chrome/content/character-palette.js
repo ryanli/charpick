@@ -19,11 +19,18 @@ characterpalette_append = function(obj)
 	document.getElementById("character-palette-pickbox").value += obj.label;
 };
 
-characterpalette_copyToClipboard = function(str)
+characterpalette_copy = function()
 {
+	var pickbox = document.getElementById("character-palette-pickbox");
 	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].
 	getService(Components.interfaces.nsIClipboardHelper);
-	gClipboardHelper.copyString(str);
+	gClipboardHelper.copyString(pickbox.value);
+};
+
+characterpalette_clear = function()
+{
+	var pickbox = document.getElementById("character-palette-pickbox");
+	pickbox.value = "";
 };
 
 characterpalette_addPalettes = function()

@@ -14,6 +14,7 @@
 	<toolbar class="chromeclass-toolbar" collapsed="false" customizable="false"
 	context="toolbar-context-menu" label="&characterpalette;" grippytooltiptext="&characterpalette;"
 	id="character-palette-toolbar" toolbarname="&characterpalette.toolbar;">
+
 		<toolbarbutton id="character-palette-menu" type="menu" label="&characterpalette;">
 			<menupopup id="character-palette-popup">
 
@@ -24,12 +25,13 @@
 
 			</menupopup>
 		</toolbarbutton>
+
 		<toolbaritem id="character-palette-buttons">
 		</toolbaritem>
-		<textbox id="character-palette-pickbox" />
-		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copyToClipboard(document.getElementById('character-palette-pickbox').value);" />
-		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="document.getElementById('character-palette-pickbox').value='';" />
 
+		<textbox id="character-palette-pickbox" />
+		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copy();" />
+		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="characterpalette_clear();" />
 	</toolbar>
 </toolbox>
 </overlay>
