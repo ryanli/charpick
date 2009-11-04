@@ -1,11 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-toolbarbutton.characterpalette-char
+toolbarbutton.character-palette-char
 {
 width: 2em;
-}
-
-#charbox, #copy_to_clipboard, #clear_field_contents
-{
-	float: right;
 }

@@ -2,10 +2,10 @@
 <!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/help.dtd">
 <?xml-stylesheet href="chrome://character-palette/content/help.css" type="text/css"?>
 
-<dialog buttons="accept" id="characterpalette-help-dialog"
+<dialog buttons="accept" id="character-palette-help-dialog"
 	title="&help.characterpalette;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	
-	<vbox id="characterpalette-help-details">
+	<vbox id="character-palette-help-details">
 		<caption>&help.title;</caption>
 		
 		<description>1. &help.content.1;</description>

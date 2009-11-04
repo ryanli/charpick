@@ -2,10 +2,10 @@
 <!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/about.dtd">
 <?xml-stylesheet href="chrome://character-palette/content/about.css" type="text/css"?>
 
-<dialog buttons="accept" id="characterpalette-about-dialog"
+<dialog buttons="accept" id="character-palette-about-dialog"
 	title="&about.characterpalette;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<vbox id="characterpalette-about-details">
+	<vbox id="character-palette-about-details">
 		<hbox>
 			<description class="name" id="software-name">Character Palette</description>
 			<description class="name" id="software-version">0.2.2</description>

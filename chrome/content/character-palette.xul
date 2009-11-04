@@ -7,29 +7,29 @@
 <script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
 
 <stringbundleset id="stringbundleset">
-	<stringbundle id="characterpalette-Strings" src="chrome://character-palette/locale/characterpalette.properties" />
+	<stringbundle id="character-palette-Strings" src="chrome://character-palette/locale/character-palette.properties" />
 </stringbundleset>
 
 <toolbox id="navigator-toolbox">
 	<toolbar class="chromeclass-toolbar" collapsed="false" customizable="false"
 	context="toolbar-context-menu" label="&characterpalette;" grippytooltiptext="&characterpalette;"
-	id="characterpalette-toolbar" toolbarname="&characterpalette.toolbar;">
-		<toolbarbutton type="menu" label="&characterpalette;">
-			<menupopup id="characterpalette-popup">
+	id="character-palette-toolbar" toolbarname="&characterpalette.toolbar;">
+		<toolbarbutton id="character-palette-menu" type="menu" label="&characterpalette;">
+			<menupopup id="character-palette-popup">
 
-				<menuseparator id="characterpalette-menu-seperator" />
+				<menuseparator id="character-palette-menu-seperator" />
 
-				<menuitem id="char_help" label="&help;" oncommand="window.openDialog('chrome://character-palette/content/help.xul', 'characterpalette-help-dialog', 'centerscreen,chrome,modal');" />
-				<menuitem id="char_about" label="&about;" oncommand="window.openDialog('chrome://character-palette/content/about.xul', 'characterpalette-about-dialog', 'centerscreen,chrome,modal');" />
-				
+				<menuitem id="character-palette-menu-help" label="&help;" oncommand="window.openDialog('chrome://character-palette/content/help.xul', 'character-palette-help-dialog', 'centerscreen,chrome,modal');" />
+				<menuitem id="character-palette-menu-about" label="&about;" oncommand="window.openDialog('chrome://character-palette/content/about.xul', 'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
+
 			</menupopup>
 		</toolbarbutton>
-		<toolbaritem id="characterpalette-buttons">
+		<toolbaritem id="character-palette-buttons">
 		</toolbaritem>
-		<textbox id="charbox" />
-		<toolbarbutton id="copy_to_clipboard" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copyToClipboard(document.getElementById('charbox').value);" />
-		<toolbarbutton id="clear_field_contents" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="document.getElementById('charbox').value='';" />
-		
+		<textbox id="character-palette-pickbox" />
+		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copyToClipboard(document.getElementById('character-palette-pickbox').value);" />
+		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="document.getElementById('character-palette-pickbox').value='';" />
+
 	</toolbar>
 </toolbox>
 </overlay>

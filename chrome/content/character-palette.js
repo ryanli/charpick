@@ -1,6 +1,6 @@
 characterpalette_loadPalette = function(charset)
 {
-	var container = document.getElementById("characterpalette-buttons");
+	var container = document.getElementById("character-palette-buttons");
 	var textbox = document.getElementById("charbox");
 	while (container.childNodes.length)
 		container.removeChild(container.firstChild);
@@ -8,7 +8,7 @@ characterpalette_loadPalette = function(charset)
 	for (var index in charset)
 	{
 		var charButton = document.createElement("toolbarbutton");
-		charButton.setAttribute("class", "characterpalette-char");
+		charButton.setAttribute("class", "character-palette-char");
 		charButton.setAttribute("oncommand", "characterpalette_append(this);");
 		charButton.setAttribute("label", charset[index]);
 		container.appendChild(charButton);
@@ -17,7 +17,7 @@ characterpalette_loadPalette = function(charset)
 
 characterpalette_append = function(obj)
 {
-	document.getElementById("charbox").value += obj.label;
+	document.getElementById("character-palette-pickbox").value += obj.label;
 };
 
 characterpalette_copyToClipboard = function(str)
@@ -31,8 +31,8 @@ characterpalette_addPalettes = function()
 {
 	var palettes = ["ÁÀĂÂǍÄÃȀÅĀ", "áàăâǎäãȁåā", "ĆćĈĉČčÇç¢ñ", "ÉéÈèĔĕÊêĚě", "ÍÌĬÎǏÏĮĨĪȈ", "íìĭîǐïįĩīȉ",
 		"ǑȌÝýỲỳŶŷ¥£", "óòŏôǒöőõøȍ", "ÚÙŬÛǓŮÜŰŨŪ", "úùŭûǔůüűũū"];
-	var popup = document.getElementById("characterpalette-popup");
-	var seperator = document.getElementById("characterpalette-menu-seperator");
+	var popup = document.getElementById("character-palette-popup");
+	var seperator = document.getElementById("character-palette-menu-seperator");
 	for (var index in palettes)
 	{
 		var palette = document.createElement("menuitem");
