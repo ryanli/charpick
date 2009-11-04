@@ -7,8 +7,8 @@
 
 	<vbox id="characterpalette-about-details">
 		<hbox>
-			<description class="name">Character Palette</description>
-			<description class="name">0.2.2</description>
+			<description class="name" id="software-name">Character Palette</description>
+			<description class="name" id="software-version">0.2.2</description>
 		</hbox>
 		<description value="&author;" class="title"/>
 		<description>Ryan Li</description>
