@@ -1,7 +1,6 @@
 characterpalette_loadPalette = function(charset)
 {
 	var container = document.getElementById("character-palette-buttons");
-	var textbox = document.getElementById("charbox");
 	while (container.childNodes.length)
 		container.removeChild(container.firstChild);
 
