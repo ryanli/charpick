@@ -24,17 +24,18 @@
 				
 			</menupopup>
 		</toolbarbutton>
-		<toolbarbutton id="characterpalette0" label="á" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette1" label="à" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette2" label="ă" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette3" label="â" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette4" label="ǎ" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette5" label="ä" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette6" label="ã" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette7" label="ȁ" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette8" label="å" oncommand="characterpalette_append(this);" />
-		<toolbarbutton id="characterpalette9" label="ā" oncommand="characterpalette_append(this);" />
-		
+		<toolbaritem id="characterpalette-buttons">
+			<toolbarbutton id="characterpalette0" label="á" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette1" label="à" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette2" label="ă" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette3" label="â" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette4" label="ǎ" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette5" label="ä" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette6" label="ã" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette7" label="ȁ" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette8" label="å" oncommand="characterpalette_append(this);" />
+			<toolbarbutton id="characterpalette9" label="ā" oncommand="characterpalette_append(this);" />
+		</toolbaritem>
 		<textbox id="charbox" />
 		<toolbarbutton id="copy_to_clipboard" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copyToClipboard(document.getElementById('charbox').value);" />
 		<toolbarbutton id="clear_field_contents" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="document.getElementById('charbox').value='';" />

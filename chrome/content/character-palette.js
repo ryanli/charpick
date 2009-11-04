@@ -1,9 +1,21 @@
 characterpalette_loadPalette = function(charset)
 {
-	for (var i = 0; i < 10; ++i)
-		document.getElementById("characterpalette" + i).label = charset[i];
+	var container = document.getElementById("characterpalette-buttons");
+	var textbox = document.getElementById("charbox");
+	while (container.childNodes.length)
+		container.removeChild(container.firstChild);
+
+	for (var index in charset)
+	{
+		var charButton = document.createElement("toolbarbutton");
+		charButton.setAttribute("class", "characterpalette-char");
+		charButton.setAttribute("oncommand", "characterpalette_append(this);");
+		charButton.setAttribute("label", charset[index]);
+		container.appendChild(charButton);
+	}
 };
-characterpalette_append = function(obj)
+
+characterpalette_append = function(obj)
 {
 	document.getElementById("charbox").value += obj.label;
 };
