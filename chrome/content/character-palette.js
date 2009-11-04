@@ -43,6 +43,8 @@ characterpalette_addPalettes = function()
 		palette.setAttribute("label", palettes[index]);
 		popup.insertBefore(palette, seperator);
 	}
+	popup.getElementsByClassName("charset")[0].setAttribute("checked", "true");
+	characterpalette_loadPalette(palettes[0]);
 };
 
 window.addEventListener("load", characterpalette_addPalettes, false);

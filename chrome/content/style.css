@@ -1,6 +1,6 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-toolbarbutton[id^="characterpalette"]
+toolbarbutton.characterpalette-char
 {
 width: 2em;
 }
