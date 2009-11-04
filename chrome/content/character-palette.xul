@@ -30,7 +30,7 @@
 		</toolbaritem>
 
 		<textbox id="character-palette-pickbox" />
-		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;"		oncommand="characterpalette_copy();" />
+		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;"	oncommand="characterpalette_copy();" />
 		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="characterpalette_clear();" />
 	</toolbar>
 </toolbox>
