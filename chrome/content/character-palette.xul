@@ -15,20 +15,10 @@
 	context="toolbar-context-menu" label="&characterpalette;" grippytooltiptext="&characterpalette;"
 	id="characterpalette-toolbar" toolbarname="&characterpalette.toolbar;">
 		<toolbarbutton type="menu" label="&characterpalette;">
-			<menupopup>
-				<menuitem id="char_upper_a" class="charset" group="charset" label="ÁÀĂÂǍÄÃȀÅĀ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_lower_A" class="charset" group="charset" label="áàăâǎäãȁåā" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_Ccn" class="charset" group="charset" label="ĆćĈĉČčÇç¢ñ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_Ee" class="charset" group="charset" label="ÉéÈèĔĕÊêĚě" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_upper_I" class="charset" group="charset" label="ÍÌĬÎǏÏĮĨĪȈ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_lower_i" class="charset" group="charset" label="íìĭîǐïįĩīȉ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_upper_OYye" class="charset" group="charset" label="ǑȌÝýỲỳŶŷ¥£" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_lower_o" class="charset" group="charset" label="óòŏôǒöőõøȍ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_upper_U" class="charset" group="charset" label="ÚÙŬÛǓŮÜŰŨŪ" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				<menuitem id="char_upper_U" class="charset" group="charset" label="úùŭûǔůüűũū" type="radio" oncommand="characterpalette_loadPalette(this.label);" />
-				
+			<menupopup id="characterpalette-popup">
+
 				<menuseparator id="characterpalette-menu-seperator" />
-				
+
 				<menuitem id="char_help" label="&help;" oncommand="window.openDialog('chrome://character-palette/content/help.xul', 'characterpalette-help-dialog', 'centerscreen,chrome,modal');" />
 				<menuitem id="char_about" label="&about;" oncommand="window.openDialog('chrome://character-palette/content/about.xul', 'characterpalette-about-dialog', 'centerscreen,chrome,modal');" />
 				
