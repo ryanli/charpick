@@ -35,8 +35,18 @@ characterpalette_clear = function()
 
 characterpalette_addPalettes = function()
 {
-	var palettes = ["ÁÀĂÂǍÄÃȀÅĀ", "áàăâǎäãȁåā", "ĆćĈĉČčÇç¢ñ", "ÉéÈèĔĕÊêĚě", "ÍÌĬÎǏÏĮĨĪȈ", "íìĭîǐïįĩīȉ",
-		"ǑȌÝýỲỳŶŷ¥£", "óòŏôǒöőõøȍ", "ÚÙŬÛǓŮÜŰŨŪ", "úùŭûǔůüűũū"];
+	var prefManager = Components.classes["@mozilla.org/preferences-service;1"].
+	getService(Components.interfaces.nsIPrefBranch);
+
+	var paletteCount = prefManager.getIntPref("extensions.character-palette.palette.count");
+
+	var palettes = new Array();
+	for (var index = 0; index < paletteCount; ++index)
+	{
+		var chars = prefManager.getComplexValue("extensions.character-palette.palette." + index, Components.interfaces.nsISupportsString).data;
+		if (chars)
+			palettes.push(chars);
+	}
 	var popup = document.getElementById("character-palette-popup");
 	var seperator = document.getElementById("character-palette-menu-seperator");
 	for (var index in palettes)
