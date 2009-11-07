@@ -4,20 +4,29 @@ characterpalette_prefManager = function()
 		getService(Components.interfaces.nsIPrefBranch);
 };
 
-characterpalette_getString = function(str)
+characterpalette_getString = function(key)
 {
-	return characterpalette_prefManager().getComplexValue("extensions.character-palette." + str,
+	return characterpalette_prefManager().getComplexValue("extensions.character-palette." + key,
 		Components.interfaces.nsISupportsString).data;
 };
 
-characterpalette_getInteger = function(str)
+characterpalette_setString = function(key, val)
 {
-	return characterpalette_prefManager().getIntPref("extensions.character-palette." + str);
+	var str = Components.classes["@mozilla.org/supports-string;1"]
+		.createInstance(Components.interfaces.nsISupportsString);
+	str.data = val;
+	characterpalette_prefManager().setComplexValue("extensions.character-palette." + key,
+		Components.interfaces.nsISupportsString, str);
 };
 
-characterpalette_setInteger = function(str, val)
+characterpalette_getInteger = function(key)
 {
-	characterpalette_prefManager().setIntPref("extensions.character-palette." + str, val);
+	return characterpalette_prefManager().getIntPref("extensions.character-palette." + key);
+};
+
+characterpalette_setInteger = function(key, val)
+{
+	characterpalette_prefManager().setIntPref("extensions.character-palette." + key, val);
 };
 
 characterpalette_getPalettes = function()
@@ -50,6 +59,15 @@ characterpalette_getPalettes = function()
 			ret.push(current);
 	}
 	return ret;
+};
+
+characterpalette_setPalettes = function(a)
+{
+	var merged = new String();
+	for (var index in a)
+		merged += a[index].replace(/;/g, ';;') + ';';
+	alert(merged);
+	characterpalette_setString('palettes', merged);
 };
 
 characterpalette_addPalettes = function()
@@ -114,6 +132,19 @@ characterpalette_clear = function()
 {
 	var pickbox = document.getElementById("character-palette-pickbox");
 	pickbox.value = "";
+};
+
+characterpalette_save = function()
+{
+	var list = document.getElementById("character-palette-palette-list");
+	if (list == null)
+		return true;
+	var palettes = new Array();
+	for (var child = list.firstChild; child != null; child = child.nextSibling)
+		palettes.push(child.getAttribute('label'));
+	characterpalette_setPalettes(palettes);
+	characterpalette_addPalettes();
+	return true;
 };
 
 window.addEventListener("load", characterpalette_addPalettes, false);

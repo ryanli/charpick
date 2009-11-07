@@ -20,6 +20,7 @@
 
 				<menuseparator id="character-palette-menu-seperator" />
 
+				<menuitem id="character-palette-menu-customize" label="&customize;" oncommand="window.openDialog('chrome://character-palette/content/customize.xul', 'character-palette-customize-dialog', 'centerscreen,chrome,modal');" />
 				<menuitem id="character-palette-menu-help" label="&help;" oncommand="window.openDialog('chrome://character-palette/content/help.xul', 'character-palette-help-dialog', 'centerscreen,chrome,modal');" />
 				<menuitem id="character-palette-menu-about" label="&about;" oncommand="window.openDialog('chrome://character-palette/content/about.xul', 'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
 

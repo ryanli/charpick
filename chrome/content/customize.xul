@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/customize.dtd">
+<?xml-stylesheet href="chrome://character-palette/content/customize.css" type="text/css"?>
+
+<dialog id="character-palette-customize-dialog"
+	title="&customize.characterpalette;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept,cancel"
+	ondialogaccept="return characterpalette_save();">
+
+	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
+
+	<vbox id="character-palette-customize-details">
+		<hbox>
+		<listbox id="character-palette-palette-list">
+		</listbox>
+		<vbox>
+			<button id="New" label="&new;" />
+			<button id="Edit" label="&edit;" />
+			<button id="Delete" label="&delete;" />
+		</vbox>
+		</hbox>
+	</vbox>
+	<separator class="groove"/>
+</dialog>
