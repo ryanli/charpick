@@ -16,7 +16,7 @@
 	id="character-palette-toolbar" toolbarname="&characterpalette.toolbar;">
 
 		<toolbarbutton id="character-palette-menu" type="menu" label="&characterpalette;">
-			<menupopup id="character-palette-popup">
+			<menupopup id="character-palette-popup" onpopupshowing="characterpalette_addPalettes();">
 
 				<menuseparator id="character-palette-menu-seperator" />
 

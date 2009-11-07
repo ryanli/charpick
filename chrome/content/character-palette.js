@@ -57,6 +57,10 @@ characterpalette_addPalettes = function()
 	var palettes = characterpalette_getPalettes();
 	var popup = document.getElementById("character-palette-popup");
 	var seperator = document.getElementById("character-palette-menu-seperator");
+	
+	while (popup.getElementsByClassName("charset").length)
+		popup.removeChild(popup.getElementsByClassName("charset")[0]);
+	
 	for (var index in palettes)
 	{
 		var palette = document.createElement("menuitem");
@@ -70,6 +74,8 @@ characterpalette_addPalettes = function()
 	var selected = 0;
 	if (characterpalette_getInteger("selected"))
 		selected = characterpalette_getInteger("selected");
+	if (!popup.getElementsByClassName("charset")[selected])
+		selected = 0;
 	popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
 	characterpalette_loadPalette(selected, palettes[selected]);
 };
