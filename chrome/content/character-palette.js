@@ -33,20 +33,46 @@ characterpalette_clear = function()
 	pickbox.value = "";
 };
 
+characterpalette_getPalettes = function()
+{
+	var prefManager = Components.classes["@mozilla.org/preferences-service;1"].
+	getService(Components.interfaces.nsIPrefBranch);
+	var palettes = prefManager.getComplexValue("extensions.character-palette.palettes", Components.interfaces.nsISupportsString).data;
+	var index = 0;
+	var ret = new Array();
+	while (index < palettes.length)
+	{
+		var current = new String();
+		while (index < palettes.length)
+		{
+			if (palettes[index] != ';')
+			{
+				current += palettes[index];
+				++index;
+			}
+			else if (index < palettes.length - 1 && palettes[index + 1] == ';')
+			{
+				current += ';';
+				index += 2;
+			}
+			else
+			{
+				++index;
+				break;
+			}
+		}
+		if (current.length)
+			ret.push(current);
+	}
+	return ret;
+}
+
 characterpalette_addPalettes = function()
 {
 	var prefManager = Components.classes["@mozilla.org/preferences-service;1"].
 	getService(Components.interfaces.nsIPrefBranch);
 
-	var paletteCount = prefManager.getIntPref("extensions.character-palette.palette.count");
-
-	var palettes = new Array();
-	for (var index = 0; index < paletteCount; ++index)
-	{
-		var chars = prefManager.getComplexValue("extensions.character-palette.palette." + index, Components.interfaces.nsISupportsString).data;
-		if (chars)
-			palettes.push(chars);
-	}
+	var palettes = characterpalette_getPalettes();
 	var popup = document.getElementById("character-palette-popup");
 	var seperator = document.getElementById("character-palette-menu-seperator");
 	for (var index in palettes)
