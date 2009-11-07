@@ -134,6 +134,14 @@ characterpalette_clear = function()
 	pickbox.value = "";
 };
 
+characterpalette_loadList = function()
+{
+	var list = document.getElementById("character-palette-palette-list");
+	var palettes = characterpalette_getPalettes();
+	for (index in palettes)
+		list.appendItem(palettes[index]);
+};
+
 characterpalette_save = function()
 {
 	var list = document.getElementById("character-palette-palette-list");
