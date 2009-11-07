@@ -1,43 +1,9 @@
-characterpalette_loadPalette = function(charset)
-{
-	var container = document.getElementById("character-palette-buttons");
-	while (container.childNodes.length)
-		container.removeChild(container.firstChild);
-
-	for (var index in charset)
-	{
-		var charButton = document.createElement("toolbarbutton");
-		charButton.setAttribute("class", "character-palette-char");
-		charButton.setAttribute("oncommand", "characterpalette_append(this);");
-		charButton.setAttribute("label", charset[index]);
-		container.appendChild(charButton);
-	}
-};
-
-characterpalette_append = function(obj)
-{
-	document.getElementById("character-palette-pickbox").value += obj.label;
-};
-
-characterpalette_copy = function()
-{
-	var pickbox = document.getElementById("character-palette-pickbox");
-	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].
-	getService(Components.interfaces.nsIClipboardHelper);
-	gClipboardHelper.copyString(pickbox.value);
-};
-
-characterpalette_clear = function()
-{
-	var pickbox = document.getElementById("character-palette-pickbox");
-	pickbox.value = "";
-};
-
 characterpalette_getPalettes = function()
 {
 	var prefManager = Components.classes["@mozilla.org/preferences-service;1"].
-	getService(Components.interfaces.nsIPrefBranch);
-	var palettes = prefManager.getComplexValue("extensions.character-palette.palettes", Components.interfaces.nsISupportsString).data;
+		getService(Components.interfaces.nsIPrefBranch);
+	var palettes = prefManager.getComplexValue("extensions.character-palette.palettes",
+		Components.interfaces.nsISupportsString).data;
 	var index = 0;
 	var ret = new Array();
 	while (index < palettes.length)
@@ -69,9 +35,6 @@ characterpalette_getPalettes = function()
 
 characterpalette_addPalettes = function()
 {
-	var prefManager = Components.classes["@mozilla.org/preferences-service;1"].
-	getService(Components.interfaces.nsIPrefBranch);
-
 	var palettes = characterpalette_getPalettes();
 	var popup = document.getElementById("character-palette-popup");
 	var seperator = document.getElementById("character-palette-menu-seperator");
@@ -87,6 +50,41 @@ characterpalette_addPalettes = function()
 	}
 	popup.getElementsByClassName("charset")[0].setAttribute("checked", "true");
 	characterpalette_loadPalette(palettes[0]);
+};
+
+characterpalette_loadPalette = function(charset)
+{
+	var container = document.getElementById("character-palette-buttons");
+	while (container.childNodes.length)
+		container.removeChild(container.firstChild);
+
+	for (var index in charset)
+	{
+		var charButton = document.createElement("toolbarbutton");
+		charButton.setAttribute("class", "character-palette-char");
+		charButton.setAttribute("oncommand", "characterpalette_append(this);");
+		charButton.setAttribute("label", charset[index]);
+		container.appendChild(charButton);
+	}
+};
+
+characterpalette_append = function(obj)
+{
+	document.getElementById("character-palette-pickbox").value += obj.label;
+};
+
+characterpalette_copy = function()
+{
+	var pickbox = document.getElementById("character-palette-pickbox");
+	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].
+		getService(Components.interfaces.nsIClipboardHelper);
+	gClipboardHelper.copyString(pickbox.value);
+};
+
+characterpalette_clear = function()
+{
+	var pickbox = document.getElementById("character-palette-pickbox");
+	pickbox.value = "";
 };
 
 window.addEventListener("load", characterpalette_addPalettes, false);
