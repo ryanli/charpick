@@ -9,4 +9,4 @@
 # Licensed under GNU GPLv3.
 # Copyright (c) 2009, Ryan Li <ryan@ryanium.com>
 
-zip -q character-palette.xpi -r * -x makexpi.sh versionbump.sh
+zip -q character-palette.xpi -r * -x makexpi.sh versionbump.sh character-palette.xpi
