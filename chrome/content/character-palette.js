@@ -1,9 +1,28 @@
+characterpalette_prefManager = function()
+{
+	return Components.classes["@mozilla.org/preferences-service;1"].
+		getService(Components.interfaces.nsIPrefBranch);
+};
+
+characterpalette_getString = function(str)
+{
+	return characterpalette_prefManager().getComplexValue("extensions.character-palette." + str,
+		Components.interfaces.nsISupportsString).data;
+};
+
+characterpalette_getInteger = function(str)
+{
+	return characterpalette_prefManager().getIntPref("extensions.character-palette." + str);
+};
+
+characterpalette_setInteger = function(str, val)
+{
+	characterpalette_prefManager().setIntPref("extensions.character-palette." + str, val);
+};
+
 characterpalette_getPalettes = function()
 {
-	var prefManager = Components.classes["@mozilla.org/preferences-service;1"].
-		getService(Components.interfaces.nsIPrefBranch);
-	var palettes = prefManager.getComplexValue("extensions.character-palette.palettes",
-		Components.interfaces.nsISupportsString).data;
+	var palettes = characterpalette_getString("palettes");
 	var index = 0;
 	var ret = new Array();
 	while (index < palettes.length)
@@ -31,7 +50,7 @@ characterpalette_getPalettes = function()
 			ret.push(current);
 	}
 	return ret;
-}
+};
 
 characterpalette_addPalettes = function()
 {
@@ -44,26 +63,30 @@ characterpalette_addPalettes = function()
 		palette.setAttribute("class", "charset");
 		palette.setAttribute("group", "charset");
 		palette.setAttribute("type", "radio");
-		palette.setAttribute("oncommand", "characterpalette_loadPalette(this.label);");
+		palette.setAttribute("oncommand", "characterpalette_loadPalette(" + index + ", this.label);");
 		palette.setAttribute("label", palettes[index]);
 		popup.insertBefore(palette, seperator);
 	}
-	popup.getElementsByClassName("charset")[0].setAttribute("checked", "true");
-	characterpalette_loadPalette(palettes[0]);
+	var selected = 0;
+	if (characterpalette_getInteger("selected"))
+		selected = characterpalette_getInteger("selected");
+	popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
+	characterpalette_loadPalette(selected, palettes[selected]);
 };
 
-characterpalette_loadPalette = function(charset)
+characterpalette_loadPalette = function(index, charset)
 {
+	characterpalette_setInteger("selected", index);
 	var container = document.getElementById("character-palette-buttons");
 	while (container.childNodes.length)
 		container.removeChild(container.firstChild);
 
-	for (var index in charset)
+	for (var charIndex in charset)
 	{
 		var charButton = document.createElement("toolbarbutton");
 		charButton.setAttribute("class", "character-palette-char");
 		charButton.setAttribute("oncommand", "characterpalette_append(this);");
-		charButton.setAttribute("label", charset[index]);
+		charButton.setAttribute("label", charset[charIndex]);
 		container.appendChild(charButton);
 	}
 };
