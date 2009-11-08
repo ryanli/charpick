@@ -1,35 +1,35 @@
-characterpalette_prefManager = function()
+function characterpalette_prefManager()
 {
 	return Components.classes["@mozilla.org/preferences-service;1"].
 		getService(Components.interfaces.nsIPrefBranch);
-};
+}
 
-characterpalette_getString = function(key)
+function characterpalette_getString(key)
 {
 	return characterpalette_prefManager().getComplexValue("extensions.character-palette." + key,
 		Components.interfaces.nsISupportsString).data;
-};
+}
 
-characterpalette_setString = function(key, val)
+function characterpalette_setString(key, val)
 {
 	var str = Components.classes["@mozilla.org/supports-string;1"]
 		.createInstance(Components.interfaces.nsISupportsString);
 	str.data = val;
 	characterpalette_prefManager().setComplexValue("extensions.character-palette." + key,
 		Components.interfaces.nsISupportsString, str);
-};
+}
 
-characterpalette_getInteger = function(key)
+function characterpalette_getInteger(key)
 {
 	return characterpalette_prefManager().getIntPref("extensions.character-palette." + key);
-};
+}
 
-characterpalette_setInteger = function(key, val)
+function characterpalette_setInteger(key, val)
 {
 	characterpalette_prefManager().setIntPref("extensions.character-palette." + key, val);
-};
+}
 
-characterpalette_getPalettes = function()
+function characterpalette_getPalettes()
 {
 	var palettes = characterpalette_getString("palettes");
 	var index = 0;
@@ -59,18 +59,17 @@ characterpalette_getPalettes = function()
 			ret.push(current);
 	}
 	return ret;
-};
+}
 
-characterpalette_setPalettes = function(a)
+function characterpalette_setPalettes(a)
 {
 	var merged = new String();
 	for (var index in a)
 		merged += a[index].replace(/;/g, ';;') + ';';
-	alert(merged);
 	characterpalette_setString('palettes', merged);
-};
+}
 
-characterpalette_addPalettes = function()
+function characterpalette_addPalettes()
 {
 	var palettes = characterpalette_getPalettes();
 	var popup = document.getElementById("character-palette-popup");
@@ -96,9 +95,9 @@ characterpalette_addPalettes = function()
 		selected = 0;
 	popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
 	characterpalette_loadPalette(selected, palettes[selected]);
-};
+}
 
-characterpalette_loadPalette = function(index, charset)
+function characterpalette_loadPalette(index, charset)
 {
 	characterpalette_setInteger("selected", index);
 	var container = document.getElementById("character-palette-buttons");
@@ -113,36 +112,36 @@ characterpalette_loadPalette = function(index, charset)
 		charButton.setAttribute("label", charset[charIndex]);
 		container.appendChild(charButton);
 	}
-};
+}
 
-characterpalette_append = function(obj)
+function characterpalette_append(obj)
 {
 	document.getElementById("character-palette-pickbox").value += obj.label;
-};
+}
 
-characterpalette_copy = function()
+function characterpalette_copy()
 {
 	var pickbox = document.getElementById("character-palette-pickbox");
 	const gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].
 		getService(Components.interfaces.nsIClipboardHelper);
 	gClipboardHelper.copyString(pickbox.value);
-};
+}
 
-characterpalette_clear = function()
+function characterpalette_clear()
 {
 	var pickbox = document.getElementById("character-palette-pickbox");
 	pickbox.value = "";
-};
+}
 
-characterpalette_loadList = function()
+function characterpalette_loadList()
 {
 	var list = document.getElementById("character-palette-palette-list");
 	var palettes = characterpalette_getPalettes();
 	for (index in palettes)
 		list.appendItem(palettes[index]);
-};
+}
 
-characterpalette_save = function()
+function characterpalette_save()
 {
 	var list = document.getElementById("character-palette-palette-list");
 	if (list == null)
@@ -153,6 +152,6 @@ characterpalette_save = function()
 	characterpalette_setPalettes(palettes);
 	characterpalette_addPalettes();
 	return true;
-};
+}
 
 window.addEventListener("load", characterpalette_addPalettes, false);
