@@ -74,7 +74,7 @@ function characterpalette_addPalettes()
 	var palettes = characterpalette_getPalettes();
 	var popup = document.getElementById("character-palette-popup");
 	var seperator = document.getElementById("character-palette-menu-seperator");
-	
+
 	while (popup.getElementsByClassName("charset").length)
 		popup.removeChild(popup.getElementsByClassName("charset")[0]);
 	
@@ -150,7 +150,6 @@ function characterpalette_save()
 	for (var child = list.firstChild; child != null; child = child.nextSibling)
 		palettes.push(child.getAttribute('label'));
 	characterpalette_setPalettes(palettes);
-	characterpalette_addPalettes();
 	return true;
 }
 
