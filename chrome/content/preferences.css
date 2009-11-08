@@ -1,18 +1,13 @@
 @import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#character-palette-customize-dialog
+#character-palette-preferences-dialog
 {
 	margin: 0 !important;
 	padding: 0 !important;
 }
 
-#character-palette-customize-details
+#character-palette-preferences-details
 {
 	padding: 0.5em !important;
-}
-
-listbox
-{
-	background-color: #ffffff;
 }

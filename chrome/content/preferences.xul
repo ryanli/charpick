@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/customize.dtd">
-<?xml-stylesheet href="chrome://character-palette/content/customize.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/preferences.dtd">
+<?xml-stylesheet href="chrome://character-palette/content/preferences.css" type="text/css"?>
 
-<dialog id="character-palette-customize-dialog"
-	title="&customize.characterpalette;"
+<dialog id="character-palette-preferences-dialog"
+	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
 	onload="characterpalette_loadList();"
@@ -11,7 +11,7 @@
 
 	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
 
-	<vbox id="character-palette-customize-details">
+	<vbox id="character-palette-preferences-details">
 		<hbox>
 		<listbox id="character-palette-palette-list">
 		</listbox>
