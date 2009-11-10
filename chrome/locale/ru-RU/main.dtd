@@ -8,8 +8,8 @@
 <!ENTITY help "Помощь">
 <!ENTITY about.characterpalette "О палитре символов">
 <!ENTITY author "Автор">
-<!ENTITY translator "">
-<!ENTITY translator.name "">
+<!ENTITY translator "Перевод">
+<!ENTITY translator.name "Evgeny Lavrov (EvgenyLavrov@gmail.com)">
 <!ENTITY help.characterpalette "Справка по использованию палитры символов">
 <!ENTITY help.content.1 "Выберите палитру, которая содержит нужный вам символ.">
 <!ENTITY help.content.2 "Нажмите на кнопку с соответствующим символом - он будет вставлен в текстовое поле на панели палитры символов.">
