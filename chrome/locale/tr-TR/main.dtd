@@ -6,3 +6,13 @@
 <!ENTITY copy "Kopyala">
 <!ENTITY copy.to.clipboard "Panoya kopyala">
 <!ENTITY help "Yardım">
+<!ENTITY about.characterpalette "Character Palette Hakkında">
+<!ENTITY author "Yazar">
+<!ENTITY translator "">
+<!ENTITY translator.name "">
+<!ENTITY help.characterpalette "Character Palette Kullanım Yardımı">
+<!ENTITY help.content.1 "Paletten istediğin Karakteri seçin.">
+<!ENTITY help.content.2 "Düğme bölmesine tıkla, karakter, sağda giriş alanına eklensin">
+<!ENTITY help.content.3 "Adım 2:Memnun Olmuş kadar.">
+<!ENTITY help.content.4 "Kopyala, sil istediğini yap.">
+<!ENTITY help.title "Yardım">

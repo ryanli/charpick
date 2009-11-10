@@ -6,3 +6,13 @@
 <!ENTITY copy "コピー">
 <!ENTITY copy.to.clipboard "クリップボードへコピー">
 <!ENTITY help "ヘルプ">
+<!ENTITY about.characterpalette "文字パレットについて">
+<!ENTITY author "作者">
+<!ENTITY translator "翻訳者">
+<!ENTITY translator.name "drry">
+<!ENTITY help.characterpalette "文字パレットの使い方ヘルプ">
+<!ENTITY help.content.1 "欲しい文字を含んだパレットを選択します。">
+<!ENTITY help.content.2 "対応するボタンをクリックすると右側の入力欄に文字が追加されます。">
+<!ENTITY help.content.3 "満足するまで手順2.を繰り返します。">
+<!ENTITY help.content.4 "お望みのままにそれらをコピーまたは消去します。">
+<!ENTITY help.title "文字パレットのヘルプ">

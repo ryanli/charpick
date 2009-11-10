@@ -6,3 +6,13 @@
 <!ENTITY copy "Умножи">
 <!ENTITY copy.to.clipboard "Умножи у оставу">
 <!ENTITY help "Помоћ">
+<!ENTITY about.characterpalette "О Палети знакова">
+<!ENTITY author "Аутор">
+<!ENTITY translator "Преводилац">
+<!ENTITY translator.name "Kacnepcku PC">
+<!ENTITY help.characterpalette "Помоћ при коришћењу палете знакова">
+<!ENTITY help.content.1 "Изаберите палету која садржи жељени знак">
+<!ENTITY help.content.2 "Кликните да огдоварајуће дугме да бисте уметнули знак у поље десно.">
+<!ENTITY help.content.3 "Поновите други корак док не добијете жељено.">
+<!ENTITY help.content.4 "Умножите или очистите, ако желите">
+<!ENTITY help.title "Помоћ за палету знакова">

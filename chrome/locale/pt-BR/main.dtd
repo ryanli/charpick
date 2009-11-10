@@ -6,3 +6,13 @@
 <!ENTITY copy "Copiar">
 <!ENTITY copy.to.clipboard "Copiar para Área de Transferência">
 <!ENTITY help "Ajuda">
+<!ENTITY about.characterpalette "Sobre o Character Palette">
+<!ENTITY author "Autor">
+<!ENTITY translator "">
+<!ENTITY translator.name "">
+<!ENTITY help.characterpalette "Ajuda de Uso do Character Palette">
+<!ENTITY help.content.1 "Selecione o mapa que contém o caractere que deseja">
+<!ENTITY help.content.2 "Clique no botão correspondente e o caractere será colocado no campo de entrada à direita.">
+<!ENTITY help.content.3 "Repita o passo 2 até se satisfazer.">
+<!ENTITY help.content.4 "Copiá-los ou limpá-los como você quiser.">
+<!ENTITY help.title "Ajuda no Character Palette">

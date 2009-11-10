@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/add-palette.dtd">
+<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/main.dtd">
 <?xml-stylesheet href="chrome://character-palette/content/add-palette.css" type="text/css"?>
 
 <dialog id="character-palette-add-palette-dialog"
