@@ -138,7 +138,7 @@ com.ryanium.characterpalette = {
 		com.ryanium.characterpalette.setPalettes(palettes);
 		return true;
 	},
-	newPalette : function()
+	addPalette : function()
 	{
 		var list = document.getElementById("character-palette-palette-list");
 		var params = {add: false, palette: ""};
