@@ -60,7 +60,7 @@ com.ryanium.characterpalette = {
 		var merged = new String();
 		for (var index in a)
 			merged += a[index].replace(/;/g, ';;') + ';';
-		com.ryanium.characterpalette.getString('palettes', merged);
+		com.ryanium.characterpalette.setString('palettes', merged);
 	},
 	addPalettes : function()
 	{
