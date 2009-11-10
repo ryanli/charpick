@@ -16,7 +16,7 @@
 		label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
 
 		<toolbarbutton id="character-palette-menu" type="menu" label="&characterpalette;">
-			<menupopup id="character-palette-popup" onpopupshowing="characterpalette_addPalettes();">
+			<menupopup id="character-palette-popup" onpopupshowing="com.ryanium.characterpalette.addPalettes();">
 
 				<menuseparator id="character-palette-menu-seperator" />
 
@@ -37,8 +37,8 @@
 		</toolbaritem>
 
 		<textbox id="character-palette-pickbox" />
-		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;" oncommand="characterpalette_copy();" />
-		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="characterpalette_clear();" />
+		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;" oncommand="com.ryanium.characterpalette.copy();" />
+		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="com.ryanium.characterpalette.clear();" />
 	</toolbar>
 </toolbox>
 </overlay>

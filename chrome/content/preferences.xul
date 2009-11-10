@@ -6,8 +6,8 @@
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="characterpalette_loadList();"
-	ondialogaccept="return characterpalette_save();">
+	onload="com.ryanium.characterpalette.loadList();"
+	ondialogaccept="return com.ryanium.characterpalette.save();">
 
 	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
 
@@ -16,9 +16,9 @@
 		<listbox id="character-palette-palette-list">
 		</listbox>
 		<vbox>
-			<button id="character-palette-add" label="&add;" onclick="characterpalette_newPalette();" />
-			<button id="character-palette-edit" label="&edit;" onclick="characterpalette_editPalette();" />
-			<button id="character-palette-delete" label="&delete;" onclick="characterpalette_deletePalette();" />
+			<button id="character-palette-add" label="&add;" onclick="com.ryanium.characterpalette.newPalette();" />
+			<button id="character-palette-edit" label="&edit;" onclick="com.ryanium.characterpalette.editPalette();" />
+			<button id="character-palette-delete" label="&delete;" onclick="com.ryanium.characterpalette.deletePalette();" />
 		</vbox>
 		</hbox>
 	</vbox>
