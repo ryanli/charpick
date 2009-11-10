@@ -8,21 +8,21 @@ com.ryanium.characterpalette = {
 	prefManager : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch),
 	getString : function(key)
 	{
-		return com.ryanium.characterpalette.prefManager.getComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString).data;
+		return this.prefManager.getComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString).data;
 	},
 	setString : function(key, val)
 	{
 		var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
 		str.data = val;
-		com.ryanium.characterpalette.prefManager.setComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString, str);
+		this.prefManager.setComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString, str);
 	},
 	getInteger : function(key)
 	{
-		return com.ryanium.characterpalette.prefManager.getIntPref("extensions.character-palette." + key);
+		return this.prefManager.getIntPref("extensions.character-palette." + key);
 	},
 	setInteger : function(key, val)
 	{
-		com.ryanium.characterpalette.prefManager.setIntPref("extensions.character-palette." + key, val);
+		this.prefManager.setIntPref("extensions.character-palette." + key, val);
 	},
 	getPalettes : function()
 	{
