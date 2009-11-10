@@ -10,5 +10,5 @@
 #
 # Copyright (c) 2009 Ryan Li
 
-sed -i "s|\"software-version\">.*<|\"software-version\">$1<|g" ./chrome/content/about.xul
+sed -i "s|\"version\">.*<|\"version\">$1<|g" ./chrome/content/about.xul
 sed -i "s|<em:version>.*</em:version>|<em:version>$1</em:version>|g" ./install.rdf

@@ -31,6 +31,11 @@ toolbarbutton.character-palette-char
 	padding-top: 0.25em !important;
 }
 
+.version
+{
+	font-style: italic;
+}
+
 caption
 {
 	margin: 5px !important;
