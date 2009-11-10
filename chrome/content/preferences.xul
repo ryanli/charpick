@@ -16,9 +16,9 @@
 		<listbox id="character-palette-palette-list">
 		</listbox>
 		<vbox>
-			<button id="New" label="&new;" />
-			<button id="Edit" label="&edit;" />
-			<button id="Delete" label="&delete;" />
+			<button id="New" label="&new;" onclick="characterpalette_newPalette();" />
+			<button id="Edit" label="&edit;" onclick="characterpalette_editPalette();" />
+			<button id="Delete" label="&delete;" onclick="characterpalette_deletePalette();" />
 		</vbox>
 		</hbox>
 	</vbox>

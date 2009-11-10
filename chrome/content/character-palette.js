@@ -153,4 +153,19 @@ function characterpalette_save()
 	return true;
 }
 
+function characterpalette_addPalette()
+{
+}
+
+function characterpalette_editPalette()
+{
+}
+
+function characterpalette_deletePalette()
+{
+	var list = document.getElementById("character-palette-palette-list");
+	if (list)
+		list.removeItemAt(list.selectedIndex);
+}
+
 window.addEventListener("load", characterpalette_addPalettes, false);
