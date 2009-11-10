@@ -28,3 +28,5 @@
 <!ENTITY delete "Delete">
 <!ENTITY add.palette "Add Palette">
 <!ENTITY edit.palette "Edit Palette">
+<!ENTITY new.palette.label "New Palette:">
+<!ENTITY edit.palette.label "Edit Palette:">

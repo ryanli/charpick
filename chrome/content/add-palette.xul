@@ -13,7 +13,7 @@
 
 	<vbox id="character-palette-add-palette-details">
 		<hbox>
-			<label value="New Palette:" control="palette" />
+			<label value="&new.palette.label;" control="palette" />
 			<textbox id="character-palette-textbox" />
 		</hbox>
 	</vbox>
