@@ -11,18 +11,24 @@
 </stringbundleset>
 
 <toolbox id="navigator-toolbox">
-	<toolbar class="chromeclass-toolbar" collapsed="false" customizable="false"
-	context="toolbar-context-menu" label="&characterpalette;" grippytooltiptext="&characterpalette;"
-	id="character-palette-toolbar" toolbarname="&characterpalette.toolbar;">
+	<toolbar id="character-palette-toolbar" class="chromeclass-toolbar"
+		collapsed="false" customizable="false" context="toolbar-context-menu"
+		label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
 
 		<toolbarbutton id="character-palette-menu" type="menu" label="&characterpalette;">
 			<menupopup id="character-palette-popup" onpopupshowing="characterpalette_addPalettes();">
 
 				<menuseparator id="character-palette-menu-seperator" />
 
-				<menuitem id="character-palette-menu-preferences" label="&preferences;" oncommand="window.openDialog('chrome://character-palette/content/preferences.xul', 'character-palette-preferences-dialog', 'centerscreen,chrome,modal');" />
-				<menuitem id="character-palette-menu-help" label="&help;" oncommand="window.openDialog('chrome://character-palette/content/help.xul', 'character-palette-help-dialog', 'centerscreen,chrome,modal');" />
-				<menuitem id="character-palette-menu-about" label="&about;" oncommand="window.openDialog('chrome://character-palette/content/about.xul', 'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
+				<menuitem id="character-palette-menu-preferences" label="&preferences;"
+					oncommand="window.openDialog('chrome://character-palette/content/preferences.xul',
+						'character-palette-preferences-dialog', 'centerscreen,chrome,modal');" />
+				<menuitem id="character-palette-menu-help" label="&help;"
+					oncommand="window.openDialog('chrome://character-palette/content/help.xul',
+						'character-palette-help-dialog', 'centerscreen,chrome,modal');" />
+				<menuitem id="character-palette-menu-about" label="&about;"
+					oncommand="window.openDialog('chrome://character-palette/content/about.xul',
+						'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
 
 			</menupopup>
 		</toolbarbutton>

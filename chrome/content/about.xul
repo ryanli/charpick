@@ -2,17 +2,19 @@
 <!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/main.dtd">
 <?xml-stylesheet href="chrome://character-palette/content/style.css" type="text/css"?>
 
-<dialog buttons="accept" id="character-palette-about-dialog"
-	title="&about.characterpalette;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<dialog id="character-palette-about-dialog"
+	title="&about.characterpalette;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept">
 
 	<vbox id="character-palette-about-details">
 		<hbox>
-			<description class="name" id="software-name">Character Palette</description>
-			<description class="name" id="software-version">0.2.2</description>
+			<description id="software-name" class="name">Character Palette</description>
+			<description id="software-version" class="name">0.2.2</description>
 		</hbox>
-		<description value="&author;" class="title"/>
+		<description class="title" value="&author;" />
 		<description>Ryan Li</description>
-		<description value="&translator;" class="title"/>
+		<description class="title" value="&translator;" />
 		<description>&translator.name;</description>
 	</vbox>
 	<separator class="groove"/>
