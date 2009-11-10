@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/add-palette.dtd">
+<?xml-stylesheet href="chrome://character-palette/content/add-palette.css" type="text/css"?>
+
+<dialog id="character-palette-add-palette-dialog"
+	title="&add.palette;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept,cancel"
+	ondialogaccept="window.arguments[0].add = true;
+		window.arguments[0].palette = document.getElementById('character-palette-textbox').value;">
+
+	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
+
+	<vbox id="character-palette-add-palette-details">
+		<hbox>
+			<label value="New Palette:" control="palette" />
+			<textbox id="character-palette-textbox" />
+		</hbox>
+	</vbox>
+</dialog>

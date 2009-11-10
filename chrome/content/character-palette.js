@@ -153,12 +153,30 @@ function characterpalette_save()
 	return true;
 }
 
-function characterpalette_addPalette()
+function characterpalette_newPalette()
 {
+	var list = document.getElementById("character-palette-palette-list");
+	var params = {add: false, palette: ""};
+	window.openDialog('chrome://character-palette/content/add-palette.xul', 'character-palette-add-palette-dialog', 'centerscreen,chrome,modal', params);
+	if (params.add)
+		list.appendItem(params.palette);
 }
 
 function characterpalette_editPalette()
 {
+	var list = document.getElementById("character-palette-palette-list");
+	if (list)
+	{
+		var selected = list.selectedItem;
+		if (selected)
+		{
+			var orig = selected.label;
+			var params = {edit: false, palette: orig};
+			window.openDialog('chrome://character-palette/content/edit-palette.xul', 'character-palette-edit-palette-dialog', 'centerscreen,chrome,modal', params);
+			if (params.edit)
+				selected.label = params.palette;
+		}
+	}
 }
 
 function characterpalette_deletePalette()
@@ -166,6 +184,12 @@ function characterpalette_deletePalette()
 	var list = document.getElementById("character-palette-palette-list");
 	if (list)
 		list.removeItemAt(list.selectedIndex);
+}
+
+function characterpalette_setTextBox()
+{
+	var textbox = document.getElementById("character-palette-textbox");
+	textbox.value = window.arguments[0].palette;
 }
 
 window.addEventListener("load", characterpalette_addPalettes, false);
