@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/main.dtd">
-<?xml-stylesheet href="chrome://character-palette/content/about.css" type="text/css"?>
+<?xml-stylesheet href="chrome://character-palette/content/style.css" type="text/css"?>
 
 <dialog buttons="accept" id="character-palette-about-dialog"
 	title="&about.characterpalette;" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">

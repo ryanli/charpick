@@ -1,6 +1,37 @@
+@import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 toolbarbutton.character-palette-char
 {
-width: 2em;
+	width: 2em;
+}
+
+#character-palette-about-details hbox
+{
+	background-image: url("chrome://character-palette/content/logo.png") !important;
+	background-position: top right !important;
+	background-repeat: no-repeat !important;
+	min-height: 35px !important;
+	padding-right: 35px !important;
+}
+
+.name
+{
+	font-size: x-large !important;
+	padding-right: 0.25em !important;
+}
+
+.name, .title
+{
+	font-weight: bold !important;
+}
+
+.title
+{
+	padding-top: 0.25em !important;
+}
+
+caption
+{
+	margin: 5px !important;
 }
