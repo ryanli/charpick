@@ -10,7 +10,7 @@
 		<em:name>Character Palette</em:name>
 		<em:description>A palette of special characters providing a handy way for you to get them.</em:description>
 		<em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/8138</em:homepageURL>
-		<em:version>0.2.2</em:version>
+		<em:version>0.3</em:version>
 		<em:type>2</em:type>
 		<em:iconURL>chrome://character-palette/content/logo.png</em:iconURL>
 
