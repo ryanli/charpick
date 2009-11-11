@@ -24,8 +24,7 @@
 					oncommand="window.openDialog('chrome://character-palette/content/preferences.xul',
 						'character-palette-preferences-dialog', 'centerscreen,chrome,modal');" />
 				<menuitem id="character-palette-menu-help" label="&help;"
-					oncommand="window.openDialog('chrome://character-palette/content/help.xul',
-						'character-palette-help-dialog', 'centerscreen,chrome,modal');" />
+					oncommand="gBrowser.selectedTab = gBrowser.addTab('chrome://character-palette/content/help.html');" />
 				<menuitem id="character-palette-menu-about" label="&about;"
 					oncommand="window.openDialog('chrome://character-palette/content/about.xul',
 						'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
