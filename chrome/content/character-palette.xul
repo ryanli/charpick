@@ -20,12 +20,12 @@
 
 				<menuseparator id="character-palette-menu-seperator" />
 
-				<menuitem id="character-palette-menu-preferences" label="&preferences;"
+				<menuitem id="character-palette-menu-preferences" label="&preferences;" accesskey="P"
 					oncommand="window.openDialog('chrome://character-palette/content/preferences.xul',
 						'character-palette-preferences-dialog', 'centerscreen,chrome,modal');" />
-				<menuitem id="character-palette-menu-help" label="&help;"
+				<menuitem id="character-palette-menu-help" label="&help;" accesskey="H"
 					oncommand="gBrowser.selectedTab = gBrowser.addTab('chrome://character-palette/content/help.html');" />
-				<menuitem id="character-palette-menu-about" label="&about;"
+				<menuitem id="character-palette-menu-about" label="&about;" accesskey="A"
 					oncommand="window.openDialog('chrome://character-palette/content/about.xul',
 						'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
 
@@ -36,8 +36,10 @@
 		</toolbaritem>
 
 		<textbox id="character-palette-pickbox" />
-		<toolbarbutton id="character-palette-copy" label="&copy;" tooltiptext="&copy.to.clipboard;" oncommand="com.ryanium.characterpalette.copy();" />
-		<toolbarbutton id="character-palette-clear" label="&clear;" tooltiptext="&clear.field.contents;" oncommand="com.ryanium.characterpalette.clear();" />
+		<toolbarbutton id="character-palette-copy" label="&copy;" accesskey="C"
+			tooltiptext="&copy.to.clipboard;" oncommand="com.ryanium.characterpalette.copy();" />
+		<toolbarbutton id="character-palette-clear" label="&clear;" accesskey="l"
+			tooltiptext="&clear.field.contents;" oncommand="com.ryanium.characterpalette.clear();" />
 	</toolbar>
 </toolbox>
 </overlay>

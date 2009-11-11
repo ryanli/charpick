@@ -16,9 +16,9 @@
 		<listbox id="character-palette-palette-list">
 		</listbox>
 		<vbox>
-			<button id="character-palette-add" label="&add;" onclick="com.ryanium.characterpalette.addPalette();" />
-			<button id="character-palette-edit" label="&edit;" onclick="com.ryanium.characterpalette.editPalette();" />
-			<button id="character-palette-delete" label="&delete;" onclick="com.ryanium.characterpalette.deletePalette();" />
+			<button id="character-palette-add" label="&add;" accesskey="A" onclick="com.ryanium.characterpalette.addPalette();" />
+			<button id="character-palette-edit" label="&edit;" accesske="E" onclick="com.ryanium.characterpalette.editPalette();" />
+			<button id="character-palette-delete" label="&delete;" accesskey="D" onclick="com.ryanium.characterpalette.deletePalette();" />
 		</vbox>
 		</hbox>
 	</vbox>

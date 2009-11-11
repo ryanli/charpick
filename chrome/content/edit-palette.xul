@@ -14,7 +14,7 @@
 
 	<vbox id="character-palette-edit-palette-details">
 		<hbox>
-			<label value="&edit.palette.label;" control="palette" />
+			<label value="&edit.palette.label;" control="palette" accesskey="P" />
 			<textbox id="character-palette-textbox" />
 		</hbox>
 	</vbox>
