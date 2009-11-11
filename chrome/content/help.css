@@ -1,0 +1,9 @@
+#character-palette-help h1, h2
+{
+	text-transform: capitalize;
+}
+
+#character-palette-help h1
+{
+	font-variant: small-caps;
+}
