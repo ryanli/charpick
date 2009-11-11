@@ -12,15 +12,22 @@
 	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
 
 	<vbox id="character-palette-preferences-details">
-		<hbox>
-		<listbox id="character-palette-palette-list">
-		</listbox>
-		<vbox>
-			<button id="character-palette-add" label="&add;" accesskey="A" onclick="com.ryanium.characterpalette.addPalette();" />
-			<button id="character-palette-edit" label="&edit;" accesske="E" onclick="com.ryanium.characterpalette.editPalette();" />
-			<button id="character-palette-delete" label="&delete;" accesskey="D" onclick="com.ryanium.characterpalette.deletePalette();" />
+		<label id="character-palette-name" class="character-palette-caption" value="&characterpalette;" />
+		<vbox class="character-palette-details">
+			<label id="character-palette-palettes" value="&palettes;"
+				control="character-palette-palette-list" accesskey="P" />
+			<hbox>
+				<listbox id="character-palette-palette-list">
+				</listbox>
+				<vbox>
+					<button id="character-palette-add" label="&add;"
+						accesskey="A" onclick="com.ryanium.characterpalette.addPalette();" />
+					<button id="character-palette-edit" label="&edit;"
+						accesske="E" onclick="com.ryanium.characterpalette.editPalette();" />
+					<button id="character-palette-delete" label="&delete;"
+						accesskey="D" onclick="com.ryanium.characterpalette.deletePalette();" />
+				</vbox>
+			</hbox>
 		</vbox>
-		</hbox>
 	</vbox>
-	<separator class="groove"/>
 </dialog>

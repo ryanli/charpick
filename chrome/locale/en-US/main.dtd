@@ -16,6 +16,7 @@
 <!ENTITY translator.name "Ryan Li">
 
 <!ENTITY characterpalette.preferences "Character Palette Preferences">
+<!ENTITY palettes "Palettes:">
 <!ENTITY add "Add">
 <!ENTITY edit "Edit">
 <!ENTITY delete "Delete">

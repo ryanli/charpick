@@ -36,6 +36,16 @@ toolbarbutton.character-palette-char
 	font-style: italic;
 }
 
+.character-palette-caption
+{
+	font-weight: bold !important;
+}
+
+.character-palette-details
+{
+	margin: 0.5em !important;
+}
+
 caption
 {
 	margin: 5px !important;
