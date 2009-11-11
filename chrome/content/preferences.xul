@@ -23,7 +23,7 @@
 					<button id="character-palette-add" label="&add;"
 						accesskey="A" onclick="com.ryanium.characterpalette.addPalette();" />
 					<button id="character-palette-edit" label="&edit;"
-						accesske="E" onclick="com.ryanium.characterpalette.editPalette();" />
+						accesskey="E" onclick="com.ryanium.characterpalette.editPalette();" />
 					<button id="character-palette-delete" label="&delete;"
 						accesskey="D" onclick="com.ryanium.characterpalette.deletePalette();" />
 				</vbox>
