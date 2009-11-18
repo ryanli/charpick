@@ -1,18 +1,22 @@
-<!ENTITY about "关于">
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette 工具栏">
-<!ENTITY clear "清除">
-<!ENTITY clear.field.contents "清除框中内容">
-<!ENTITY copy "复制">
-<!ENTITY copy.to.clipboard "复制到剪贴板">
+<!ENTITY preferences "首选项">
 <!ENTITY help "帮助">
+<!ENTITY about "关于">
+<!ENTITY copy "复制">
+<!ENTITY clear "清除">
+<!ENTITY copy.to.clipboard "复制到剪贴板">
+<!ENTITY clear.field.contents "清除框中内容">
 <!ENTITY about.characterpalette "关于 Character Palette">
 <!ENTITY author "作者">
 <!ENTITY translator "译者">
 <!ENTITY translator.name "Ryan Li">
-<!ENTITY help.characterpalette "Character Palette使用帮助">
-<!ENTITY help.content.1 "选择包含你想要的字符的字符版">
-<!ENTITY help.content.2 "单击相对应的按钮, 该字符会被添加在右侧的输入框内.">
-<!ENTITY help.content.3 "重复第2步直到满意为止.">
-<!ENTITY help.content.4 "你可以复制或者清除这些字符.">
-<!ENTITY help.title "Character Palette帮助">
+<!ENTITY characterpalette.preferences "Character Palette首选项">
+<!ENTITY palettes "字符版:">
+<!ENTITY add "添加">
+<!ENTITY edit "编辑">
+<!ENTITY delete "删除">
+<!ENTITY add.palette "添加字符板">
+<!ENTITY edit.palette "编辑字符板">
+<!ENTITY new.palette.label "新字符板:">
+<!ENTITY edit.palette.label "编辑字符板:">

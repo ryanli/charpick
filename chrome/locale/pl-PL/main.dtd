@@ -1,18 +1,22 @@
-<!ENTITY about "O rozszerzeniu">
 <!ENTITY characterpalette "Paleta znaków">
 <!ENTITY characterpalette.toolbar "Character Palette">
-<!ENTITY clear "Wyczyść">
-<!ENTITY clear.field.contents "Wyczyść pole">
-<!ENTITY copy "Kopiuj">
-<!ENTITY copy.to.clipboard "Kopiuj do schowka">
+<!ENTITY preferences "Preferencje">
 <!ENTITY help "Pomoc">
+<!ENTITY about "O rozszerzeniu">
+<!ENTITY copy "Kopiuj">
+<!ENTITY clear "Wyczyść">
+<!ENTITY copy.to.clipboard "Kopiuj do schowka">
+<!ENTITY clear.field.contents "Wyczyść pole">
 <!ENTITY about.characterpalette "Character Palette - informacje">
-<!ENTITY author "Stworzony przez:">
+<!ENTITY author "Autor">
 <!ENTITY translator "Tłumacz">
 <!ENTITY translator.name "Wacław Jacek">
-<!ENTITY help.characterpalette "Character Palette - pomoc dot. używania rozszerzenia">
-<!ENTITY help.content.1 "Wybierz paletę, która zawiera szukany znak.">
-<!ENTITY help.content.2 "Kliknij odpowiadający znakowi przycisk, a zostanie on dodany do pola tekstowego znajdującego się po prawej stronie.">
-<!ENTITY help.content.3 "Powtarzaj krok 2. do momentu osiągnięcia pożądanego rezultatu.">
-<!ENTITY help.content.4 "Skopiuj otrzymany ciąg znaków lub wyczyść pole.">
-<!ENTITY help.title "Character palette - pomoc">
+<!ENTITY characterpalette.preferences "Character Palette - preferencje">
+<!ENTITY palettes "Palety:">
+<!ENTITY add "Dodaj">
+<!ENTITY edit "Edytuj">
+<!ENTITY delete "Usuń">
+<!ENTITY add.palette "Dodaj paletę">
+<!ENTITY edit.palette "Edytuj paletę">
+<!ENTITY new.palette.label "Nowa paleta:">
+<!ENTITY edit.palette.label "Edytuj paletę:">

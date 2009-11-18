@@ -1,20 +1,16 @@
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette Toolbar">
-
 <!ENTITY preferences "Preferences">
 <!ENTITY help "Help">
 <!ENTITY about "About">
-
 <!ENTITY copy "Copy">
 <!ENTITY clear "Clear">
 <!ENTITY copy.to.clipboard "Copy To Clipboard">
 <!ENTITY clear.field.contents "Clear Field Contents">
-
 <!ENTITY about.characterpalette "About Character Palette">
 <!ENTITY author "Author">
 <!ENTITY translator "Translator">
 <!ENTITY translator.name "Ryan Li">
-
 <!ENTITY characterpalette.preferences "Character Palette Preferences">
 <!ENTITY palettes "Palettes:">
 <!ENTITY add "Add">

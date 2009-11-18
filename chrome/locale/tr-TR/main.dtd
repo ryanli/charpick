@@ -1,18 +1,22 @@
-<!ENTITY about "Hakkında">
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette Araç Çubuğu">
-<!ENTITY clear "Temizle">
-<!ENTITY clear.field.contents "Alan İçeriğini Temizle">
-<!ENTITY copy "Kopyala">
-<!ENTITY copy.to.clipboard "Panoya kopyala">
+<!ENTITY preferences "Tercihler">
 <!ENTITY help "Yardım">
+<!ENTITY about "Hakkında">
+<!ENTITY copy "Kopyala">
+<!ENTITY clear "Temizle">
+<!ENTITY copy.to.clipboard "Panoya kopyala">
+<!ENTITY clear.field.contents "Alan İçeriğini Temizle">
 <!ENTITY about.characterpalette "Character Palette Hakkında">
 <!ENTITY author "Yazar">
-<!ENTITY translator "">
-<!ENTITY translator.name "">
-<!ENTITY help.characterpalette "Character Palette Kullanım Yardımı">
-<!ENTITY help.content.1 "Paletten istediğin Karakteri seçin.">
-<!ENTITY help.content.2 "Düğme bölmesine tıkla, karakter, sağda giriş alanına eklensin">
-<!ENTITY help.content.3 "Adım 2:Memnun Olmuş kadar.">
-<!ENTITY help.content.4 "Kopyala, sil istediğini yap.">
-<!ENTITY help.title "Yardım">
+<!ENTITY translator "Çeviren">
+<!ENTITY translator.name "MRTCVK">
+<!ENTITY characterpalette.preferences "Character Palette Tercihleri">
+<!ENTITY palettes "Paletler">
+<!ENTITY add "Ekle">
+<!ENTITY edit "Düzenle">
+<!ENTITY delete "Sil">
+<!ENTITY add.palette "Palet ekle">
+<!ENTITY edit.palette "Paleti düzenle">
+<!ENTITY new.palette.label "Yeni palet:">
+<!ENTITY edit.palette.label "Paleti düzenle:">

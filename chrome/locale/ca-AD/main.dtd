@@ -1,18 +1,22 @@
-<!ENTITY about "Sobre">
 <!ENTITY characterpalette "Paleta de Caràcters">
 <!ENTITY characterpalette.toolbar "Barra d'Eines Paleta de Caràcters">
-<!ENTITY clear "Neteja">
-<!ENTITY clear.field.contents "Neteja el contingut dels camps">
-<!ENTITY copy "Copia">
-<!ENTITY copy.to.clipboard "Copia al Portapapers">
+<!ENTITY preferences "Preferències">
 <!ENTITY help "Ajuda">
+<!ENTITY about "Sobre">
+<!ENTITY copy "Copia">
+<!ENTITY clear "Neteja">
+<!ENTITY copy.to.clipboard "Copia al Portapapers">
+<!ENTITY clear.field.contents "Neteja el contingut dels camps">
 <!ENTITY about.characterpalette "Sobre Paleta de Caràcters">
 <!ENTITY author "Autor/a">
 <!ENTITY translator "Traductor/a">
 <!ENTITY translator.name "el_libre">
-<!ENTITY help.characterpalette "Ajuda de Character Palette">
-<!ENTITY help.content.1 "Selecciona la paleta que conté el caràcter que vols">
-<!ENTITY help.content.2 "Clica al botó corresponent i el caràcter serà afegit al camp de la dreta">
-<!ENTITY help.content.3 "Repeteix Pas 2 fins que estiguis satisfet/a">
-<!ENTITY help.content.4 "Copia o neteja'ls tal i com vulguis">
-<!ENTITY help.title "Ajuda de Character Palette">
+<!ENTITY characterpalette.preferences "Preferències de la Paleta de Caràcters">
+<!ENTITY palettes "Paletes:">
+<!ENTITY add "Afegeix">
+<!ENTITY edit "Edita">
+<!ENTITY delete "Esborra">
+<!ENTITY add.palette "Afegeix Paleta">
+<!ENTITY edit.palette "Edita Paleta">
+<!ENTITY new.palette.label "Nova Paleta:">
+<!ENTITY edit.palette.label "Edita Paleta:">

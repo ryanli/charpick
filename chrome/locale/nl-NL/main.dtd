@@ -1,18 +1,22 @@
-<!ENTITY about "Over">
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette Werkbalk">
-<!ENTITY clear "Clear">
-<!ENTITY clear.field.contents "Clear Field Contents">
-<!ENTITY copy "Copy">
-<!ENTITY copy.to.clipboard "Copy To Clipboard">
+<!ENTITY preferences "">
 <!ENTITY help "Help">
+<!ENTITY about "Over">
+<!ENTITY copy "Copy">
+<!ENTITY clear "Clear">
+<!ENTITY copy.to.clipboard "Copy To Clipboard">
+<!ENTITY clear.field.contents "Clear Field Contents">
 <!ENTITY about.characterpalette "Over Character Palette">
 <!ENTITY author "Auteur">
 <!ENTITY translator "">
 <!ENTITY translator.name "">
-<!ENTITY help.characterpalette "Character Palette Usage Help">
-<!ENTITY help.content.1 "Select the palette which contains the character you want">
-<!ENTITY help.content.2 "Click on the button corresponding and the character will be appended to the input field on the right.">
-<!ENTITY help.content.3 "Repeat Step 2. until satisfied.">
-<!ENTITY help.content.4 "Copy or clear them as you wish.">
-<!ENTITY help.title "Help on Character Palette">
+<!ENTITY characterpalette.preferences "">
+<!ENTITY palettes "">
+<!ENTITY add "">
+<!ENTITY edit "">
+<!ENTITY delete "">
+<!ENTITY add.palette "">
+<!ENTITY edit.palette "">
+<!ENTITY new.palette.label "">
+<!ENTITY edit.palette.label "">
