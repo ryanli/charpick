@@ -1,3 +1,9 @@
+* Version 0.3, 18 Nov 2009
+
+- Fully customizable toolbar, with default palettes set to the GNOME one's.
+- Unicode characters can now display correctly.
+- Use a help page as a substitution of the previous dialog.
+
 * Version 0.2.2, 3 Nov 2009
 
 - Fixed the bug that menus are displayed in red when using themes.
