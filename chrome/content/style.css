@@ -1,11 +1,6 @@
 @import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-toolbarbutton.character-palette-char
-{
-	width: 2em;
-}
-
 #character-palette-about-details hbox
 {
 	background-image: url("chrome://character-palette/content/logo.png") !important;
