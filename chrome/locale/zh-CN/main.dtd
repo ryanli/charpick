@@ -1,5 +1,5 @@
-<!ENTITY characterpalette "Character Palette">
-<!ENTITY characterpalette.toolbar "Character Palette 工具栏">
+<!ENTITY characterpalette "字符板">
+<!ENTITY characterpalette.toolbar "字符板工具栏">
 <!ENTITY preferences "首选项">
 <!ENTITY help "帮助">
 <!ENTITY about "关于">
@@ -7,12 +7,12 @@
 <!ENTITY clear "清除">
 <!ENTITY copy.to.clipboard "复制到剪贴板">
 <!ENTITY clear.field.contents "清除框中内容">
-<!ENTITY about.characterpalette "关于 Character Palette">
+<!ENTITY about.characterpalette "关于字符板">
 <!ENTITY author "作者">
 <!ENTITY translator "译者">
 <!ENTITY translator.name "Ryan Li">
-<!ENTITY characterpalette.preferences "Character Palette首选项">
-<!ENTITY palettes "字符版:">
+<!ENTITY characterpalette.preferences "字符板首选项">
+<!ENTITY palettes "字符板:">
 <!ENTITY add "添加">
 <!ENTITY edit "编辑">
 <!ENTITY delete "删除">
