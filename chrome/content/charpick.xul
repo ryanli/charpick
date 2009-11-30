@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://charpick/locale/main.dtd">
+<?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
+
+<overlay id="charpick" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
+
+<stringbundleset id="stringbundleset">
+	<stringbundle id="charpick-Strings" src="chrome://charpick/locale/charpick.properties" />
+</stringbundleset>
+
+<toolbox id="navigator-toolbox">
+	<toolbar id="charpick-toolbar" class="chromeclass-toolbar"
+		collapsed="false" customizable="false" context="toolbar-context-menu"
+		label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
+
+		<toolbarbutton id="charpick-menu" type="menu" label="&characterpalette;">
+			<menupopup id="charpick-popup" onpopupshowing="com.ryanium.charpick.loadPalettes();">
+
+				<menuseparator id="charpick-menu-seperator" />
+
+				<menuitem id="charpick-menu-preferences" label="&preferences;" accesskey="P"
+					oncommand="window.openDialog('chrome://charpick/content/preferences.xul',
+						'charpick-preferences-dialog', 'centerscreen,chrome,modal');" />
+				<menuitem id="charpick-menu-help" label="&help;" accesskey="H"
+					oncommand="gBrowser.selectedTab = gBrowser.addTab('chrome://charpick/content/help.html');" />
+				<menuitem id="charpick-menu-about" label="&about;" accesskey="A"
+					oncommand="window.openDialog('chrome://charpick/content/about.xul',
+						'charpick-about-dialog', 'centerscreen,chrome,modal');" />
+
+			</menupopup>
+		</toolbarbutton>
+
+		<toolbaritem id="charpick-buttons">
+		</toolbaritem>
+	</toolbar>
+</toolbox>
+</overlay>

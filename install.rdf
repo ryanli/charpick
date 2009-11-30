@@ -4,7 +4,7 @@
 	xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 	<Description about="urn:mozilla:install-manifest">
-		<em:aboutURL>chrome://character-palette/content/about.xul</em:aboutURL>
+		<em:aboutURL>chrome://charpick/content/about.xul</em:aboutURL>
 		<em:creator>Ryan Li</em:creator>
 		<em:id>{5c17eb1d-edfa-5f58-3a64-a49f2071713c}</em:id>
 		<em:name>Character Palette</em:name>
@@ -12,7 +12,7 @@
 		<em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/8138</em:homepageURL>
 		<em:version>0.3</em:version>
 		<em:type>2</em:type>
-		<em:iconURL>chrome://character-palette/content/logo.png</em:iconURL>
+		<em:iconURL>chrome://charpick/content/logo.png</em:iconURL>
 
 		<em:targetApplication>
 			<Description>

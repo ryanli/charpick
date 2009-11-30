@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/main.dtd">
-<?xml-stylesheet href="chrome://character-palette/content/style.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
+<?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
 
-<dialog id="character-palette-about-dialog"
+<dialog id="charpick-about-dialog"
 	title="&about.characterpalette;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept">
 
-	<vbox id="character-palette-about-details">
+	<vbox id="charpick-about-details">
 		<hbox>
 			<description id="software-name" class="name">Character Palette</description>
 			<description id="software-version" class="version">0.3</description>

@@ -1,18 +1,18 @@
-content	character-palette	chrome/content/
-overlay chrome://browser/content/browser.xul chrome://character-palette/content/character-palette.xul
+content	charpick chrome/content/
+overlay chrome://browser/content/browser.xul chrome://charpick/content/charpick.xul
 
-locale character-palette ca-AD chrome/locale/ca-AD/
-locale character-palette de-DE chrome/locale/de-DE/
-locale character-palette en-US chrome/locale/en-US/
-locale character-palette fr-FR chrome/locale/fr-FR/
-locale character-palette hu-HU chrome/locale/hu-HU/
-locale character-palette ja-JP chrome/locale/ja-JP/
-locale character-palette ko-KR chrome/locale/ko-KR/
-locale character-palette nl-NL chrome/locale/nl-NL/
-locale character-palette pl-PL chrome/locale/pl-PL/
-locale character-palette pt-BR chrome/locale/pt-BR/
-locale character-palette ru-RU chrome/locale/ru-RU/
-locale character-palette sr-RS chrome/locale/sr-RS/
-locale character-palette tr-TR chrome/locale/tr-TR/
-locale character-palette uk-UA chrome/locale/uk-UA/
-locale character-palette zh-CN chrome/locale/zh-CN/
+locale charpick ca-AD chrome/locale/ca-AD/
+locale charpick de-DE chrome/locale/de-DE/
+locale charpick en-US chrome/locale/en-US/
+locale charpick fr-FR chrome/locale/fr-FR/
+locale charpick hu-HU chrome/locale/hu-HU/
+locale charpick ja-JP chrome/locale/ja-JP/
+locale charpick ko-KR chrome/locale/ko-KR/
+locale charpick nl-NL chrome/locale/nl-NL/
+locale charpick pl-PL chrome/locale/pl-PL/
+locale charpick pt-BR chrome/locale/pt-BR/
+locale charpick ru-RU chrome/locale/ru-RU/
+locale charpick sr-RS chrome/locale/sr-RS/
+locale charpick tr-TR chrome/locale/tr-TR/
+locale charpick uk-UA chrome/locale/uk-UA/
+locale charpick zh-CN chrome/locale/zh-CN/

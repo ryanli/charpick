@@ -1,31 +1,31 @@
 <?xml version="1.0"?>
-<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/main.dtd">
-<?xml-stylesheet href="chrome://character-palette/content/style.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
+<?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
 
-<dialog id="character-palette-preferences-dialog"
+<dialog id="charpick-preferences-dialog"
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="com.ryanium.characterpalette.loadPaletteList();"
-	ondialogaccept="return com.ryanium.characterpalette.savePalettes();">
+	onload="com.ryanium.charpick.loadPaletteList();"
+	ondialogaccept="return com.ryanium.charpick.savePalettes();">
 
-	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
+	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
 
-	<vbox id="character-palette-preferences-details">
-		<label id="character-palette-name" class="character-palette-caption" value="&characterpalette;" />
-		<vbox class="character-palette-details">
-			<label id="character-palette-palettes" value="&palettes;"
-				control="character-palette-palette-list" accesskey="P" />
+	<vbox id="charpick-preferences-details">
+		<label id="charpick-name" class="charpick-caption" value="&characterpalette;" />
+		<vbox class="charpick-details">
+			<label id="charpick-palettes" value="&palettes;"
+				control="charpick-palette-list" accesskey="P" />
 			<hbox>
-				<listbox id="character-palette-palette-list">
+				<listbox id="charpick-palette-list">
 				</listbox>
 				<vbox>
-					<button id="character-palette-add" label="&add;"
-						accesskey="A" onclick="com.ryanium.characterpalette.addPalette();" />
-					<button id="character-palette-edit" label="&edit;"
-						accesskey="E" onclick="com.ryanium.characterpalette.editPalette();" />
-					<button id="character-palette-delete" label="&delete;"
-						accesskey="D" onclick="com.ryanium.characterpalette.deletePalette();" />
+					<button id="charpick-add" label="&add;"
+						accesskey="A" onclick="com.ryanium.charpick.addPalette();" />
+					<button id="charpick-edit" label="&edit;"
+						accesskey="E" onclick="com.ryanium.charpick.editPalette();" />
+					<button id="charpick-delete" label="&delete;"
+						accesskey="D" onclick="com.ryanium.charpick.deletePalette();" />
 				</vbox>
 			</hbox>
 		</vbox>

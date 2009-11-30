@@ -1,9 +1,9 @@
 @import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#character-palette-about-details hbox
+#charpick-about-details hbox
 {
-	background-image: url("chrome://character-palette/content/logo.png") !important;
+	background-image: url("chrome://charpick/content/logo.png") !important;
 	background-position: top right !important;
 	background-repeat: no-repeat !important;
 	min-height: 35px !important;
@@ -31,12 +31,12 @@
 	font-style: italic;
 }
 
-.character-palette-caption
+.charpick-caption
 {
 	font-weight: bold !important;
 }
 
-.character-palette-details
+.charpick-details
 {
 	margin: 0.5em !important;
 }

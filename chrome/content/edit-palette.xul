@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
-<!DOCTYPE dialog SYSTEM "chrome://character-palette/locale/main.dtd">
-<?xml-stylesheet href="chrome://character-palette/content/style.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
+<?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
 
-<dialog id="character-palette-edit-palette-dialog"
+<dialog id="charpick-edit-palette-dialog"
 	title="&edit.palette;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="com.ryanium.characterpalette.setTextBox();"
+	onload="com.ryanium.charpick.setTextBox();"
 	ondialogaccept="window.arguments[0].edit = true;
-		window.arguments[0].palette = document.getElementById('character-palette-textbox').value;">
+		window.arguments[0].palette = document.getElementById('charpick-textbox').value;">
 
-	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
+	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
 
-	<vbox id="character-palette-edit-palette-details">
+	<vbox id="charpick-edit-palette-details">
 		<hbox>
 			<label value="&edit.palette.label;" control="palette" accesskey="P" />
-			<textbox id="character-palette-textbox" />
+			<textbox id="charpick-textbox" />
 		</hbox>
 	</vbox>
 </dialog>
