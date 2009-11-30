@@ -6,8 +6,8 @@
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="com.ryanium.characterpalette.loadList();"
-	ondialogaccept="return com.ryanium.characterpalette.save();">
+	onload="com.ryanium.characterpalette.loadPaletteList();"
+	ondialogaccept="return com.ryanium.characterpalette.savePalettes();">
 
 	<script type="application/x-javascript" src="chrome://character-palette/content/character-palette.js" />
 

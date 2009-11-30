@@ -4,27 +4,41 @@ if (!com.ryanium)
 	com.ryanium = {};
 if (!com.ryanium.characterpalette)
 	com.ryanium.characterpalette = {};
+
 com.ryanium.characterpalette = {
-	prefManager : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch),
-	selected : '',
-	getString : function(key)
+
+// utils begin
+	prefManager : Components
+		.classes["@mozilla.org/preferences-service;1"]
+		.getService(Components.interfaces.nsIPrefBranch),
+
+	getStringPref : function(key)
 	{
-		return this.prefManager.getComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString).data;
+		return this.prefManager.
+			getComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString)
+			.data;
 	},
-	setString : function(key, val)
+
+	setStringPref : function(key, val)
 	{
-		var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+		var str = Components
+			.classes["@mozilla.org/supports-string;1"]
+			.createInstance(Components.interfaces.nsISupportsString);
 		str.data = val;
-		this.prefManager.setComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString, str);
+		this.prefManager
+			.setComplexValue("extensions.character-palette." + key, Components.interfaces.nsISupportsString, str);
 	},
-	getInteger : function(key)
+
+	getIntegerPref : function(key)
 	{
 		return this.prefManager.getIntPref("extensions.character-palette." + key);
 	},
-	setInteger : function(key, val)
+
+	setIntegerPref : function(key, val)
 	{
 		this.prefManager.setIntPref("extensions.character-palette." + key, val);
 	},
+
 	setClipboard : function(str)
 	{
 		const gClipboardHelper = Components
@@ -32,9 +46,12 @@ com.ryanium.characterpalette = {
 			.getService(Components.interfaces.nsIClipboardHelper);
 		gClipboardHelper.copyString(str);
 	},
+// utils end
+
+// palette prefs begin
 	getPalettes : function()
 	{
-		var palettes = com.ryanium.characterpalette.getString("palettes");
+		var palettes = com.ryanium.characterpalette.getStringPref("palettes");
 		var index = 0;
 		var ret = new Array();
 		while (index < palettes.length)
@@ -63,14 +80,18 @@ com.ryanium.characterpalette = {
 		}
 		return ret;
 	},
+
 	setPalettes : function(a)
 	{
 		var merged = new String();
 		for (var index in a)
 			merged += a[index].replace(/;/g, ';;') + ';';
-		com.ryanium.characterpalette.setString('palettes', merged);
+		com.ryanium.characterpalette.setStringPref('palettes', merged);
 	},
-	addPalettes : function()
+// palette prefs end
+
+// toolbar actions begin
+	loadPalettes : function()
 	{
 		var palettes = com.ryanium.characterpalette.getPalettes();
 		var popup = document.getElementById("character-palette-popup");
@@ -78,29 +99,30 @@ com.ryanium.characterpalette = {
 
 		while (popup.getElementsByClassName("charset").length)
 			popup.removeChild(popup.getElementsByClassName("charset")[0]);
-	
+
 		for (var index in palettes)
 		{
 			var palette = document.createElement("menuitem");
 			palette.setAttribute("class", "charset");
 			palette.setAttribute("group", "charset");
 			palette.setAttribute("type", "radio");
-			palette.setAttribute("oncommand", "com.ryanium.characterpalette.loadPalette(" + index + ", this.label);");
+			palette.setAttribute("oncommand", "com.ryanium.characterpalette.selectPalette(" + index + ", this.label);");
 			palette.setAttribute("label", palettes[index]);
 			popup.insertBefore(palette, seperator);
 		}
 		var selected = 0;
-		if (com.ryanium.characterpalette.getInteger("selected"))
-			selected = com.ryanium.characterpalette.getInteger("selected");
+		if (com.ryanium.characterpalette.getIntegerPref("selected"))
+			selected = com.ryanium.characterpalette.getIntegerPref("selected");
 		if (!popup.getElementsByClassName("charset")[selected])
 			selected = 0;
 		popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
-		com.ryanium.characterpalette.loadPalette(selected, palettes[selected]);
+		com.ryanium.characterpalette.selectPalette(selected, palettes[selected]);
 	},
-	loadPalette : function(index, charset)
+
+	selectPalette : function(index, charset)
 	{
 		this.selected = '';
-		com.ryanium.characterpalette.setInteger("selected", index);
+		com.ryanium.characterpalette.setIntegerPref("selected", index);
 		var container = document.getElementById("character-palette-buttons");
 		while (container.childNodes.length)
 			container.removeChild(container.firstChild);
@@ -112,13 +134,13 @@ com.ryanium.characterpalette = {
 			charButton.setAttribute("class", "character-palette-char");
 			charButton.setAttribute("group", "character-palette-char");
 			charButton.setAttribute("type", "radio");
-			charButton.setAttribute("autocheck", "true");
-			charButton.setAttribute("oncommand", "com.ryanium.characterpalette.toggle(this);");
+			charButton.setAttribute("oncommand", "com.ryanium.characterpalette.selectChar(this);");
 			charButton.setAttribute("label", charset[charIndex]);
 			container.appendChild(charButton);
 		}
 	},
-	toggle : function(obj)
+
+	selectChar : function(obj)
 	{
 		if (obj.id == this.selected)
 		{
@@ -131,14 +153,18 @@ com.ryanium.characterpalette = {
 			com.ryanium.characterpalette.setClipboard(obj.getAttribute('label'));
 		}
 	},
-	loadList : function()
+// toolbar actions end
+
+// preferences dialog begin
+	loadPaletteList : function()
 	{
 		var list = document.getElementById("character-palette-palette-list");
 		var palettes = com.ryanium.characterpalette.getPalettes();
 		for (index in palettes)
 			list.appendItem(palettes[index]);
 	},
-	save : function()
+
+	savePalettes : function()
 	{
 		var list = document.getElementById("character-palette-palette-list");
 		if (list == null)
@@ -149,14 +175,17 @@ com.ryanium.characterpalette = {
 		com.ryanium.characterpalette.setPalettes(palettes);
 		return true;
 	},
+
 	addPalette : function()
 	{
 		var list = document.getElementById("character-palette-palette-list");
 		var params = {add: false, palette: ""};
-		window.openDialog('chrome://character-palette/content/add-palette.xul', 'character-palette-add-palette-dialog', 'centerscreen,chrome,modal', params);
+		window.openDialog('chrome://character-palette/content/add-palette.xul',
+			'character-palette-add-palette-dialog', 'centerscreen,chrome,modal', params);
 		if (params.add)
 			list.appendItem(params.palette);
 	},
+
 	editPalette : function()
 	{
 		var list = document.getElementById("character-palette-palette-list");
@@ -167,27 +196,34 @@ com.ryanium.characterpalette = {
 			{
 				var orig = selected.label;
 				var params = {edit: false, palette: orig};
-				window.openDialog('chrome://character-palette/content/edit-palette.xul', 'character-palette-edit-palette-dialog', 'centerscreen,chrome,modal', params);
+				window.openDialog('chrome://character-palette/content/edit-palette.xul',
+					'character-palette-edit-palette-dialog', 'centerscreen,chrome,modal', params);
 				if (params.edit)
 					selected.label = params.palette;
 			}
 		}
 	},
+
 	deletePalette : function()
 	{
 		var list = document.getElementById("character-palette-palette-list");
 		if (list)
 			list.removeItemAt(list.selectedIndex);
 	},
+
 	setTextBox : function()
 	{
 		var textbox = document.getElementById("character-palette-textbox");
 		textbox.value = window.arguments[0].palette;
 	},
+// preferences dialog end
+
+// listener begin
 	init : function()
 	{
-		com.ryanium.characterpalette.addPalettes();
+		com.ryanium.characterpalette.loadPalettes();
 	}
+// listener end
 };
 
 window.addEventListener("load", com.ryanium.characterpalette.init, false);
