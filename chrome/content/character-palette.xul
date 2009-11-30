@@ -34,12 +34,6 @@
 
 		<toolbaritem id="character-palette-buttons">
 		</toolbaritem>
-
-		<textbox id="character-palette-pickbox" />
-		<toolbarbutton id="character-palette-copy" label="&copy;" accesskey="C"
-			tooltiptext="&copy.to.clipboard;" oncommand="com.ryanium.characterpalette.copy();" />
-		<toolbarbutton id="character-palette-clear" label="&clear;" accesskey="l"
-			tooltiptext="&clear.field.contents;" oncommand="com.ryanium.characterpalette.clear();" />
 	</toolbar>
 </toolbox>
 </overlay>
