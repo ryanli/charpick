@@ -1,42 +1,60 @@
-* Version 0.3, 18 Nov 2009
+==================== 0.3 ====================
 
-- Fully customizable toolbar, with default palettes set to the GNOME one's.
-- Unicode characters can now display correctly.
-- Use a help page as a substitution of the previous dialog.
+2009-11-18  Ryan Li <ryan@ryanium.com>
 
-* Version 0.2.2, 3 Nov 2009
+	* chrome/content/*: Fully customizable toolbar,
+		with default palettes set to the GNOME one's.
+	* chrome/content/style.css: Unicode characters
+		can now display correctly.
+	* chrome/content/help.*: Use a help page as
+		a substitution of the previous dialog.
 
-- Fixed the bug that menus are displayed in red when using themes.
-	Thanks for Alan Martin who points out this bug.
-- Homepage URL also changed to the AMO one.
-- Translator's name get listed in about dialog.
+==================== 0.2.2 ====================
 
-* Version 0.2.1, 8 Oct 2009
+2009-11-03  Ryan Li <ryan@ryanium.com>
 
-- Missing hu-HU declarating in chrome.manifest also fixed.
-	Thanks Mikes Kaszmán István for mentioning this.
-- New locales for ru-RU and sr-RS.
+	* chrome/content/style.css: Fixed the bug that menus
+		are displayed in red when using themes.
+		Thanks for Alan Martin who points out this bug.
+	* install.rdf: Homepage URL also changed to the AMO one.
+	* chrome/content/about.xul: Translator's name get listed
+		in about dialog.
 
-* Version 0.2, 28 January 2009
+==================== 0.2.1 ====================
 
-Sorry for this late update.
+2009-10-08  Ryan Li <ryan@ryanium.com>
 
-- User interface improved, with a input field containing the characters you want and easy to copy.
-- Along with it comes fresh new locales, ca-AD, de-DE, hu-HU, nl-NL, pl-PL, pt-BR, tr-TR and uk-UA, although some are not updated to this newest version.
-- A brief introduction is added.
-- The bug that some characters were improperly displayed, esp. under GNOME, solved.
+	* chrome.manifest: Missing hu-HU declarating in chrome.manifest fixed.
+		Thanks Mikes Kaszmán István for mentioning this.
+	* chrome/locale/*: New locales for ru-RU and sr-RS.
 
-* Version 0.1.1, 16 July 2008
+==================== 0.2 ====================
 
-- Added zh-CN, ja-JP, ko-KR, fr-FR altogether 4 locales.
-- Description at extension manager localized.
+2009-01-28  Ryan Li <ryan@ryanium.com>
 
-* Version 0.1, 16 July 2008
+	* chrome/content/*: User interface improved,
+		with a input field containing the characters
+		you want and easy to copy.
+	* chrome/locale/*: Locales for ca-AD, de-DE, hu-HU, nl-NL,
+		pl-PL, pt-BR, tr-TR and uk-UA.
+	* *: A brief introduction is added.
+	* chrome/content/style.css: The bug that some characters
+		were improperly displayed, esp. under GNOME, solved.
 
-- Fixed the incompability with form controls with tag name 'textarea'.
+==================== 0.1.1 ====================
 
-* Version 0.0, 16 July 2008
+2008-07-16  Ryan Li <ryan@ryanium.com>
 
-- The first version of Character Palette.
-------------------------------
-Ryan Li <ryan@ryanium.com>
+	* chrome/locale/*/charpick.properties: Description localized.
+	* chrome/locale/*: Locales for fr-FR, ja-JP, ko-KR, zh-CN.
+
+==================== 0.1 ====================
+
+2008-07-16  Ryan Li <ryan@ryanium.com>
+	* chrome/locale/character-palette.js: Fixed incompatibility with
+		`textarea's.
+
+==================== 0.0 ====================
+
+2008-07-16  Ryan Li <ryan@ryanium.com>
+	* *: First version of Character Palette.
