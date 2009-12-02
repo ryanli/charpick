@@ -6,8 +6,8 @@
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="com.ryanium.charpick.loadPaletteList();"
-	ondialogaccept="return com.ryanium.charpick.savePalettes();">
+	onload="com.ryanium.charpick.loadPrefs();"
+	ondialogaccept="return com.ryanium.charpick.savePrefs();">
 
 	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
 
@@ -28,6 +28,7 @@
 						accesskey="D" onclick="com.ryanium.charpick.deletePalette();" />
 				</vbox>
 			</hbox>
+			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" accesskey="P" />
 		</vbox>
 	</vbox>
 </dialog>

@@ -216,6 +216,31 @@ com.ryanium.charpick = {
 		var textbox = document.getElementById("charpick-textbox");
 		textbox.value = window.arguments[0].palette;
 	},
+
+	setMiddleClick : function()
+	{
+		var middleClick = document.getElementById("charpick-middle-click-paste");
+		var enabled = this.prefManager.getBoolPref("middlemouse.paste");
+		middleClick.setAttribute('checked', enabled);
+	},
+
+	saveMiddleClick : function()
+	{
+		var middleClick = document.getElementById("charpick-middle-click-paste");
+		this.prefManager.setBoolPref("middlemouse.paste", middleClick.hasAttribute('checked'));
+		return true;
+	},
+
+	loadPrefs : function()
+	{
+		com.ryanium.charpick.loadPaletteList();
+		com.ryanium.charpick.setMiddleClick();
+	},
+
+	savePrefs : function()
+	{
+		return com.ryanium.charpick.savePalettes() && com.ryanium.charpick.saveMiddleClick();
+	},
 // preferences dialog end
 
 // listener begin
