@@ -217,7 +217,7 @@ com.ryanium.charpick = {
 		textbox.value = window.arguments[0].palette;
 	},
 
-	setMiddleClick : function()
+	loadMiddleClick : function()
 	{
 		var middleClick = document.getElementById("charpick-middle-click-paste");
 		var enabled = this.prefManager.getBoolPref("middlemouse.paste");
@@ -234,7 +234,7 @@ com.ryanium.charpick = {
 	loadPrefs : function()
 	{
 		com.ryanium.charpick.loadPaletteList();
-		com.ryanium.charpick.setMiddleClick();
+		com.ryanium.charpick.loadMiddleClick();
 	},
 
 	savePrefs : function()
