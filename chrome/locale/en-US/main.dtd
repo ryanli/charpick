@@ -11,9 +11,6 @@
 <!ENTITY written.by "Written by">
 <!ENTITY documented.by "Documented by">
 <!ENTITY translated.by "Translated by">
-<!ENTITY author "Author">
-<!ENTITY translator "Translator">
-<!ENTITY translator.name "Ryan Li">
 <!ENTITY characterpalette.preferences "Character Palette Preferences">
 <!ENTITY palettes "Palettes:">
 <!ENTITY add "Add">
