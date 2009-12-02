@@ -12,7 +12,7 @@
 <!ENTITY add "Add">
 <!ENTITY edit "Edit">
 <!ENTITY delete "Delete">
-<!ENTITY paste.middle.click "Paste by middle-click (Requires browser restart)">
+<!ENTITY paste.middle.click "Paste by middle-click">
 <!ENTITY add.palette "Add Palette">
 <!ENTITY edit.palette "Edit Palette">
 <!ENTITY new.palette.label "New Palette:">
