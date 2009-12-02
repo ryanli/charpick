@@ -9,4 +9,4 @@
 # Licensed under GNU GPLv3.
 # Copyright (c) 2009, Ryan Li <ryan@ryanium.com>
 
-zip -q charpick.xpi -r * -x makexpi.sh versionbump.sh screenshot.png charpick.xpi
+zip -q charpick.xpi -r * -x makexpi.sh screenshot.png charpick.xpi

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
+<?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
+
+<dialog id="charpick-credits-dialog"
+	title="&credits;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="accept">
+
+	<tabbox>
+		<tabs>
+			<tab label="&written.by;" />
+			<tab label="&documented.by;" />
+			<tab label="&translated.by;" />
+		</tabs>
+		<tabpanels id="charpick-credits-panels">
+			<tabpanel>
+				<vbox flex="1">
+					<description>Ryan Li &lt;ryan@ryanium.com&gt;</description>
+					<description>GNOME Character Palette Authors:</description>
+					<description>Alexandre Muñiz &lt;munizao@xprt.net&gt;</description>
+					<description>Kevin Vandersloot</description>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<description>Dan Mueth &lt;d-mueth@uchicago.edu&gt;</description>
+					<description>Sun GNOME Documentation Team &lt;gdocteam@sun.com&gt;</description>
+					<description>Ryan Li &lt;ryan@ryanium.com&gt;</description>
+				</vbox>
+			</tabpanel>
+			<tabpanel>
+				<vbox flex="1">
+					<description>ca-AD: el_libre</description>
+					<description>de-DE: erglo</description>
+					<description>hu-HU: Mikes Kaszmán István</description>
+					<description>ja-JP: drry</description>
+					<description>ko-kR: Wtspout(용오름)</description>
+					<description>pl-PL: Wacław Jacek</description>
+					<description>ru-RU: Evgeny Lavrov &lt;EvgenyLavrov@gmail.com&gt;</description>
+					<description>sr-RS: Kacnepcku PC</description>
+					<description>tr-TR: MRTCVK</description>
+					<description>zh-CN: Ryan Li &lt;ryan@ryanium.com&gt;</description>
+				</vbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+</dialog>
