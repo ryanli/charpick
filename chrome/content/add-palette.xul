@@ -9,7 +9,7 @@
 	ondialogaccept="window.arguments[0].add = true;
 		window.arguments[0].palette = document.getElementById('charpick-textbox').value;">
 
-	<script type="application/x-javascript" src="chrome://charpick/content/character-palette.js" />
+	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
 
 	<vbox id="charpick-add-palette-details">
 		<hbox>
