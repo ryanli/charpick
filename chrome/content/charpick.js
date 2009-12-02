@@ -127,6 +127,8 @@ com.ryanium.charpick = {
 		while (container.childNodes.length)
 			container.removeChild(container.firstChild);
 
+		var copyString = document.getElementById('charpick-strings').getString('copy');
+
 		for (var charIndex in charset)
 		{
 			var charButton = document.createElement("toolbarbutton");
@@ -134,6 +136,7 @@ com.ryanium.charpick = {
 			charButton.setAttribute("class", "charpick-char");
 			charButton.setAttribute("group", "charpick-char");
 			charButton.setAttribute("type", "radio");
+			charButton.setAttribute("tooltiptext", copyString);
 			charButton.setAttribute("oncommand", "com.ryanium.charpick.selectChar(this);");
 			charButton.setAttribute("label", charset[charIndex]);
 			container.appendChild(charButton);
