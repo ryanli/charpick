@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
+<?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
+
+<dialog id="charpick-about-dialog"
+	title="&about.characterpalette;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	buttons="disclosure,accept"
+	buttonlabeldisclosure="&credits;"
+	ondialogdisclosure="window.openDialog('chrome://charpick/content/credits.xul',
+		'charpick-credits-dialog', 'centerscreen,chrome,modal');">
+
+	<vbox id="charpick-about-details">
+		<hbox pack="center">
+			<image src="chrome://charpick/content/logo-large.png" id="charpick-logo-large" />
+		</hbox>
+		<hbox pack="center">
+			<description class="charpick-software-name">&characterpalette; 0.3</description>
+		</hbox>
+		<hbox pack="center">
+			<description class="charpick-desc">&description;</description>
+		</hbox>
+		<hbox pack="center">
+			<description class="charpick-licence">&licence;</description>
+		</hbox>
+		<hbox pack="center">
+			<description class="charpick-copyright">&copyright;</description>
+		</hbox>
+	</vbox>
+</dialog>
