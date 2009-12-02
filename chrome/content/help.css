@@ -1,9 +1,33 @@
-#charpick-help h1, h2
+#charpick-help
 {
-	text-transform: capitalize;
+	background-color: #c6c6c6;
+	font-family: "DejaVu Sans Condensed", Tahoma, Verdana, sans-serif;
 }
 
 #charpick-help h1
 {
+	font-style: italic;
+	font-family: Georgia, serif;
 	font-variant: small-caps;
+	text-transform: capitalize;
+}
+
+#charpick-help h2
+{
+	text-transform: capitalize;
+}
+
+#charpick-help h1 + div
+{
+	margin-left: 1em;
+}
+
+#charpick-help h2 + div
+{
+	margin-left: 1.5em;
+}
+
+#charpick-help h3 + div
+{
+	margin-left: 2em;
 }
