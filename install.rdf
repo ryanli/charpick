@@ -6,7 +6,7 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:aboutURL>chrome://charpick/content/about.xul</em:aboutURL>
 		<em:creator>Ryan Li</em:creator>
-		<em:id>{5c17eb1d-edfa-5f58-3a64-a49f2071713c}</em:id>
+		<em:id>charpick@ryanium.com</em:id>
 		<em:name>Character Palette</em:name>
 		<em:description>Firefox toolbar for selecting strange characters that are not on my keyboard.</em:description>
 		<em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/8138</em:homepageURL>
