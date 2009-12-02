@@ -5,10 +5,10 @@ For official stable versions, you could download at the following AMO link:
 https://addons.mozilla.org/en-US/firefox/addon/8138
 
 Character Palette uses git as its version control system, hosted at github:
-http://github.com/ryanli/character-palette
+http://github.com/ryanli/charpick
 
 You can get the latest development files using the following command:
-$ git clone git://github.com/ryanli/character-palette.git
+$ git clone git://github.com/ryanli/charpick.git
 
 If you have any problem using this software, you can create an issue in
 the github homepage.
