@@ -15,7 +15,7 @@
 			<image src="chrome://charpick/content/logo-large.png" id="charpick-logo-large" />
 		</hbox>
 		<hbox pack="center">
-			<description class="charpick-software-name">&characterpalette; 0.3</description>
+			<description class="charpick-software-name">&characterpalette; 0.4</description>
 		</hbox>
 		<hbox pack="center">
 			<description class="charpick-desc">&description;</description>
