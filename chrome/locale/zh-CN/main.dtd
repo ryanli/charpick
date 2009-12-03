@@ -1,15 +1,33 @@
 <!ENTITY characterpalette "字符板">
 <!ENTITY characterpalette.toolbar "字符板工具栏">
 <!ENTITY preferences "首选项">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "帮助">
+<!ENTITY help.accesskey "H">
 <!ENTITY about "关于">
+<!ENTITY about.accesskey "A">
 <!ENTITY about.characterpalette "关于字符板">
+<!ENTITY description "Firefox 工具栏, 用于选择那些在你的键盘上找不到的字符.">
+<!ENTITY licence "发布于GNU General Public Licence v3">
+<!ENTITY copyright "© 2008–2009 Ryan Li 与其他人">
+<!ENTITY credits "致谢">
+<!ENTITY written.by "编写者">
+<!ENTITY documented.by "文档撰写者">
+<!ENTITY translated.by "翻译者">
 <!ENTITY characterpalette.preferences "字符板首选项">
 <!ENTITY palettes "字符板:">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "添加">
+<!ENTITY add.accesskey "A">
 <!ENTITY edit "编辑">
+<!ENTITY edit.accesskey "E">
 <!ENTITY delete "删除">
+<!ENTITY delete.accesskey "D">
+<!ENTITY paste.middle.click "中键粘贴">
+<!ENTITY paste.middle.click.accesskey "m">
 <!ENTITY add.palette "添加字符板">
 <!ENTITY edit.palette "编辑字符板">
 <!ENTITY new.palette.label "新字符板:">
+<!ENTITY new.palette.accesskey "N">
 <!ENTITY edit.palette.label "编辑字符板:">
+<!ENTITY edit.palette.accesskey "E">
