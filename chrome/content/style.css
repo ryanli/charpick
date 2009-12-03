@@ -1,6 +1,17 @@
 @import url("chrome://global/skin/");
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+.charpick-caption
+{
+	font-weight: bold;
+}
+
+.charpick-details
+{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
 #charpick-logo-large
 {
 	width: 48px;
