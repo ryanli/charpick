@@ -1,8 +1,11 @@
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette 도구막대">
 <!ENTITY preferences "환경설정">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "도움말">
+<!ENTITY help.accesskey "H">
 <!ENTITY about "정보">
+<!ENTITY about.accesskey "A">
 <!ENTITY about.characterpalette "Character Palette 정보">
 <!ENTITY description "내 키보드에 없는 특이한 문자들을 선택하기 위한 Firefox 도구막대">
 <!ENTITY licence "GNU General Public Licence v3하에 배포">
@@ -13,11 +16,18 @@
 <!ENTITY translated.by "번역">
 <!ENTITY characterpalette.preferences "Character Palette 환경설정">
 <!ENTITY palettes "팔레트:">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "추가">
+<!ENTITY add.accesskey "A">
 <!ENTITY edit "편집">
+<!ENTITY edit.accesskey "E">
 <!ENTITY delete "삭제">
+<!ENTITY delete.accesskey "D">
 <!ENTITY paste.middle.click "가운데 클릭해 붙여넣기">
+<!ENTITY paste.middle.click.accesskey "m">
 <!ENTITY add.palette "팔레트 추가">
 <!ENTITY edit.palette "팔레트 편집">
 <!ENTITY new.palette.label "새 팔레트:">
+<!ENTITY new.palette.accesskey "N">
 <!ENTITY edit.palette.label "팔레트 편집:">
+<!ENTITY edit.palette.accesskey "E">

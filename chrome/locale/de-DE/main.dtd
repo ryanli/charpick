@@ -1,15 +1,33 @@
 <!ENTITY characterpalette "Zeichenpalette">
 <!ENTITY characterpalette.toolbar "Zeichenpaletten-Symbolleiste">
 <!ENTITY preferences "Einstellungen">
+<!ENTITY preferences.accesskey "E">
 <!ENTITY help "Hilfe">
+<!ENTITY help.accesskey "H">
 <!ENTITY about "Über...">
+<!ENTITY about.accesskey "Ü">
 <!ENTITY about.characterpalette "Über Zeichenpalette">
+<!ENTITY description "Eine Symbolleiste für Firefox zur Auswahl fremder Zeichen die nicht auf der Tastatur zu finden sind.">
+<!ENTITY licence "Veröffentlicht unter der GNU General Public Licence v3">
+<!ENTITY copyright "© 2008–2009 Ryan Li et al.">
+<!ENTITY credits "MItwirkende">
+<!ENTITY written.by "Geschrieben von">
+<!ENTITY documented.by "Dokumentiert von">
+<!ENTITY translated.by "Übersetzt von">
 <!ENTITY characterpalette.preferences "Zeichenpalette - Einstellungen">
 <!ENTITY palettes "Paletten:">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "Hinzufügen">
+<!ENTITY add.accesskey "H">
 <!ENTITY edit "Bearbeiten">
+<!ENTITY edit.accesskey "e">
 <!ENTITY delete "Entfernen">
+<!ENTITY delete.accesskey "t">
+<!ENTITY paste.middle.click "Mit der mittleren Maustaste einfügen">
+<!ENTITY paste.middle.click.accesskey "m">
 <!ENTITY add.palette "Palette hinzufügen">
 <!ENTITY edit.palette "Palette bearbeiten">
 <!ENTITY new.palette.label "Neue Palette:">
+<!ENTITY new.palette.accesskey "N">
 <!ENTITY edit.palette.label "Palette bearbeiten:">
+<!ENTITY edit.palette.accesskey "e">

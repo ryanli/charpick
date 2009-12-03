@@ -1,15 +1,33 @@
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette Araç Çubuğu">
 <!ENTITY preferences "Tercihler">
+<!ENTITY preferences.accesskey "T">
 <!ENTITY help "Yardım">
+<!ENTITY help.accesskey "Y">
 <!ENTITY about "Hakkında">
+<!ENTITY about.accesskey "H">
 <!ENTITY about.characterpalette "Character Palette Hakkında">
+<!ENTITY description "Klavyende olmayan özel karekterleri firefox araç çubuğuna ekler...">
+<!ENTITY licence "GNU Lisansı ile korunmaktadır.">
+<!ENTITY copyright "© 2008–2009 Ryan Li ve diğerleri">
+<!ENTITY credits "Yapımcılar">
+<!ENTITY written.by "Yazan">
+<!ENTITY documented.by "Belgeleme">
+<!ENTITY translated.by "Çeviri">
 <!ENTITY characterpalette.preferences "Character Palette Tercihleri">
 <!ENTITY palettes "Paletler">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "Ekle">
+<!ENTITY add.accesskey "E">
 <!ENTITY edit "Düzenle">
+<!ENTITY edit.accesskey "D">
 <!ENTITY delete "Sil">
+<!ENTITY delete.accesskey "S">
+<!ENTITY paste.middle.click "Orta tık ile yapıştır">
+<!ENTITY paste.middle.click.accesskey "O">
 <!ENTITY add.palette "Palet ekle">
 <!ENTITY edit.palette "Paleti düzenle">
 <!ENTITY new.palette.label "Yeni palet:">
+<!ENTITY new.palette.accesskey "Y">
 <!ENTITY edit.palette.label "Paleti düzenle:">
+<!ENTITY edit.palette.accesskey "P">
