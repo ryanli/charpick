@@ -1,8 +1,11 @@
 <!ENTITY characterpalette "Палитра символов">
 <!ENTITY characterpalette.toolbar "Палитра символов">
 <!ENTITY preferences "Настройки">
+<!ENTITY preferences.accesskey "Н">
 <!ENTITY help "Помощь">
+<!ENTITY help.accesskey "П">
 <!ENTITY about "О расширении">
+<!ENTITY about.accesskey "О">
 <!ENTITY about.characterpalette "О палитре символов">
 <!ENTITY description "С помощью палитры специальных символов вы сможете выбрать нужный символ и вставить его в текст.">
 <!ENTITY licence "Выпущено под GNU General Public Licence v3">
@@ -13,11 +16,18 @@
 <!ENTITY translated.by "Перевод">
 <!ENTITY characterpalette.preferences "Настройки палитры символов">
 <!ENTITY palettes "Палитры:">
+<!ENTITY palettes.accesskey "П">
 <!ENTITY add "Добавить">
+<!ENTITY add.accesskey "Д">
 <!ENTITY edit "Изменить">
+<!ENTITY edit.accesskey "И">
 <!ENTITY delete "Удалить">
+<!ENTITY delete.accesskey "У">
 <!ENTITY paste.middle.click "Вставка нажатием средней кнопки мыши">
+<!ENTITY paste.middle.click.accesskey "с">
 <!ENTITY add.palette "Добавить палитру">
 <!ENTITY edit.palette "Изменить палитру">
 <!ENTITY new.palette.label "Новая палитра:">
+<!ENTITY new.palette.accesskey "Н">
 <!ENTITY edit.palette.label "Изменить палитру:">
+<!ENTITY edit.palette.accesskey "И">
