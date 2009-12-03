@@ -24,7 +24,7 @@
 					oncommand="window.openDialog('chrome://charpick/content/preferences.xul',
 						'charpick-preferences-dialog', 'centerscreen,chrome,modal');" />
 				<menuitem id="charpick-menu-help" label="&help;" accesskey="&help.accesskey;"
-					oncommand="gBrowser.selectedTab = gBrowser.addTab('chrome://charpick/content/help.html');" />
+					oncommand="gBrowser.selectedTab = gBrowser.addTab('http://wiki.github.com/ryanli/charpick/');" />
 				<menuitem id="charpick-menu-about" label="&about;" accesskey="&about.accesskey;"
 					oncommand="window.openDialog('chrome://charpick/content/about.xul',
 						'charpick-about-dialog', 'centerscreen,chrome,modal');" />
