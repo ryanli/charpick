@@ -1,3 +1,20 @@
+==================== 0.4 ====================
+2009-12-03  Ryan Li <ryan@ryanium.com>
+	* *: Changed character-palette/characterpalette
+		to charpick.
+	* install.rdf: changed ID to charpick@ryanium.com.
+	* chrome/content/charpick.xul, charpick.js:
+		Copy directly after pushing the buttons.
+	* chrome/content/about.xul, credits.xul:
+		About dialog modified, and added credits dialog.
+	* chrome/content/help.html, help.css:
+		Moved help page to GitHub.
+	* chrome/content/preferences.xul:
+		Option for pasting with middle-clicks.
+	* chrome/content/logo.png, logo-large.png:
+		Logo updates.
+	* chrome/locale: Locale updates.
+
 ==================== 0.3 ====================
 
 2009-11-18  Ryan Li <ryan@ryanium.com>
