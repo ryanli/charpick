@@ -1,8 +1,11 @@
 <!ENTITY characterpalette "Karaktertábla">
 <!ENTITY characterpalette.toolbar "Karaktertábla eszköztár">
 <!ENTITY preferences "Beállítások">
+<!ENTITY preferences.accesskey "B">
 <!ENTITY help "Súgó">
+<!ENTITY help.accesskey "S">
 <!ENTITY about "Névjegy">
+<!ENTITY about.accesskey "N">
 <!ENTITY about.characterpalette "Karaktertábla névjegye">
 <!ENTITY description "Firefox eszköztár a billentyűzeten nem található karakterekkel.">
 <!ENTITY licence "Kiadva a GNU General Public Licence v3 alatt.">
@@ -13,11 +16,18 @@
 <!ENTITY translated.by "Fordította">
 <!ENTITY characterpalette.preferences "Karaktertábla beállítások">
 <!ENTITY palettes "Táblák:">
+<!ENTITY palettes.accesskey "T">
 <!ENTITY add "Hozzáadás">
+<!ENTITY add.accesskey "H">
 <!ENTITY edit "Szerkesztés">
+<!ENTITY edit.accesskey "S">
 <!ENTITY delete "Törlés">
+<!ENTITY delete.accesskey "T">
 <!ENTITY paste.middle.click "Beillesztés középső kattintással">
+<!ENTITY paste.middle.click.accesskey "B">
 <!ENTITY add.palette "Tábla hozzáadása">
 <!ENTITY edit.palette "Tábla szerkesztése">
 <!ENTITY new.palette.label "Új tábla">
+<!ENTITY new.palette.accesskey "j">
 <!ENTITY edit.palette.label "Tábla szerkesztése:">
+<!ENTITY edit.palette.accesskey "s">
