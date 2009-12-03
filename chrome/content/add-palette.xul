@@ -13,7 +13,7 @@
 
 	<vbox id="charpick-add-palette-details">
 		<hbox>
-			<label value="&new.palette.label;" control="palette" accesskey="P" />
+			<label value="&new.palette.label;" control="palette" accesskey="&new.palette.accesskey;" />
 			<textbox id="charpick-textbox" />
 		</hbox>
 	</vbox>

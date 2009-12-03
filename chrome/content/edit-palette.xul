@@ -14,7 +14,7 @@
 
 	<vbox id="charpick-edit-palette-details">
 		<hbox>
-			<label value="&edit.palette.label;" control="palette" accesskey="P" />
+			<label value="&edit.palette.label;" control="palette" accesskey="&edit.palette.accesskey;" />
 			<textbox id="charpick-textbox" />
 		</hbox>
 	</vbox>

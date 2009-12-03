@@ -15,20 +15,20 @@
 		<label id="charpick-name" class="charpick-caption" value="&characterpalette;" />
 		<vbox class="charpick-details">
 			<label id="charpick-palettes" value="&palettes;"
-				control="charpick-palette-list" accesskey="P" />
+				control="charpick-palette-list" accesskey="&palettes.accesskey;" />
 			<hbox>
 				<listbox id="charpick-palette-list">
 				</listbox>
 				<vbox>
 					<button id="charpick-add" label="&add;"
-						accesskey="A" onclick="com.ryanium.charpick.addPalette();" />
+						accesskey="&add.accesskey;" onclick="com.ryanium.charpick.addPalette();" />
 					<button id="charpick-edit" label="&edit;"
-						accesskey="E" onclick="com.ryanium.charpick.editPalette();" />
+						accesskey="&edit.accesskey;" onclick="com.ryanium.charpick.editPalette();" />
 					<button id="charpick-delete" label="&delete;"
-						accesskey="D" onclick="com.ryanium.charpick.deletePalette();" />
+						accesskey="&delete.accesskey;" onclick="com.ryanium.charpick.deletePalette();" />
 				</vbox>
 			</hbox>
-			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" accesskey="P" />
+			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" accesskey="&paste.middle.click.accesskey;" />
 		</vbox>
 	</vbox>
 </dialog>

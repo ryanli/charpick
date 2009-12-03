@@ -1,8 +1,11 @@
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Character Palette Toolbar">
 <!ENTITY preferences "Preferences">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "Help">
+<!ENTITY help.accesskey "H">
 <!ENTITY about "About">
+<!ENTITY about.accesskey "A">
 <!ENTITY about.characterpalette "About Character Palette">
 <!ENTITY description "Firefox toolbar for selecting strange characters that are not on my keyboard.">
 <!ENTITY licence "Released under GNU General Public Licence v3">
@@ -13,11 +16,18 @@
 <!ENTITY translated.by "Translated by">
 <!ENTITY characterpalette.preferences "Character Palette Preferences">
 <!ENTITY palettes "Palettes:">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "Add">
+<!ENTITY add.accesskey "A">
 <!ENTITY edit "Edit">
+<!ENTITY edit.accesskey "E">
 <!ENTITY delete "Delete">
+<!ENTITY delete.accesskey "D">
 <!ENTITY paste.middle.click "Paste with middle-click">
+<!ENTITY paste.middle.click.accesskey "m">
 <!ENTITY add.palette "Add Palette">
 <!ENTITY edit.palette "Edit Palette">
 <!ENTITY new.palette.label "New Palette:">
+<!ENTITY new.palette.accesskey "N">
 <!ENTITY edit.palette.label "Edit Palette:">
+<!ENTITY edit.palette.accesskey "E">
