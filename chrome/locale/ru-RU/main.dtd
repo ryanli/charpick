@@ -3,19 +3,20 @@
 <!ENTITY preferences "Настройки">
 <!ENTITY help "Помощь">
 <!ENTITY about "О расширении">
-<!ENTITY copy "Копировать">
-<!ENTITY clear "Очистить">
-<!ENTITY copy.to.clipboard "Копировать в буфер">
-<!ENTITY clear.field.contents "Очистить поле">
 <!ENTITY about.characterpalette "О палитре символов">
-<!ENTITY author "Автор">
-<!ENTITY translator "Перевод">
-<!ENTITY translator.name "Evgeny Lavrov (EvgenyLavrov@gmail.com)">
+<!ENTITY description "С помощью палитры специальных символов вы сможете выбрать нужный символ и вставить его в текст.">
+<!ENTITY licence "Выпущено под GNU General Public Licence v3">
+<!ENTITY copyright "© 2008–2009 Ryan Li и другие">
+<!ENTITY credits "Над расширением работали">
+<!ENTITY written.by "Автор">
+<!ENTITY documented.by "Документация">
+<!ENTITY translated.by "Перевод">
 <!ENTITY characterpalette.preferences "Настройки палитры символов">
 <!ENTITY palettes "Палитры:">
 <!ENTITY add "Добавить">
 <!ENTITY edit "Изменить">
 <!ENTITY delete "Удалить">
+<!ENTITY paste.middle.click "Вставка нажатием средней кнопки мыши">
 <!ENTITY add.palette "Добавить палитру">
 <!ENTITY edit.palette "Изменить палитру">
 <!ENTITY new.palette.label "Новая палитра:">

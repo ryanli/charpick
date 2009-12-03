@@ -1,22 +1,5 @@
 <!ENTITY characterpalette "Palette de caractères">
 <!ENTITY characterpalette.toolbar "Barre de la palette de caractères">
-<!ENTITY preferences "">
 <!ENTITY help "Aide">
 <!ENTITY about "À propos">
-<!ENTITY copy "Copier">
-<!ENTITY clear "Effacer">
-<!ENTITY copy.to.clipboard "Copier dans le presse-papiers">
-<!ENTITY clear.field.contents "Effacer le contenu du champ">
 <!ENTITY about.characterpalette "À propos de la palette de caractères">
-<!ENTITY author "Auteur">
-<!ENTITY translator "">
-<!ENTITY translator.name "">
-<!ENTITY characterpalette.preferences "">
-<!ENTITY palettes "">
-<!ENTITY add "">
-<!ENTITY edit "">
-<!ENTITY delete "">
-<!ENTITY add.palette "">
-<!ENTITY edit.palette "">
-<!ENTITY new.palette.label "">
-<!ENTITY edit.palette.label "">

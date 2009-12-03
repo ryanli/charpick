@@ -3,14 +3,7 @@
 <!ENTITY preferences "Einstellungen">
 <!ENTITY help "Hilfe">
 <!ENTITY about "Über...">
-<!ENTITY copy "Kopieren">
-<!ENTITY clear "Löschen">
-<!ENTITY copy.to.clipboard "In Zwischenablage kopieren">
-<!ENTITY clear.field.contents "Inhalt des Eingabefeldes löschen">
 <!ENTITY about.characterpalette "Über Zeichenpalette">
-<!ENTITY author "Autor">
-<!ENTITY translator "Übersetzer">
-<!ENTITY translator.name "erglo">
 <!ENTITY characterpalette.preferences "Zeichenpalette - Einstellungen">
 <!ENTITY palettes "Paletten:">
 <!ENTITY add "Hinzufügen">

@@ -3,19 +3,20 @@
 <!ENTITY preferences "Preferències">
 <!ENTITY help "Ajuda">
 <!ENTITY about "Sobre">
-<!ENTITY copy "Copia">
-<!ENTITY clear "Neteja">
-<!ENTITY copy.to.clipboard "Copia al Portapapers">
-<!ENTITY clear.field.contents "Neteja el contingut dels camps">
 <!ENTITY about.characterpalette "Sobre Paleta de Caràcters">
-<!ENTITY author "Autor/a">
-<!ENTITY translator "Traductor/a">
-<!ENTITY translator.name "el_libre">
+<!ENTITY description "Barra d'eines per a Firefox per tal de seleccionar caràcters estranys que no estan al teclat">
+<!ENTITY licence "Llançat sota la Llicència General Pública GNU v3">
+<!ENTITY copyright "© 2008–2009 Ryan Li i d'altres">
+<!ENTITY credits "Crèdits">
+<!ENTITY written.by "Escrit per">
+<!ENTITY documented.by "Documentat per">
+<!ENTITY translated.by "Traduït per">
 <!ENTITY characterpalette.preferences "Preferències de la Paleta de Caràcters">
 <!ENTITY palettes "Paletes:">
 <!ENTITY add "Afegeix">
 <!ENTITY edit "Edita">
 <!ENTITY delete "Esborra">
+<!ENTITY paste.middle.click "Enganxa amb un clic del botó del mig">
 <!ENTITY add.palette "Afegeix Paleta">
 <!ENTITY edit.palette "Edita Paleta">
 <!ENTITY new.palette.label "Nova Paleta:">

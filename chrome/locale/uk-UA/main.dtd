@@ -1,22 +1,5 @@
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Панель інстументів Character Palette">
-<!ENTITY preferences "">
 <!ENTITY help "Help">
 <!ENTITY about "Про">
-<!ENTITY copy "Copy">
-<!ENTITY clear "Clear">
-<!ENTITY copy.to.clipboard "Copy To Clipboard">
-<!ENTITY clear.field.contents "Clear Field Contents">
 <!ENTITY about.characterpalette "Про Character Palette">
-<!ENTITY author "Автор">
-<!ENTITY translator "">
-<!ENTITY translator.name "">
-<!ENTITY characterpalette.preferences "">
-<!ENTITY palettes "">
-<!ENTITY add "">
-<!ENTITY edit "">
-<!ENTITY delete "">
-<!ENTITY add.palette "">
-<!ENTITY edit.palette "">
-<!ENTITY new.palette.label "">
-<!ENTITY edit.palette.label "">

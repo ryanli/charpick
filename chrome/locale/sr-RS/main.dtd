@@ -3,19 +3,20 @@
 <!ENTITY preferences "Подешавања">
 <!ENTITY help "Помоћ">
 <!ENTITY about "О додатку">
-<!ENTITY copy "Умножи">
-<!ENTITY clear "Очисти">
-<!ENTITY copy.to.clipboard "Умножи у оставу">
-<!ENTITY clear.field.contents "Очисти садржај поља">
 <!ENTITY about.characterpalette "О Палети знакова">
-<!ENTITY author "Аутор">
-<!ENTITY translator "Преводилац">
-<!ENTITY translator.name "Kacnepcku PC">
+<!ENTITY description "Трака са алаткама за лако уношење посебних знакова.">
+<!ENTITY licence "Објављено под GNU општом јавном лиценцом в3">
+<!ENTITY copyright "© 2008–2009 Рајан Ли и остали">
+<!ENTITY credits "Заслуге">
+<!ENTITY written.by "Направио">
+<!ENTITY documented.by "Документовали">
+<!ENTITY translated.by "Превели">
 <!ENTITY characterpalette.preferences "Подешавања Палете знакова">
 <!ENTITY palettes "Палете:">
 <!ENTITY add "Додај">
 <!ENTITY edit "Уреди">
 <!ENTITY delete "Обриши">
+<!ENTITY paste.middle.click "Налепи средњим кликом">
 <!ENTITY add.palette "Додај палету">
 <!ENTITY edit.palette "Уреди палету">
 <!ENTITY new.palette.label "Нова палета:">

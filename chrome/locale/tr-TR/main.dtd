@@ -3,14 +3,7 @@
 <!ENTITY preferences "Tercihler">
 <!ENTITY help "Yardım">
 <!ENTITY about "Hakkında">
-<!ENTITY copy "Kopyala">
-<!ENTITY clear "Temizle">
-<!ENTITY copy.to.clipboard "Panoya kopyala">
-<!ENTITY clear.field.contents "Alan İçeriğini Temizle">
 <!ENTITY about.characterpalette "Character Palette Hakkında">
-<!ENTITY author "Yazar">
-<!ENTITY translator "Çeviren">
-<!ENTITY translator.name "MRTCVK">
 <!ENTITY characterpalette.preferences "Character Palette Tercihleri">
 <!ENTITY palettes "Paletler">
 <!ENTITY add "Ekle">

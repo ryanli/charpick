@@ -3,14 +3,7 @@
 <!ENTITY preferences "Preferencje">
 <!ENTITY help "Pomoc">
 <!ENTITY about "O rozszerzeniu">
-<!ENTITY copy "Kopiuj">
-<!ENTITY clear "Wyczyść">
-<!ENTITY copy.to.clipboard "Kopiuj do schowka">
-<!ENTITY clear.field.contents "Wyczyść pole">
 <!ENTITY about.characterpalette "Character Palette - informacje">
-<!ENTITY author "Autor">
-<!ENTITY translator "Tłumacz">
-<!ENTITY translator.name "Wacław Jacek">
 <!ENTITY characterpalette.preferences "Character Palette - preferencje">
 <!ENTITY palettes "Palety:">
 <!ENTITY add "Dodaj">

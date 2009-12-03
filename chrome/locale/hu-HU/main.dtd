@@ -3,19 +3,20 @@
 <!ENTITY preferences "Beállítások">
 <!ENTITY help "Súgó">
 <!ENTITY about "Névjegy">
-<!ENTITY copy "Másolás">
-<!ENTITY clear "Törlés">
-<!ENTITY copy.to.clipboard "Másolás a vágólapra">
-<!ENTITY clear.field.contents "Beviteli mező törlése">
 <!ENTITY about.characterpalette "Karaktertábla névjegye">
-<!ENTITY author "Készítő">
-<!ENTITY translator "Fordító">
-<!ENTITY translator.name "Mikes Kaszmán István">
+<!ENTITY description "Firefox eszköztár a billentyűzeten nem található karakterekkel.">
+<!ENTITY licence "Kiadva a GNU General Public Licence v3 alatt.">
+<!ENTITY copyright "© 2008–2009 Ryan Li és mások">
+<!ENTITY credits "Közreműködők">
+<!ENTITY written.by "Írta">
+<!ENTITY documented.by "Dokumentálta">
+<!ENTITY translated.by "Fordította">
 <!ENTITY characterpalette.preferences "Karaktertábla beállítások">
 <!ENTITY palettes "Táblák:">
 <!ENTITY add "Hozzáadás">
 <!ENTITY edit "Szerkesztés">
 <!ENTITY delete "Törlés">
+<!ENTITY paste.middle.click "Beillesztés középső kattintással">
 <!ENTITY add.palette "Tábla hozzáadása">
 <!ENTITY edit.palette "Tábla szerkesztése">
 <!ENTITY new.palette.label "Új tábla">
