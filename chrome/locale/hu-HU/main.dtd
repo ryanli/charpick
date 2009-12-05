@@ -11,12 +11,12 @@
 <!ENTITY licence "Kiadva a GNU General Public Licence v3 alatt.">
 <!ENTITY copyright "© 2008–2009 Ryan Li és mások">
 <!ENTITY credits "Közreműködők">
-<!ENTITY written.by "Írta">
-<!ENTITY documented.by "Dokumentálta">
-<!ENTITY translated.by "Fordította">
-<!ENTITY characterpalette.preferences "Karaktertábla beállítások">
+<!ENTITY written.by "Készítő">
+<!ENTITY documented.by "Dokumentálás">
+<!ENTITY translated.by "Fordítók">
+<!ENTITY characterpalette.preferences "Karaktertábla - beállítások">
 <!ENTITY palettes "Táblák:">
-<!ENTITY palettes.accesskey "T">
+<!ENTITY palettes.accesskey "l">
 <!ENTITY add "Hozzáadás">
 <!ENTITY add.accesskey "H">
 <!ENTITY edit "Szerkesztés">

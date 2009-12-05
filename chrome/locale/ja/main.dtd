@@ -1,0 +1,33 @@
+<!ENTITY characterpalette "文字パレット">
+<!ENTITY characterpalette.toolbar "文字パレットツールバー">
+<!ENTITY preferences "設定">
+<!ENTITY preferences.accesskey "P">
+<!ENTITY help "ヘルプ">
+<!ENTITY help.accesskey "H">
+<!ENTITY about "About">
+<!ENTITY about.accesskey "A">
+<!ENTITY about.characterpalette "文字パレットについて">
+<!ENTITY description "キーボードにない特殊な文字を選択するための Firefox ツールバーです。">
+<!ENTITY licence "GNU General Public Licence v3 の下で公開しています">
+<!ENTITY copyright "© 2008–2009 Ryan Li ほか">
+<!ENTITY credits "クレジット">
+<!ENTITY written.by "作成">
+<!ENTITY documented.by "文書">
+<!ENTITY translated.by "翻訳">
+<!ENTITY characterpalette.preferences "文字パレット設定">
+<!ENTITY palettes "パレット:">
+<!ENTITY palettes.accesskey "P">
+<!ENTITY add "追加">
+<!ENTITY add.accesskey "A">
+<!ENTITY edit "編集">
+<!ENTITY edit.accesskey "E">
+<!ENTITY delete "削除">
+<!ENTITY delete.accesskey "D">
+<!ENTITY paste.middle.click "中クリックで貼り付ける">
+<!ENTITY paste.middle.click.accesskey "m">
+<!ENTITY add.palette "パレットを追加">
+<!ENTITY edit.palette "パレットを編集">
+<!ENTITY new.palette.label "新規パレット:">
+<!ENTITY new.palette.accesskey "N">
+<!ENTITY edit.palette.label "パレット編集:">
+<!ENTITY edit.palette.accesskey "E">

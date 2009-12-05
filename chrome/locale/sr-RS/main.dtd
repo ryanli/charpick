@@ -1,8 +1,11 @@
 <!ENTITY characterpalette "Палета знакова">
 <!ENTITY characterpalette.toolbar "Трака са палетом знакова">
 <!ENTITY preferences "Подешавања">
+<!ENTITY preferences.accesskey "П">
 <!ENTITY help "Помоћ">
+<!ENTITY help.accesskey "И">
 <!ENTITY about "О додатку">
+<!ENTITY about.accesskey "О">
 <!ENTITY about.characterpalette "О Палети знакова">
 <!ENTITY description "Трака са алаткама за лако уношење посебних знакова.">
 <!ENTITY licence "Објављено под GNU општом јавном лиценцом в3">
@@ -13,11 +16,18 @@
 <!ENTITY translated.by "Превели">
 <!ENTITY characterpalette.preferences "Подешавања Палете знакова">
 <!ENTITY palettes "Палете:">
+<!ENTITY palettes.accesskey "Л">
 <!ENTITY add "Додај">
+<!ENTITY add.accesskey "Д">
 <!ENTITY edit "Уреди">
+<!ENTITY edit.accesskey "У">
 <!ENTITY delete "Обриши">
+<!ENTITY delete.accesskey "О">
 <!ENTITY paste.middle.click "Налепи средњим кликом">
+<!ENTITY paste.middle.click.accesskey "с">
 <!ENTITY add.palette "Додај палету">
 <!ENTITY edit.palette "Уреди палету">
 <!ENTITY new.palette.label "Нова палета:">
+<!ENTITY new.palette.accesskey "Н">
 <!ENTITY edit.palette.label "Уређивање палете:">
+<!ENTITY edit.palette.accesskey "У">
