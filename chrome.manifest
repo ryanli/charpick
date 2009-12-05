@@ -6,7 +6,7 @@ locale charpick de-DE chrome/locale/de-DE/
 locale charpick en-US chrome/locale/en-US/
 locale charpick fr-FR chrome/locale/fr-FR/
 locale charpick hu-HU chrome/locale/hu-HU/
-locale charpick ja-JP chrome/locale/ja-JP/
+locale charpick ja chrome/locale/ja/
 locale charpick ko-KR chrome/locale/ko-KR/
 locale charpick nl-NL chrome/locale/nl-NL/
 locale charpick pl-PL chrome/locale/pl-PL/
