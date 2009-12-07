@@ -4,6 +4,7 @@ overlay chrome://browser/content/browser.xul chrome://charpick/content/charpick.
 locale charpick ca-AD chrome/locale/ca-AD/
 locale charpick de-DE chrome/locale/de-DE/
 locale charpick en-US chrome/locale/en-US/
+locale charpick es-ES chrome/locale/es-ES/
 locale charpick fr-FR chrome/locale/fr-FR/
 locale charpick hu-HU chrome/locale/hu-HU/
 locale charpick ja chrome/locale/ja/
