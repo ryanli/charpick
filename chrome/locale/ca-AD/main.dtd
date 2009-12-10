@@ -1,8 +1,11 @@
 <!ENTITY characterpalette "Paleta de Caràcters">
 <!ENTITY characterpalette.toolbar "Barra d'Eines Paleta de Caràcters">
 <!ENTITY preferences "Preferències">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "Ajuda">
+<!ENTITY help.accesskey "A">
 <!ENTITY about "Sobre">
+<!ENTITY about.accesskey "S">
 <!ENTITY about.characterpalette "Sobre Paleta de Caràcters">
 <!ENTITY description "Barra d'eines per a Firefox per tal de seleccionar caràcters estranys que no estan al teclat">
 <!ENTITY licence "Llançat sota la Llicència General Pública GNU v3">
@@ -13,11 +16,18 @@
 <!ENTITY translated.by "Traduït per">
 <!ENTITY characterpalette.preferences "Preferències de la Paleta de Caràcters">
 <!ENTITY palettes "Paletes:">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "Afegeix">
+<!ENTITY add.accesskey "A">
 <!ENTITY edit "Edita">
+<!ENTITY edit.accesskey "E">
 <!ENTITY delete "Esborra">
+<!ENTITY delete.accesskey "s">
 <!ENTITY paste.middle.click "Enganxa amb un clic del botó del mig">
+<!ENTITY paste.middle.click.accesskey "m">
 <!ENTITY add.palette "Afegeix Paleta">
 <!ENTITY edit.palette "Edita Paleta">
 <!ENTITY new.palette.label "Nova Paleta:">
+<!ENTITY new.palette.accesskey "N">
 <!ENTITY edit.palette.label "Edita Paleta:">
+<!ENTITY edit.palette.accesskey "E">
