@@ -217,13 +217,13 @@ com.ryanium.charpick = {
 
 	clipboardListener : function()
 	{
-		var timer = setInterval(function () {
-			text = com.ryanium.charpick.selectedText;
-			var selection = com.ryanium.charpick.getClipboard();
-			if (text)
-				if (selection.Global != text || selection.Selection != text)
-					com.ryanium.charpick.clearSelection();
-		}, 200);
+		var text = com.ryanium.charpick.selectedText;
+		var selection = com.ryanium.charpick.getClipboard();
+		if (text) {
+			if (selection.Global != text || selection.Selection != text) {
+				com.ryanium.charpick.clearSelection();
+			}
+		}
 	},
 // toolbar actions end
 
@@ -325,3 +325,13 @@ com.ryanium.charpick = {
 };
 
 window.addEventListener("load", com.ryanium.charpick.init, false);
+
+// so we need many event listeners in order to monitor clipboard change
+window.addEventListener("focus", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("blur", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("click", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("mouseover", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("mouseout", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("mousedown", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("mouseup", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("mousemove", com.ryanium.charpick.clipboardListener, false);
