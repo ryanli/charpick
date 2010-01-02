@@ -16,15 +16,13 @@ com.ryanium.charpick = {
 		.classes["@mozilla.org/preferences-service;1"]
 		.getService(Components.interfaces.nsIPrefBranch),
 
-	getStringPref : function(key)
-	{
+	getStringPref : function(key) {
 		return this.prefManager.
 			getComplexValue("extensions.charpick." + key, Components.interfaces.nsISupportsString)
 			.data;
 	},
 
-	setStringPref : function(key, val)
-	{
+	setStringPref : function(key, val) {
 		var str = Components
 			.classes["@mozilla.org/supports-string;1"]
 			.createInstance(Components.interfaces.nsISupportsString);
@@ -33,18 +31,15 @@ com.ryanium.charpick = {
 			.setComplexValue("extensions.charpick." + key, Components.interfaces.nsISupportsString, str);
 	},
 
-	getIntegerPref : function(key)
-	{
+	getIntegerPref : function(key) {
 		return this.prefManager.getIntPref("extensions.charpick." + key);
 	},
 
-	setIntegerPref : function(key, val)
-	{
+	setIntegerPref : function(key, val) {
 		this.prefManager.setIntPref("extensions.charpick." + key, val);
 	},
 
-	getClipboard : function()
-	{
+	getClipboard : function() {
 		try {
 			var ret = new Object();
 			var clip = Components
@@ -89,8 +84,7 @@ com.ryanium.charpick = {
 		}
 	},
 
-	setClipboard : function(str)
-	{
+	setClipboard : function(str) {
 		const gClipboardHelper = Components
 			.classes["@mozilla.org/widget/clipboardhelper;1"]
 			.getService(Components.interfaces.nsIClipboardHelper);
@@ -99,59 +93,53 @@ com.ryanium.charpick = {
 // utils end
 
 // palette prefs begin
-	getPalettes : function()
-	{
+	getPalettes : function() {
 		var palettes = com.ryanium.charpick.getStringPref("palettes");
 		var index = 0;
 		var ret = new Array();
-		while (index < palettes.length)
-		{
+		while (index < palettes.length) {
 			var current = new String();
-			while (index < palettes.length)
-			{
-				if (palettes[index] != ';')
-				{
+			while (index < palettes.length) {
+				if (palettes[index] != ';') {
 					current += palettes[index];
 					++index;
 				}
-				else if (index < palettes.length - 1 && palettes[index + 1] == ';')
-				{
+				else if (index < palettes.length - 1 && palettes[index + 1] == ';') {
 					current += ';';
 					index += 2;
 				}
-				else
-				{
+				else {
 					++index;
 					break;
 				}
 			}
-			if (current.length)
+			if (current.length) {
 				ret.push(current);
+			}
 		}
 		return ret;
 	},
 
-	setPalettes : function(a)
-	{
+	setPalettes : function(a) {
 		var merged = new String();
-		for (var index in a)
+		for (var index in a) {
 			merged += a[index].replace(/;/g, ';;') + ';';
+		}
 		com.ryanium.charpick.setStringPref('palettes', merged);
 	},
 // palette prefs end
 
 // toolbar actions begin
-	loadPalettes : function()
-	{
+	loadPalettes : function() {
 		var palettes = com.ryanium.charpick.getPalettes();
 		var popup = document.getElementById("charpick-popup");
 		var seperator = document.getElementById("charpick-menu-seperator");
 
-		while (popup.getElementsByClassName("charset").length)
+		while (popup.getElementsByClassName("charset").length) {
 			popup.removeChild(popup.getElementsByClassName("charset")[0]);
+		}
 
-		for (var index in palettes)
-		{
+		for (var index in palettes) {
 			var palette = document.createElement("menuitem");
 			palette.setAttribute("class", "charset");
 			palette.setAttribute("group", "charset");
@@ -161,27 +149,28 @@ com.ryanium.charpick = {
 			popup.insertBefore(palette, seperator);
 		}
 		var selected = 0;
-		if (com.ryanium.charpick.getIntegerPref("selected"))
+		if (com.ryanium.charpick.getIntegerPref("selected")) {
 			selected = com.ryanium.charpick.getIntegerPref("selected");
-		if (!popup.getElementsByClassName("charset")[selected])
+		}
+		if (!popup.getElementsByClassName("charset")[selected]) {
 			selected = 0;
+		}
 		popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
 		com.ryanium.charpick.selectPalette(selected, palettes[selected]);
 	},
 
-	selectPalette : function(index, charset)
-	{
+	selectPalette : function(index, charset) {
 		this.selected = '';
 		this.selectedText = '';
 		com.ryanium.charpick.setIntegerPref("selected", index);
 		var container = document.getElementById("charpick-buttons");
-		while (container.childNodes.length)
+		while (container.childNodes.length) {
 			container.removeChild(container.firstChild);
+		}
 
 		var copyString = document.getElementById('charpick-strings').getString('copy');
 
-		for (var charIndex in charset)
-		{
+		for (var charIndex in charset) {
 			var charButton = document.createElement("toolbarbutton");
 			charButton.setAttribute("id", "charpick-char-" + charIndex);
 			charButton.setAttribute("class", "charpick-char");
@@ -194,16 +183,13 @@ com.ryanium.charpick = {
 		}
 	},
 
-	selectChar : function(obj)
-	{
-		if (obj.id == this.selected)
-		{
+	selectChar : function(obj) {
+		if (obj.id == this.selected) {
 			obj.setAttribute("checked", false);
 			this.selected = '';
 			this.selectedText = '';
 		}
-		else
-		{
+		else {
 			var text = obj.getAttribute('label');
 			this.selected = obj.id;
 			this.selectedText = text;
@@ -211,17 +197,16 @@ com.ryanium.charpick = {
 		}
 	},
 
-	clearSelection : function()
-	{
+	clearSelection : function() {
 		var button = document.getElementById(this.selected);
-		if (button)
+		if (button) {
 			button.setAttribute('checked', false);
+		}
 		this.selected = '';
 		this.selectedText = '';
 	},
 
-	clipboardListener : function()
-	{
+	clipboardListener : function() {
 		var text = com.ryanium.charpick.selectedText;
 		var selection = com.ryanium.charpick.getClipboard();
 		if (text) {
@@ -233,16 +218,14 @@ com.ryanium.charpick = {
 // toolbar actions end
 
 // preferences dialog begin
-	loadPaletteList : function()
-	{
+	loadPaletteList : function() {
 		var list = document.getElementById("charpick-palette-list");
 		var palettes = com.ryanium.charpick.getPalettes();
 		for (index in palettes)
 			list.appendItem(palettes[index]);
 	},
 
-	savePalettes : function()
-	{
+	savePalettes : function() {
 		var list = document.getElementById("charpick-palette-list");
 		if (list == null)
 			return true;
@@ -253,18 +236,17 @@ com.ryanium.charpick = {
 		return true;
 	},
 
-	addPalette : function()
-	{
+	addPalette : function() {
 		var list = document.getElementById("charpick-palette-list");
 		var params = {add: false, palette: ""};
 		window.openDialog('chrome://charpick/content/add-palette.xul',
 			'charpick-add-palette-dialog', 'centerscreen,chrome,modal', params);
-		if (params.add)
+		if (params.add) {
 			list.appendItem(params.palette);
+		}
 	},
 
-	editPalette : function()
-	{
+	editPalette : function() {
 		var list = document.getElementById("charpick-palette-list");
 		if (list)
 		{
@@ -281,48 +263,41 @@ com.ryanium.charpick = {
 		}
 	},
 
-	deletePalette : function()
-	{
+	deletePalette : function() {
 		var list = document.getElementById("charpick-palette-list");
 		if (list)
 			list.removeItemAt(list.selectedIndex);
 	},
 
-	setTextBox : function()
-	{
+	setTextBox : function() {
 		var textbox = document.getElementById("charpick-textbox");
 		textbox.value = window.arguments[0].palette;
 	},
 
-	loadMiddleClick : function()
-	{
+	loadMiddleClick : function() {
 		var middleClick = document.getElementById("charpick-middle-click-paste");
 		var enabled = this.prefManager.getBoolPref("middlemouse.paste");
 		middleClick.setAttribute('checked', enabled);
 	},
 
-	saveMiddleClick : function()
-	{
+	saveMiddleClick : function() {
 		var middleClick = document.getElementById("charpick-middle-click-paste");
 		this.prefManager.setBoolPref("middlemouse.paste", middleClick.hasAttribute('checked'));
 		return true;
 	},
 
-	loadPrefs : function()
-	{
+	loadPrefs : function() {
 		com.ryanium.charpick.loadPaletteList();
 		com.ryanium.charpick.loadMiddleClick();
 	},
 
-	savePrefs : function()
-	{
+	savePrefs : function() {
 		return com.ryanium.charpick.savePalettes() && com.ryanium.charpick.saveMiddleClick();
 	},
 // preferences dialog end
 
 // listener begin
-	init : function()
-	{
+	init : function() {
 		com.ryanium.charpick.loadPalettes();
 		com.ryanium.charpick.clipboardListener();
 	}
