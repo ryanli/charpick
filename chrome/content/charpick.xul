@@ -16,7 +16,7 @@
 		label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
 
 		<toolbarbutton id="charpick-menu" type="menu" label="&characterpalette;">
-			<menupopup id="charpick-popup" onpopupshowing="com.ryanium.charpick.loadPalettes();">
+			<menupopup id="charpick-popup" onpopupshowing="charpick.loadPalettes();">
 
 				<menuseparator id="charpick-menu-seperator" />
 

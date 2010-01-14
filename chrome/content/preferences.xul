@@ -6,8 +6,8 @@
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="com.ryanium.charpick.loadPrefs();"
-	ondialogaccept="return com.ryanium.charpick.savePrefs();">
+	onload="charpick.loadPrefs();"
+	ondialogaccept="return charpick.savePrefs();">
 
 	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
 
@@ -21,11 +21,11 @@
 				</listbox>
 				<vbox>
 					<button id="charpick-add" label="&add;"
-						accesskey="&add.accesskey;" onclick="com.ryanium.charpick.addPalette();" />
+						accesskey="&add.accesskey;" onclick="charpick.addPalette();" />
 					<button id="charpick-edit" label="&edit;"
-						accesskey="&edit.accesskey;" onclick="com.ryanium.charpick.editPalette();" />
+						accesskey="&edit.accesskey;" onclick="charpick.editPalette();" />
 					<button id="charpick-delete" label="&delete;"
-						accesskey="&delete.accesskey;" onclick="com.ryanium.charpick.deletePalette();" />
+						accesskey="&delete.accesskey;" onclick="charpick.deletePalette();" />
 				</vbox>
 			</hbox>
 			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" accesskey="&paste.middle.click.accesskey;" />

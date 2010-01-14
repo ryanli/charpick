@@ -1,14 +1,6 @@
-if (!com)
-	var com = {};
-if (!com.ryanium)
-	com.ryanium = {};
-if (!com.ryanium.charpick)
-	com.ryanium.charpick = {};
-
-com.ryanium.charpick = {
+var charpick = {
 
 	selected : '',
-
 	selectedText : '',
 
 // utils begin
@@ -94,7 +86,7 @@ com.ryanium.charpick = {
 
 // palette prefs begin
 	getPalettes : function() {
-		var palettes = com.ryanium.charpick.getStringPref("palettes");
+		var palettes = charpick.getStringPref("palettes");
 		var index = 0;
 		var ret = new Array();
 		while (index < palettes.length) {
@@ -125,13 +117,13 @@ com.ryanium.charpick = {
 		for (var index in a) {
 			merged += a[index].replace(/;/g, ';;') + ';';
 		}
-		com.ryanium.charpick.setStringPref('palettes', merged);
+		charpick.setStringPref('palettes', merged);
 	},
 // palette prefs end
 
 // toolbar actions begin
 	loadPalettes : function() {
-		var palettes = com.ryanium.charpick.getPalettes();
+		var palettes = charpick.getPalettes();
 		var popup = document.getElementById("charpick-popup");
 		var seperator = document.getElementById("charpick-menu-seperator");
 
@@ -144,25 +136,25 @@ com.ryanium.charpick = {
 			palette.setAttribute("class", "charset");
 			palette.setAttribute("group", "charset");
 			palette.setAttribute("type", "radio");
-			palette.setAttribute("oncommand", "com.ryanium.charpick.selectPalette(" + index + ", this.label);");
+			palette.setAttribute("oncommand", "charpick.selectPalette(" + index + ", this.label);");
 			palette.setAttribute("label", palettes[index]);
 			popup.insertBefore(palette, seperator);
 		}
 		var selected = 0;
-		if (com.ryanium.charpick.getIntegerPref("selected")) {
-			selected = com.ryanium.charpick.getIntegerPref("selected");
+		if (charpick.getIntegerPref("selected")) {
+			selected = charpick.getIntegerPref("selected");
 		}
 		if (!popup.getElementsByClassName("charset")[selected]) {
 			selected = 0;
 		}
 		popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
-		com.ryanium.charpick.selectPalette(selected, palettes[selected]);
+		charpick.selectPalette(selected, palettes[selected]);
 	},
 
 	selectPalette : function(index, charset) {
 		this.selected = '';
 		this.selectedText = '';
-		com.ryanium.charpick.setIntegerPref("selected", index);
+		charpick.setIntegerPref("selected", index);
 		var container = document.getElementById("charpick-buttons");
 		while (container.childNodes.length) {
 			container.removeChild(container.firstChild);
@@ -177,7 +169,7 @@ com.ryanium.charpick = {
 			charButton.setAttribute("group", "charpick-char");
 			charButton.setAttribute("type", "radio");
 			charButton.setAttribute("tooltiptext", copyString);
-			charButton.setAttribute("oncommand", "com.ryanium.charpick.selectChar(this);");
+			charButton.setAttribute("oncommand", "charpick.selectChar(this);");
 			charButton.setAttribute("label", charset[charIndex]);
 			container.appendChild(charButton);
 		}
@@ -193,7 +185,7 @@ com.ryanium.charpick = {
 			var text = obj.getAttribute('label');
 			this.selected = obj.id;
 			this.selectedText = text;
-			com.ryanium.charpick.setClipboard(text);
+			charpick.setClipboard(text);
 		}
 	},
 
@@ -207,11 +199,11 @@ com.ryanium.charpick = {
 	},
 
 	clipboardListener : function() {
-		var text = com.ryanium.charpick.selectedText;
-		var selection = com.ryanium.charpick.getClipboard();
+		var text = charpick.selectedText;
+		var selection = charpick.getClipboard();
 		if (text) {
 			if (selection.Global != text || selection.Selection != text) {
-				com.ryanium.charpick.clearSelection();
+				charpick.clearSelection();
 			}
 		}
 	},
@@ -220,7 +212,7 @@ com.ryanium.charpick = {
 // preferences dialog begin
 	loadPaletteList : function() {
 		var list = document.getElementById("charpick-palette-list");
-		var palettes = com.ryanium.charpick.getPalettes();
+		var palettes = charpick.getPalettes();
 		for (index in palettes)
 			list.appendItem(palettes[index]);
 	},
@@ -232,7 +224,7 @@ com.ryanium.charpick = {
 		var palettes = new Array();
 		for (var child = list.firstChild; child != null; child = child.nextSibling)
 			palettes.push(child.getAttribute('label'));
-		com.ryanium.charpick.setPalettes(palettes);
+		charpick.setPalettes(palettes);
 		return true;
 	},
 
@@ -287,31 +279,31 @@ com.ryanium.charpick = {
 	},
 
 	loadPrefs : function() {
-		com.ryanium.charpick.loadPaletteList();
-		com.ryanium.charpick.loadMiddleClick();
+		charpick.loadPaletteList();
+		charpick.loadMiddleClick();
 	},
 
 	savePrefs : function() {
-		return com.ryanium.charpick.savePalettes() && com.ryanium.charpick.saveMiddleClick();
+		return charpick.savePalettes() && charpick.saveMiddleClick();
 	},
 // preferences dialog end
 
 // listener begin
 	init : function() {
-		com.ryanium.charpick.loadPalettes();
-		com.ryanium.charpick.clipboardListener();
+		charpick.loadPalettes();
+		charpick.clipboardListener();
 	}
 // listener end
 };
 
-window.addEventListener("load", com.ryanium.charpick.init, false);
+window.addEventListener("load", charpick.init, false);
 
 // so we need many event listeners in order to monitor clipboard change
-window.addEventListener("focus", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("blur", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("click", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("mouseover", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("mouseout", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("mousedown", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("mouseup", com.ryanium.charpick.clipboardListener, false);
-window.addEventListener("mousemove", com.ryanium.charpick.clipboardListener, false);
+window.addEventListener("focus", charpick.clipboardListener, false);
+window.addEventListener("blur", charpick.clipboardListener, false);
+window.addEventListener("click", charpick.clipboardListener, false);
+window.addEventListener("mouseover", charpick.clipboardListener, false);
+window.addEventListener("mouseout", charpick.clipboardListener, false);
+window.addEventListener("mousedown", charpick.clipboardListener, false);
+window.addEventListener("mouseup", charpick.clipboardListener, false);
+window.addEventListener("mousemove", charpick.clipboardListener, false);

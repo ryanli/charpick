@@ -6,7 +6,7 @@
 	title="&edit.palette;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	buttons="accept,cancel"
-	onload="com.ryanium.charpick.setTextBox();"
+	onload="charpick.setTextBox();"
 	ondialogaccept="window.arguments[0].edit = true;
 		window.arguments[0].palette = document.getElementById('charpick-textbox').value;">
 
