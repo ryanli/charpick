@@ -305,7 +305,6 @@ var charpick = {
 // listener begin
 	init : function() {
 		charpick.loadPalettes();
-		charpick.clipboardListener();
 	}
 // listener end
 };
