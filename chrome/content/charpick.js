@@ -9,9 +9,16 @@ var charpick = {
 		.getService(Components.interfaces.nsIPrefBranch),
 
 	getStringPref : function(key) {
-		return this.prefManager.
+		var val;
+		try {
+			val = this.prefManager.
 			getComplexValue("extensions.charpick." + key, Components.interfaces.nsISupportsString)
 			.data;
+		}
+		catch (e) {
+			return null;
+		}
+		return val;
 	},
 
 	setStringPref : function(key, val) {
@@ -24,7 +31,14 @@ var charpick = {
 	},
 
 	getIntegerPref : function(key) {
-		return this.prefManager.getIntPref("extensions.charpick." + key);
+		var val;
+		try {
+			val = this.prefManager.getIntPref("extensions.charpick." + key);
+		}
+		catch (e) {
+			return null;
+		}
+		return val;
 	},
 
 	setIntegerPref : function(key, val) {
