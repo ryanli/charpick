@@ -53,42 +53,56 @@ var charpick = {
 			var clip = Components
 				.classes["@mozilla.org/widget/clipboard;1"]
 				.getService(Components.interfaces.nsIClipboard);
-			if (!clip)
-				return false;
+			var supportsSelection;
+			supportsSelection = clip.supportsSelectionClipboard();
 
 			var trans = Components
 				.classes["@mozilla.org/widget/transferable;1"]
 				.createInstance(Components.interfaces.nsITransferable);
-			if (!trans)
-				return false;
 			trans.addDataFlavor("text/unicode");
 
-			var str = new Object();
-			var strLength = new Object();
+			// kGlobalClipboard
+			try {
+				var str = new Object();
+				var strLength = new Object();
 
-			clip.getData(trans, clip.kGlobalClipboard);
+				clip.getData(trans, clip.kGlobalClipboard);
 
-			trans.getTransferData("text/unicode", str, strLength);
-			if (str)
-				str = str.value.QueryInterface(Components.interfaces.nsISupportsString);
-			if (str)
-				ret.Global = str.data.substring(0, strLength.value / 2);
+				trans.getTransferData("text/unicode", str, strLength);
+				if (str)
+					str = str.value.QueryInterface(Components.interfaces.nsISupportsString);
+				if (str)
+					ret.Global = str.data.substring(0, strLength.value / 2);
+			}
+			catch (e) {
+				ret.Global = false;
+			}
 
-			var str_ = new Object();
-			var strLength_ = new Object();
+			// kSelectionClipboard - only for X
+			try {
+				if (supportsSelection) {
+					var str_ = new Object();
+					var strLength_ = new Object();
+					clip.getData(trans, clip.kSelectionClipboard);
 
-			clip.getData(trans, clip.kSelectionClipboard);
-
-			trans.getTransferData("text/unicode", str_, strLength_);
-			if (str_)
-				str_ = str_.value.QueryInterface(Components.interfaces.nsISupportsString);
-			if (str)
-				ret.Selection = str_.data.substring(0, strLength_.value / 2);
+					trans.getTransferData("text/unicode", str_, strLength_);
+					if (str_)
+						str_ = str_.value.QueryInterface(Components.interfaces.nsISupportsString);
+					if (str)
+						ret.Selection = str_.data.substring(0, strLength_.value / 2);
+				}
+				else {
+					ret.Selection = false;
+				}
+			}
+			catch (e) {
+				ret.Selection = false;
+			}
 
 			return ret;
 		}
 		catch (e) {
-			return false;
+			return {Global: false, Selection: false};
 		}
 	},
 
@@ -218,7 +232,8 @@ var charpick = {
 		var text = charpick.selectedText;
 		var selection = charpick.getClipboard();
 		if (text) {
-			if (selection.Global != text || selection.Selection != text) {
+			if ((selection.Global !== false && selection.Global !== text)
+				|| (selection.Selection !== false && selection.Selection !== text)) {
 				charpick.clearSelection();
 			}
 		}
