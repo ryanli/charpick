@@ -69,10 +69,12 @@ var charpick = {
 				clip.getData(trans, clip.kGlobalClipboard);
 
 				trans.getTransferData("text/unicode", str, strLength);
-				if (str)
+				if (str) {
 					str = str.value.QueryInterface(Components.interfaces.nsISupportsString);
-				if (str)
+				}
+				if (str) {
 					ret.Global = str.data.substring(0, strLength.value / 2);
+				}
 			}
 			catch (e) {
 				ret.Global = false;
@@ -86,10 +88,12 @@ var charpick = {
 					clip.getData(trans, clip.kSelectionClipboard);
 
 					trans.getTransferData("text/unicode", str_, strLength_);
-					if (str_)
+					if (str_) {
 						str_ = str_.value.QueryInterface(Components.interfaces.nsISupportsString);
-					if (str)
+					}
+					if (str) {
 						ret.Selection = str_.data.substring(0, strLength_.value / 2);
+					}
 				}
 				else {
 					ret.Selection = false;
@@ -244,17 +248,20 @@ var charpick = {
 	loadPaletteList : function() {
 		var list = document.getElementById("charpick-palette-list");
 		var palettes = charpick.getPalettes();
-		for (index in palettes)
+		for (index in palettes) {
 			list.appendItem(palettes[index]);
+		}
 	},
 
 	savePalettes : function() {
 		var list = document.getElementById("charpick-palette-list");
-		if (list == null)
+		if (list == null) {
 			return true;
+		}
 		var palettes = new Array();
-		for (var child = list.firstChild; child != null; child = child.nextSibling)
+		for (var child = list.firstChild; child != null; child = child.nextSibling) {
 			palettes.push(child.getAttribute('label'));
+		}
 		charpick.setPalettes(palettes);
 		return true;
 	},
@@ -280,16 +287,18 @@ var charpick = {
 				var params = {edit: false, palette: orig};
 				window.openDialog('chrome://charpick/content/edit-palette.xul',
 					'charpick-edit-palette-dialog', 'centerscreen,chrome,modal', params);
-				if (params.edit)
+				if (params.edit) {
 					selected.label = params.palette;
+				}
 			}
 		}
 	},
 
 	deletePalette : function() {
 		var list = document.getElementById("charpick-palette-list");
-		if (list)
+		if (list) {
 			list.removeItemAt(list.selectedIndex);
+		}
 	},
 
 	setTextBox : function() {
