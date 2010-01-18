@@ -1,11 +1,11 @@
 Character Palette is a Firefox extension for inputing special characters,
 licensed under GNU GPLv3.
 
-For official stable versions, you could download at the following AMO link:
-https://addons.mozilla.org/en-US/firefox/addon/8138
-
 Character Palette uses git as its version control system, hosted at github:
 http://github.com/ryanli/charpick
+
+For official stable versions, you could download at the following AMO link:
+http://github.com/ryanli/charpick/downloads
 
 You can get the latest development files using the following command:
 $ git clone git://github.com/ryanli/charpick.git
