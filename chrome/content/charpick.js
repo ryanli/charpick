@@ -346,12 +346,19 @@ var charpick = {
 
 window.addEventListener("load", charpick.init, false);
 
-// so we need many event listeners in order to monitor clipboard change
-window.addEventListener("focus", charpick.clipboardListener, false);
-window.addEventListener("blur", charpick.clipboardListener, false);
+// We need many event listeners in order to monitor clipboard change.
+// Besides user-triggered copy events, external applications and scripts
+// may also modify the clipboard. So we need copy and a frenquently used
+// event, here is mousemove.
+// Under Unix-like systems, there's an extra selection clipboard, and selection
+// itself will not trigger oncopy(), so we introduced click, mouseup, mousemove
+// for selection by mouse, and keypress, keyup for selection by keyboard.
+// copy event itself
+window.addEventListener("copy", charpick.clipboardListener, false);
+// selection by mouse
 window.addEventListener("click", charpick.clipboardListener, false);
-window.addEventListener("mouseover", charpick.clipboardListener, false);
-window.addEventListener("mouseout", charpick.clipboardListener, false);
-window.addEventListener("mousedown", charpick.clipboardListener, false);
 window.addEventListener("mouseup", charpick.clipboardListener, false);
 window.addEventListener("mousemove", charpick.clipboardListener, false);
+// selection by keyboard
+window.addEventListener("keypress", charpick.clipboardListener, false);
+window.addEventListener("keyup", charpick.clipboardListener, false);
