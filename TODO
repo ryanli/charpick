@@ -13,3 +13,8 @@ Functionality
 -----------------------------
 + Provide the customization of each row of characters.
 + Better way for handling character input, like middle key click.
+- Add char description as tooltip text instead of `Copy'.
+
+Compatibility
+-----------------------------
+- To be compatiable with Thunderbird, etc.
