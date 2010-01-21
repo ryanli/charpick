@@ -185,6 +185,31 @@ var charpick = {
 		charpick.selectPalette(selected, palettes[selected]);
 	},
 
+	getWholeCharAndI : function (str, i) {
+		var code = str.charCodeAt(i);
+		if (0xD800 <= code && code <= 0xDBFF) { // High surrogate (could change last hex to 0xDB7F to treat high private surrogates as single characters)
+			if (str.length <= (i+1))  {
+				throw 'High surrogate without following low surrogate';
+			}
+			var next = str.charCodeAt(i+1);
+			if (0xDC00 > next || next > 0xDFFF) {
+				throw 'High surrogate without following low surrogate';
+			}
+			return [str.charAt(i)+str.charAt(i+1), i+1];
+		}
+		else if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
+			if (i === 0) {
+				throw 'Low surrogate without preceding high surrogate';
+			}
+			var prev = str.charCodeAt(i-1);
+			if (0xD800 > prev || prev > 0xDBFF) { // (could change last hex to 0xDB7F to treat high private surrogates as single characters)
+				throw 'Low surrogate without preceding high surrogate';
+			}
+			return [str.charAt(i+1), i+1]; // Return the next character instead (and increment)
+		}
+		return [str.charAt(i), i]; // Normal character, keeping 'i' the same
+	},
+
 	selectPalette : function(index, charset) {
 		this.selected = '';
 		this.selectedText = '';
@@ -196,15 +221,16 @@ var charpick = {
 
 		var copyString = document.getElementById('charpick-strings').getString('copy');
 
-		for (var charIndex in charset) {
+		for (var i=0, chr; i < charset.length; i++) {
+			[chr, i] = this.getWholeCharAndI(charset, i);
 			var charButton = document.createElement("toolbarbutton");
-			charButton.setAttribute("id", "charpick-char-" + charIndex);
+			charButton.setAttribute("id", "charpick-char-" + i);
 			charButton.setAttribute("class", "charpick-char");
 			charButton.setAttribute("group", "charpick-char");
 			charButton.setAttribute("type", "radio");
 			charButton.setAttribute("tooltiptext", copyString);
 			charButton.setAttribute("oncommand", "charpick.selectChar(this);");
-			charButton.setAttribute("label", charset[charIndex]);
+			charButton.setAttribute("label", chr);
 			container.appendChild(charButton);
 		}
 	},
