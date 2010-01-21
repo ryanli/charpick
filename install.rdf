@@ -4,14 +4,13 @@
 	xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
 	<Description about="urn:mozilla:install-manifest">
-		<em:aboutURL>chrome://charpick/content/about.xul</em:aboutURL>
-		<em:creator>Ryan Li</em:creator>
-		<em:id>charpick@ryanium.com</em:id>
 		<em:name>Character Palette</em:name>
-		<em:description>Firefox toolbar for selecting strange characters that are not on my keyboard.</em:description>
-		<em:homepageURL>http://github.com/ryanli/charpick</em:homepageURL>
+		<em:id>charpick@ryanium.com</em:id>
 		<em:version>0.4</em:version>
 		<em:type>2</em:type>
+		<em:description>Firefox toolbar for selecting strange characters that are not on my keyboard.</em:description>
+		<em:creator>Ryan Li</em:creator>
+		<em:homepageURL>http://github.com/ryanli/charpick</em:homepageURL>
 		<em:optionsURL>chrome://charpick/content/preferences.xul</em:optionsURL>
 		<em:aboutURL>chrome://charpick/content/about.xul</em:aboutURL>
 		<em:iconURL>chrome://charpick/content/logo.png</em:iconURL>
