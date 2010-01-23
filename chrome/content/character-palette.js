@@ -184,14 +184,14 @@ com.ryanium.characterpalette = {
 	},
 	openUpdatePage : function()
 	{
-		gBrowser.selectedTab = gBrowser.addTab("http://wiki.github.com/ryanli/charpick/updating-from-03");
+		window.openUILinkIn("http://wiki.github.com/ryanli/charpick/updating-from-03", "tab");
 	},
 	checkUpdate : function()
 	{
 		var shown = com.ryanium.characterpalette.getInteger("updateShown");
 		if (shown != 1)
 		{
-			com.ryanium.characterpalette.openUpdatePage();
+			setTimeout(com.ryanium.characterpalette.openUpdatePage, 500);
 			com.ryanium.characterpalette.setInteger("updateShown", 1);
 		}
 	}
