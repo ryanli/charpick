@@ -182,7 +182,10 @@ var charpick = {
 	mergePaletteList : function(palettes) {
 		var merged = new String();
 		for (var index in palettes) {
-			merged += palettes[index].replace(/;/g, ";;") + ";";
+			// ignore empty palettes
+			if (palettes[index] != "") {
+				merged += palettes[index].replace(/;/g, ";;") + ";";
+			}
 		}
 		return merged;
 	},
