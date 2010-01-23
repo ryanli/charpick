@@ -152,7 +152,7 @@ var charpick = {
 	},
 // utils end
 
-// palette prefs begin
+// palette operations begin
 	splitPaletteList : function(palettes) {
 		var index = 0;
 		var ret = new Array();
@@ -187,12 +187,24 @@ var charpick = {
 		return merged;
 	},
 
+	splitPalette : function(palette) {
+		var ret = new Array();
+		for (var index = 0; index < palette.length; ++index) {
+			var chr;
+			[chr, index] = charpick.getWholeCharAndIndex(palette, index);
+			ret.push(chr);
+		}
+		return ret;
+	},
+
+// palette operations end
+
+// pref begin
 	getPalettes : function() {
 		var palettes = charpick.getStringPref("palettes");
 		return charpick.splitPaletteList(palettes);
 	},
-
-// palette prefs end
+// pref end
 
 // toolbar actions begin
 	loadPalettes : function() {
@@ -235,16 +247,16 @@ var charpick = {
 
 		var copyString = document.getElementById('charpick-strings').getString('copy');
 
-		for (var i = 0, chr; i < charset.length; ++i) {
-			[chr, i] = this.getWholeCharAndIndex(charset, i);
+		var charArray = charpick.splitPalette(charset);
+		for (var index in charArray) {
 			var charButton = document.createElement("toolbarbutton");
-			charButton.setAttribute("id", "charpick-char-" + i);
+			charButton.setAttribute("id", "charpick-char-" + index);
 			charButton.setAttribute("class", "charpick-char");
 			charButton.setAttribute("group", "charpick-char");
 			charButton.setAttribute("type", "radio");
 			charButton.setAttribute("tooltiptext", copyString);
 			charButton.setAttribute("oncommand", "charpick.selectChar(this);");
-			charButton.setAttribute("label", chr);
+			charButton.setAttribute("label", charArray[index]);
 			container.appendChild(charButton);
 		}
 	},
