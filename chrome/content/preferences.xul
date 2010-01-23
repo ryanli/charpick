@@ -2,23 +2,20 @@
 <!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
 <?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
 
-<dialog id="charpick-preferences-dialog"
+<prefwindow id="charpick-preferences-dialog"
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-	buttons="accept,cancel"
-	onload="charpick.loadPrefs();"
-	ondialogaccept="return charpick.savePrefs();">
-
-	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
-
-	<vbox id="charpick-preferences-details">
-		<label id="charpick-name" class="charpick-caption" value="&characterpalette;" />
+	onload="charpick.fillPaletteList();">
+	<prefpane id="charpick-preferences-details" label="&characterpalette;">
+		<preferences>
+			<preference id="palettes" name="extensions.charpick.palettes" type="string" onchange="charpick.fillPaletteList();" />
+			<preference id="middle-click" name="middlemouse.paste" type="bool" />
+		</preferences>
 		<vbox class="charpick-details">
 			<label id="charpick-palettes" value="&palettes;"
 				control="charpick-palette-list" accesskey="&palettes.accesskey;" />
 			<hbox>
-				<listbox id="charpick-palette-list">
-				</listbox>
+				<listbox id="charpick-palette-list"></listbox>
 				<vbox>
 					<button id="charpick-add" label="&add;"
 						accesskey="&add.accesskey;" onclick="charpick.addPalette();" />
@@ -28,7 +25,8 @@
 						accesskey="&delete.accesskey;" onclick="charpick.deletePalette();" />
 				</vbox>
 			</hbox>
-			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" accesskey="&paste.middle.click.accesskey;" />
+			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" preference="middle-click" accesskey="&paste.middle.click.accesskey;" />
 		</vbox>
-	</vbox>
-</dialog>
+	</prefpane>
+	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
+</prefwindow>

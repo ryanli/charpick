@@ -153,8 +153,7 @@ var charpick = {
 // utils end
 
 // palette prefs begin
-	getPalettes : function() {
-		var palettes = charpick.getStringPref("palettes");
+	splitPaletteList : function(palettes) {
 		var index = 0;
 		var ret = new Array();
 		while (index < palettes.length) {
@@ -180,13 +179,19 @@ var charpick = {
 		return ret;
 	},
 
-	setPalettes : function(a) {
+	mergePaletteList : function(palettes) {
 		var merged = new String();
-		for (var index in a) {
-			merged += a[index].replace(/;/g, ';;') + ';';
+		for (var index in palettes) {
+			merged += palettes[index].replace(/;/g, ';;') + ';';
 		}
-		charpick.setStringPref('palettes', merged);
+		return merged;
 	},
+
+	getPalettes : function() {
+		var palettes = charpick.getStringPref("palettes");
+		return charpick.splitPaletteList(palettes);
+	},
+
 // palette prefs end
 
 // toolbar actions begin
@@ -280,59 +285,54 @@ var charpick = {
 // toolbar actions end
 
 // preferences dialog begin
-	loadPaletteList : function() {
+	fillPaletteList : function() {
+		var pref = document.getElementById("palettes");
+		var palettes = charpick.splitPaletteList(pref.value);
 		var list = document.getElementById("charpick-palette-list");
-		var palettes = charpick.getPalettes();
-		for (index in palettes) {
+		while (list.itemCount > 0) {
+			list.removeItemAt(0);
+		}
+		for (var index in palettes) {
 			list.appendItem(palettes[index]);
 		}
 	},
 
-	savePalettes : function() {
-		var list = document.getElementById("charpick-palette-list");
-		if (list == null) {
-			return true;
-		}
-		var palettes = new Array();
-		for (var child = list.firstChild; child != null; child = child.nextSibling) {
-			palettes.push(child.getAttribute('label'));
-		}
-		charpick.setPalettes(palettes);
-		return true;
-	},
-
 	addPalette : function() {
-		var list = document.getElementById("charpick-palette-list");
+		var pref = document.getElementById("palettes");
+		var palettes = charpick.splitPaletteList(pref.value);
 		var params = {add: false, palette: ""};
 		window.openDialog('chrome://charpick/content/add-palette.xul',
 			'charpick-add-palette-dialog', 'centerscreen,chrome,modal', params);
 		if (params.add) {
-			list.appendItem(params.palette);
+			palettes.push(params.palette);
 		}
+		pref.value = charpick.mergePaletteList(palettes);
 	},
 
 	editPalette : function() {
+		var pref = document.getElementById("palettes");
+		var palettes = charpick.splitPaletteList(pref.value);
 		var list = document.getElementById("charpick-palette-list");
-		if (list)
-		{
-			var selected = list.selectedItem;
-			if (selected)
-			{
-				var orig = selected.label;
-				var params = {edit: false, palette: orig};
-				window.openDialog('chrome://charpick/content/edit-palette.xul',
-					'charpick-edit-palette-dialog', 'centerscreen,chrome,modal', params);
-				if (params.edit) {
-					selected.label = params.palette;
-				}
+		var index = list.selectedIndex;
+		if (index >= 0) {
+			var params = {edit: false, palette: palettes[index]};
+			window.openDialog('chrome://charpick/content/edit-palette.xul',
+				'charpick-edit-palette-dialog', 'centerscreen,chrome,modal', params);
+			if (params.edit) {
+				palettes[index] = params.palette;
 			}
+			pref.value = charpick.mergePaletteList(palettes);
 		}
 	},
 
 	deletePalette : function() {
+		var pref = document.getElementById("palettes");
+		var palettes = charpick.splitPaletteList(pref.value);
 		var list = document.getElementById("charpick-palette-list");
-		if (list) {
-			list.removeItemAt(list.selectedIndex);
+		var index = list.selectedIndex;
+		if (index >= 0) {
+			palettes.splice(index, 1);
+			pref.value = charpick.mergePaletteList(palettes);
 		}
 	},
 
@@ -341,25 +341,12 @@ var charpick = {
 		textbox.value = window.arguments[0].palette;
 	},
 
-	loadMiddleClick : function() {
-		var middleClick = document.getElementById("charpick-middle-click-paste");
-		var enabled = this.prefManager.getBoolPref("middlemouse.paste");
-		middleClick.setAttribute('checked', enabled);
-	},
-
-	saveMiddleClick : function() {
-		var middleClick = document.getElementById("charpick-middle-click-paste");
-		this.prefManager.setBoolPref("middlemouse.paste", middleClick.hasAttribute('checked'));
-		return true;
-	},
-
 	loadPrefs : function() {
 		charpick.loadPaletteList();
-		charpick.loadMiddleClick();
 	},
 
 	savePrefs : function() {
-		return charpick.savePalettes() && charpick.saveMiddleClick();
+		return charpick.savePalettes();
 	},
 // preferences dialog end
 
