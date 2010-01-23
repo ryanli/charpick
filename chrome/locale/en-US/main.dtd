@@ -3,6 +3,7 @@
 <!ENTITY preferences "Preferences">
 <!ENTITY help "Help">
 <!ENTITY about "About">
+<!ENTITY update "Update">
 <!ENTITY copy "Copy">
 <!ENTITY clear "Clear">
 <!ENTITY copy.to.clipboard "Copy To Clipboard">

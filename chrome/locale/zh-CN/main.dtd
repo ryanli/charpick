@@ -3,6 +3,7 @@
 <!ENTITY preferences "首选项">
 <!ENTITY help "帮助">
 <!ENTITY about "关于">
+<!ENTITY update "更新">
 <!ENTITY copy "复制">
 <!ENTITY clear "清除">
 <!ENTITY copy.to.clipboard "复制到剪贴板">

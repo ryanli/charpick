@@ -18,7 +18,16 @@ com.ryanium.characterpalette = {
 	},
 	getInteger : function(key)
 	{
-		return this.prefManager.getIntPref("extensions.character-palette." + key);
+		var val;
+		try
+		{
+			val = this.prefManager.getIntPref("extensions.character-palette." + key);
+		}
+		catch (e)
+		{
+			return null;
+		}
+		return val;
 	},
 	setInteger : function(key, val)
 	{
@@ -172,6 +181,20 @@ com.ryanium.characterpalette = {
 	{
 		var textbox = document.getElementById("character-palette-textbox");
 		textbox.value = window.arguments[0].palette;
+	},
+	openUpdatePage : function()
+	{
+		gBrowser.selectedTab = gBrowser.addTab("http://wiki.github.com/ryanli/charpick/updating-from-03");
+	},
+	checkUpdate : function()
+	{
+		var shown = com.ryanium.characterpalette.getInteger("updateShown");
+		if (shown != 1)
+		{
+			com.ryanium.characterpalette.openUpdatePage();
+			com.ryanium.characterpalette.setInteger("updateShown", 1);
+		}
 	}
 };
 window.addEventListener("load", com.ryanium.characterpalette.addPalettes, false);
+window.addEventListener("load", com.ryanium.characterpalette.checkUpdate, false);

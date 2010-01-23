@@ -29,6 +29,10 @@
 					oncommand="window.openDialog('chrome://character-palette/content/about.xul',
 						'character-palette-about-dialog', 'centerscreen,chrome,modal');" />
 
+				<menuseparator />
+				<menuitem id="character-palette-menu-update" label="&update;"
+					oncommand="com.ryanium.characterpalette.openUpdatePage();" />
+
 			</menupopup>
 		</toolbarbutton>
 
