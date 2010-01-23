@@ -210,7 +210,7 @@ var charpick = {
 	loadPalettes : function() {
 		var palettes = charpick.getPalettes();
 		var popup = document.getElementById("charpick-popup");
-		var seperator = document.getElementById("charpick-menu-seperator");
+		var separator = document.getElementById("charpick-menu-separator");
 
 		while (popup.getElementsByClassName("charset").length) {
 			popup.removeChild(popup.getElementsByClassName("charset")[0]);
@@ -223,7 +223,7 @@ var charpick = {
 			palette.setAttribute("type", "radio");
 			palette.setAttribute("oncommand", "charpick.selectPalette(" + index + ", this.label);");
 			palette.setAttribute("label", palettes[index]);
-			popup.insertBefore(palette, seperator);
+			popup.insertBefore(palette, separator);
 		}
 		var selected = 0;
 		if (charpick.getIntegerPref("selected")) {
