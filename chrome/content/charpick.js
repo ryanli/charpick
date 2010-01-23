@@ -1,9 +1,9 @@
 var charpick = {
 
-	version : '0.4',
+	version : "0.4",
 
-	selected : '',
-	selectedText : '',
+	selected : "",
+	selectedText : "",
 
 // utils begin
 	prefManager : Components
@@ -127,28 +127,28 @@ var charpick = {
 		// High surrogate (could change last hex to 0xDB7F to treat high private surrogates as single characters)
 		if (0xD800 <= code && code <= 0xDBFF) {
 			if (str.length <= (i + 1)) {
-				throw 'High surrogate without following low surrogate';
+				throw "High surrogate without following low surrogate";
 			}
 			var next = str.charCodeAt(i + 1);
 			if (0xDC00 > next || next > 0xDFFF) {
-				throw 'High surrogate without following low surrogate';
+				throw "High surrogate without following low surrogate";
 			}
 			return [str.charAt(i) + str.charAt(i + 1), i + 1];
 		}
 		// Low surrogate
 		else if (0xDC00 <= code && code <= 0xDFFF) {
 			if (i === 0) {
-				throw 'Low surrogate without preceding high surrogate';
+				throw "Low surrogate without preceding high surrogate";
 			}
 			var prev = str.charCodeAt(i - 1);
 			// (could change last hex to 0xDB7F to treat high private surrogates as single characters)
 			if (0xD800 > prev || prev > 0xDBFF) {
-				throw 'Low surrogate without preceding high surrogate';
+				throw "Low surrogate without preceding high surrogate";
 			}
 			// Return the next character instead (and increment)
 			return [str.charAt(i + 1), i + 1];
 		}
-		return [str.charAt(i), i]; // Normal character, keeping 'i' the same
+		return [str.charAt(i), i]; // Normal character, keeping i the same
 	},
 // utils end
 
@@ -159,12 +159,12 @@ var charpick = {
 		while (index < palettes.length) {
 			var current = new String();
 			while (index < palettes.length) {
-				if (palettes[index] != ';') {
+				if (palettes[index] != ";") {
 					current += palettes[index];
 					++index;
 				}
-				else if (index < palettes.length - 1 && palettes[index + 1] == ';') {
-					current += ';';
+				else if (index < palettes.length - 1 && palettes[index + 1] == ";") {
+					current += ";";
 					index += 2;
 				}
 				else {
@@ -182,7 +182,7 @@ var charpick = {
 	mergePaletteList : function(palettes) {
 		var merged = new String();
 		for (var index in palettes) {
-			merged += palettes[index].replace(/;/g, ';;') + ';';
+			merged += palettes[index].replace(/;/g, ";;") + ";";
 		}
 		return merged;
 	},
@@ -237,15 +237,15 @@ var charpick = {
 	},
 
 	selectPalette : function(index, charset) {
-		this.selected = '';
-		this.selectedText = '';
+		this.selected = "";
+		this.selectedText = "";
 		charpick.setIntegerPref("selected", index);
 		var container = document.getElementById("charpick-buttons");
 		while (container.childNodes.length) {
 			container.removeChild(container.firstChild);
 		}
 
-		var copyString = document.getElementById('charpick-strings').getString('copy');
+		var copyString = document.getElementById("charpick-strings").getString("copy");
 
 		var charArray = charpick.splitPalette(charset);
 		for (var index in charArray) {
@@ -264,11 +264,11 @@ var charpick = {
 	selectChar : function(obj) {
 		if (obj.id == this.selected) {
 			obj.setAttribute("checked", false);
-			this.selected = '';
-			this.selectedText = '';
+			this.selected = "";
+			this.selectedText = "";
 		}
 		else {
-			var text = obj.getAttribute('label');
+			var text = obj.getAttribute("label");
 			this.selected = obj.id;
 			this.selectedText = text;
 			charpick.setClipboard(text);
@@ -278,10 +278,10 @@ var charpick = {
 	clearSelection : function() {
 		var button = document.getElementById(this.selected);
 		if (button) {
-			button.setAttribute('checked', false);
+			button.setAttribute("checked", false);
 		}
-		this.selected = '';
-		this.selectedText = '';
+		this.selected = "";
+		this.selectedText = "";
 	},
 
 	clipboardListener : function() {
@@ -313,8 +313,8 @@ var charpick = {
 		var pref = document.getElementById("palettes");
 		var palettes = charpick.splitPaletteList(pref.value);
 		var params = {add: false, palette: ""};
-		window.openDialog('chrome://charpick/content/add-palette.xul',
-			'charpick-add-palette-dialog', 'centerscreen,chrome,modal', params);
+		window.openDialog("chrome://charpick/content/add-palette.xul",
+			"charpick-add-palette-dialog", "centerscreen,chrome,modal", params);
 		if (params.add) {
 			palettes.push(params.palette);
 		}
@@ -328,8 +328,8 @@ var charpick = {
 		var index = list.selectedIndex;
 		if (index >= 0) {
 			var params = {edit: false, palette: palettes[index]};
-			window.openDialog('chrome://charpick/content/edit-palette.xul',
-				'charpick-edit-palette-dialog', 'centerscreen,chrome,modal', params);
+			window.openDialog("chrome://charpick/content/edit-palette.xul",
+				"charpick-edit-palette-dialog", "centerscreen,chrome,modal", params);
 			if (params.edit) {
 				palettes[index] = params.palette;
 			}
@@ -364,8 +364,8 @@ var charpick = {
 
 // first run begin
 	getWikiURI : function() {
-		var host = 'http://wiki.github.com/ryanli/charpick/';
-		var version = this.version.replace(/\./g, '');
+		var host = "http://wiki.github.com/ryanli/charpick/";
+		var version = this.version.replace(/\./g, "");
 		var uri = host + "version-" + version;
 		return uri;
 	},
