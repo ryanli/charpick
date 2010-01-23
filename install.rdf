@@ -10,7 +10,7 @@
 		<em:name>Character Palette</em:name>
 		<em:description>Firefox toolbar for selecting strange characters that are not on my keyboard.</em:description>
 		<em:homepageURL>https://addons.mozilla.org/en-US/firefox/addon/8138</em:homepageURL>
-		<em:version>0.3</em:version>
+		<em:version>0.3.1</em:version>
 		<em:type>2</em:type>
 		<em:iconURL>chrome://character-palette/content/logo.png</em:iconURL>
 

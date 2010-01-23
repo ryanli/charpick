@@ -10,7 +10,7 @@
 	<vbox id="character-palette-about-details">
 		<hbox>
 			<description id="software-name" class="name">Character Palette</description>
-			<description id="software-version" class="version">0.3</description>
+			<description id="software-version" class="version">0.3.1</description>
 		</hbox>
 		<description class="title" value="&author;" />
 		<description>Ryan Li</description>
