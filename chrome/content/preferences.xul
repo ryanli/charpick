@@ -11,7 +11,8 @@
 			<preference id="palettes" name="extensions.charpick.palettes" type="string" onchange="charpick.fillPaletteList();" />
 			<preference id="middle-click" name="middlemouse.paste" type="bool" />
 		</preferences>
-		<vbox class="charpick-details">
+		<groupbox class="charpick-details">
+			<caption label="&characterpalette;" />
 			<label id="charpick-palettes" value="&palettes;"
 				control="charpick-palette-list" accesskey="&palettes.accesskey;" />
 			<hbox>
@@ -26,7 +27,7 @@
 				</vbox>
 			</hbox>
 			<checkbox id="charpick-middle-click-paste" label="&paste.middle.click;" preference="middle-click" accesskey="&paste.middle.click.accesskey;" />
-		</vbox>
+		</groupbox>
 	</prefpane>
 	<script type="application/x-javascript" src="chrome://charpick/content/charpick.js" />
 </prefwindow>
