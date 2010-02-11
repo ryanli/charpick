@@ -6,17 +6,17 @@
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	onload="charpick.fillPaletteList();">
-	<prefpane id="charpick-preferences-details" label="&characterpalette;">
+	<prefpane id="charpick-preferences-details" label="&characterpalette;" flex="1">
 		<preferences>
 			<preference id="palettes" name="extensions.charpick.palettes" type="string" onchange="charpick.fillPaletteList();" />
 			<preference id="middle-click" name="middlemouse.paste" type="bool" />
 		</preferences>
-		<groupbox class="charpick-details">
+		<groupbox class="charpick-details" flex="1">
 			<caption label="&characterpalette;" />
 			<label id="charpick-palettes" value="&palettes;"
 				control="charpick-palette-list" accesskey="&palettes.accesskey;" />
-			<hbox>
-				<listbox id="charpick-palette-list"></listbox>
+			<hbox flex="1">
+				<listbox id="charpick-palette-list" flex="1" />
 				<vbox>
 					<button id="charpick-add" label="&add;"
 						accesskey="&add.accesskey;" onclick="charpick.addPalette();" />
