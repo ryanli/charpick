@@ -7,7 +7,7 @@
 <!ENTITY about "About">
 <!ENTITY about.accesskey "A">
 <!ENTITY about.characterpalette "About Character Palette">
-<!ENTITY description "Firefox toolbar for selecting strange characters that are not on my keyboard.">
+<!ENTITY description "Toolbar for selecting strange characters that are not on my keyboard.">
 <!ENTITY licence "Released under GNU General Public Licence v3">
 <!ENTITY copyright "© 2008–2009 Ryan Li and others">
 <!ENTITY credits "Credits">

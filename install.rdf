@@ -8,7 +8,7 @@
 		<em:id>charpick@ryanium.com</em:id>
 		<em:version>0.4</em:version>
 		<em:type>2</em:type>
-		<em:description>Firefox toolbar for selecting strange characters that are not on my keyboard.</em:description>
+		<em:description>Toolbar for selecting strange characters that are not on my keyboard.</em:description>
 		<em:creator>Ryan Li</em:creator>
 		<em:homepageURL>http://github.com/ryanli/charpick</em:homepageURL>
 		<em:optionsURL>chrome://charpick/content/preferences.xul</em:optionsURL>
