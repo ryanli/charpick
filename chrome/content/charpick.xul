@@ -30,7 +30,7 @@
 	<toolbar id="charpick-toolbar" />
 </toolbox>
 
-<toolbar id="charpick-toolbar" class="chromeclass-toolbar" mode="text"
+<toolbar id="charpick-toolbar" class="chromeclass-toolbar"
 	collapsed="false" customizable="false" context="toolbar-context-menu"
 	label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
 
