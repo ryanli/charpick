@@ -11,7 +11,7 @@
 </stringbundleset>
 
 <toolbox id="navigator-toolbox">
-	<toolbar id="charpick-toolbar" class="chromeclass-toolbar"
+	<toolbar id="charpick-toolbar" class="chromeclass-toolbar" mode="text"
 		collapsed="false" customizable="false" context="toolbar-context-menu"
 		label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
 
