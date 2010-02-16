@@ -1,6 +1,8 @@
 content	charpick chrome/content/
 overlay chrome://browser/content/browser.xul chrome://charpick/content/charpick.xul
-overlay chrome://messenger/content/messenger.xul chrome://charpick/content/charpick-tb.xul
+overlay chrome://messenger/content/messenger.xul chrome://charpick/content/charpick.xul
+overlay chrome://messenger/content/addressbook/addressbook.xul chrome://charpick/content/charpick.xul
+overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://charpick/content/charpick.xul
 
 locale charpick ca-AD chrome/locale/ca-AD/
 locale charpick de-DE chrome/locale/de-DE/

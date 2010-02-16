@@ -10,30 +10,49 @@
 	<stringbundle id="charpick-strings" src="chrome://charpick/locale/charpick.properties" />
 </stringbundleset>
 
+<!-- Firefox -->
 <toolbox id="navigator-toolbox">
-	<toolbar id="charpick-toolbar" class="chromeclass-toolbar" mode="text"
-		collapsed="false" customizable="false" context="toolbar-context-menu"
-		label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
-
-		<toolbarbutton id="charpick-menu" type="menu" label="&characterpalette;">
-			<menupopup id="charpick-popup" onpopupshowing="charpick.loadPalettes();">
-
-				<menuseparator id="charpick-menu-separator" />
-
-				<menuitem id="charpick-menu-preferences" label="&preferences;" accesskey="&preferences.accesskey;"
-					oncommand="window.openDialog('chrome://charpick/content/preferences.xul',
-						'charpick-preferences-dialog', 'centerscreen,chrome,modal');" />
-				<menuitem id="charpick-menu-help" label="&help;" accesskey="&help.accesskey;"
-					oncommand="gBrowser.selectedTab = gBrowser.addTab('http://wiki.github.com/ryanli/charpick/');" />
-				<menuitem id="charpick-menu-about" label="&about;" accesskey="&about.accesskey;"
-					oncommand="window.openDialog('chrome://charpick/content/about.xul',
-						'charpick-about-dialog', 'centerscreen,chrome,modal');" />
-
-			</menupopup>
-		</toolbarbutton>
-
-		<toolbaritem id="charpick-buttons">
-		</toolbaritem>
-	</toolbar>
+	<toolbar id="charpick-toolbar" />
 </toolbox>
+
+<!-- Mail -->
+<toolbox id="mail-toolbox">
+	<toolbar id="charpick-toolbar" />
+</toolbox>
+
+<!-- Composer -->
+<toolbox id="compose-toolbox">
+	<toolbar id="charpick-toolbar" />
+</toolbox>
+
+<!-- Address book-->
+<toolbox id="ab-toolbox">
+	<toolbar id="charpick-toolbar" />
+</toolbox>
+
+<toolbar id="charpick-toolbar" class="chromeclass-toolbar" mode="text"
+	collapsed="false" customizable="false" context="toolbar-context-menu"
+	label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
+
+	<toolbarbutton id="charpick-menu" type="menu" label="&characterpalette;">
+		<menupopup id="charpick-popup" onpopupshowing="charpick.loadPalettes();">
+
+			<menuseparator id="charpick-menu-separator" />
+
+			<menuitem id="charpick-menu-preferences" label="&preferences;" accesskey="&preferences.accesskey;"
+				oncommand="window.openDialog('chrome://charpick/content/preferences.xul',
+					'charpick-preferences-dialog', 'centerscreen,chrome,modal');" />
+			<menuitem id="charpick-menu-help" label="&help;" accesskey="&help.accesskey;"
+				oncommand="gBrowser.selectedTab = gBrowser.addTab('http://wiki.github.com/ryanli/charpick/');" />
+			<menuitem id="charpick-menu-about" label="&about;" accesskey="&about.accesskey;"
+				oncommand="window.openDialog('chrome://charpick/content/about.xul',
+					'charpick-about-dialog', 'centerscreen,chrome,modal');" />
+
+		</menupopup>
+	</toolbarbutton>
+
+	<toolbaritem id="charpick-buttons">
+	</toolbaritem>
+</toolbar>
+
 </overlay>
