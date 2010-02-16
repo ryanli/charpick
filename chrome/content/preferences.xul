@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE dialog SYSTEM "chrome://charpick/locale/main.dtd">
+<!DOCTYPE prefwindow SYSTEM "chrome://charpick/locale/main.dtd">
 <?xml-stylesheet href="chrome://charpick/content/style.css" type="text/css"?>
 
 <prefwindow id="charpick-preferences-dialog"
