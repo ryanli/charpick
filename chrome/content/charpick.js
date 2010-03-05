@@ -358,14 +358,6 @@ var charpick = {
 		var textbox = document.getElementById("charpick-textbox");
 		textbox.value = window.arguments[0].palette;
 	},
-
-	loadPrefs : function() {
-		charpick.loadPaletteList();
-	},
-
-	savePrefs : function() {
-		return charpick.savePalettes();
-	},
 // preferences dialog end
 
 // first run begin
