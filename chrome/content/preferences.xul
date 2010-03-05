@@ -5,10 +5,10 @@
 <prefwindow id="charpick-preferences-dialog"
 	title="&characterpalette.preferences;"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-	onload="charpick.fillPaletteList();">
+	onload="charpick.listFromPref();">
 	<prefpane id="charpick-preferences-details" label="&characterpalette;" flex="1">
 		<preferences>
-			<preference id="palettes" name="extensions.charpick.palettes" type="string" onchange="charpick.fillPaletteList();" />
+			<preference id="palettes" name="extensions.charpick.palettes" type="string" />
 			<preference id="middle-click" name="middlemouse.paste" type="bool" />
 		</preferences>
 		<groupbox class="charpick-details" flex="1">

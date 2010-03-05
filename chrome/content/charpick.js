@@ -183,7 +183,7 @@ var charpick = {
 		var merged = new String();
 		for (var index in palettes) {
 			// ignore empty palettes
-			if (palettes[index] != "") {
+			if (palettes[index]) {
 				merged += palettes[index].replace(/;/g, ";;") + ";";
 			}
 		}
@@ -300,7 +300,17 @@ var charpick = {
 // toolbar actions end
 
 // preferences dialog begin
-	fillPaletteList : function() {
+	listToPref : function() {
+		var pref = document.getElementById("palettes");
+		var list = document.getElementById("charpick-palette-list");
+		var palettes = [];
+		for (var index = 0; index < list.itemCount; ++index) {
+			palettes.push(list.getItemAtIndex(index).getAttribute("label"));
+		}
+		pref.value = charpick.mergePaletteList(palettes);
+	},
+
+	listFromPref : function() {
 		var pref = document.getElementById("palettes");
 		var palettes = charpick.splitPaletteList(pref.value);
 		var list = document.getElementById("charpick-palette-list");
@@ -313,42 +323,35 @@ var charpick = {
 	},
 
 	addPalette : function() {
-		var pref = document.getElementById("palettes");
-		var palettes = charpick.splitPaletteList(pref.value);
+		var list = document.getElementById("charpick-palette-list");
 		var params = {add: false, palette: ""};
 		window.openDialog("chrome://charpick/content/add-palette.xul",
 			"charpick-add-palette-dialog", "centerscreen,chrome,modal", params);
 		if (params.add) {
-			palettes.push(params.palette);
+			list.appendItem(params.palette);
 		}
-		pref.value = charpick.mergePaletteList(palettes);
+		charpick.listToPref();
 	},
 
 	editPalette : function() {
-		var pref = document.getElementById("palettes");
-		var palettes = charpick.splitPaletteList(pref.value);
 		var list = document.getElementById("charpick-palette-list");
-		var index = list.selectedIndex;
-		if (index >= 0) {
-			var params = {edit: false, palette: palettes[index]};
+		if (list.selectedItem) {
+			var params = {edit: false, palette: list.selectedItem.label};
 			window.openDialog("chrome://charpick/content/edit-palette.xul",
 				"charpick-edit-palette-dialog", "centerscreen,chrome,modal", params);
 			if (params.edit) {
-				palettes[index] = params.palette;
+				list.selectedItem.label = params.palette;
 			}
-			pref.value = charpick.mergePaletteList(palettes);
 		}
+		charpick.listToPref();
 	},
 
 	deletePalette : function() {
-		var pref = document.getElementById("palettes");
-		var palettes = charpick.splitPaletteList(pref.value);
 		var list = document.getElementById("charpick-palette-list");
-		var index = list.selectedIndex;
-		if (index >= 0) {
-			palettes.splice(index, 1);
-			pref.value = charpick.mergePaletteList(palettes);
+		if (list.selectedItem) {
+			list.removeItemAt(list.selectedIndex);
 		}
+		charpick.listToPref();
 	},
 
 	setTextBox : function() {
