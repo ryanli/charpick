@@ -1,5 +1,33 @@
 <!ENTITY characterpalette "Character Palette">
 <!ENTITY characterpalette.toolbar "Barra de Ferramentas do Character Palette">
+<!ENTITY preferences "Preferências">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "Ajuda">
+<!ENTITY help.accesskey "A">
 <!ENTITY about "Sobre">
+<!ENTITY about.accesskey "S">
 <!ENTITY about.characterpalette "Sobre o Character Palette">
+<!ENTITY description "Barra de ferramentas do Firefox para selecionar caracteres estranhos que não estão no meu teclado.">
+<!ENTITY licence "Disponibilizado sobre Licença Pública Geral GNU v3">
+<!ENTITY copyright "© 2008–2009 Ryan Li e outros">
+<!ENTITY credits "Créditos">
+<!ENTITY written.by "Escrito por">
+<!ENTITY documented.by "Documentado por">
+<!ENTITY translated.by "Traduzido por">
+<!ENTITY characterpalette.preferences "Preferências Character Palette">
+<!ENTITY palettes "Paletas:">
+<!ENTITY palettes.accesskey "P">
+<!ENTITY add "Adicionar">
+<!ENTITY add.accesskey "A">
+<!ENTITY edit "Editar">
+<!ENTITY edit.accesskey "E">
+<!ENTITY delete "Apagar">
+<!ENTITY delete.accesskey "p">
+<!ENTITY paste.middle.click "Copiar com o botão do meio do mouse">
+<!ENTITY paste.middle.click.accesskey "m">
+<!ENTITY add.palette "Adicionar paleta">
+<!ENTITY edit.palette "Editar paleta">
+<!ENTITY new.palette.label "Nova paleta:">
+<!ENTITY new.palette.accesskey "N">
+<!ENTITY edit.palette.label "Editar palheta:">
+<!ENTITY edit.palette.accesskey "E">
