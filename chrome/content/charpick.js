@@ -8,13 +8,14 @@ var charpick = {
 // utils begin
 	prefManager : Components
 		.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefBranch),
+		.getService(Components.interfaces.nsIPrefService)
+		.getBranch("extensions.charpick."),
 
 	getStringPref : function(key) {
 		var val;
 		try {
 			val = this.prefManager.
-			getComplexValue("extensions.charpick." + key, Components.interfaces.nsISupportsString)
+			getComplexValue(key, Components.interfaces.nsISupportsString)
 			.data;
 		}
 		catch (e) {
@@ -29,13 +30,13 @@ var charpick = {
 			.createInstance(Components.interfaces.nsISupportsString);
 		str.data = val;
 		this.prefManager
-			.setComplexValue("extensions.charpick." + key, Components.interfaces.nsISupportsString, str);
+			.setComplexValue(key, Components.interfaces.nsISupportsString, str);
 	},
 
 	getIntegerPref : function(key) {
 		var val;
 		try {
-			val = this.prefManager.getIntPref("extensions.charpick." + key);
+			val = this.prefManager.getIntPref(key);
 		}
 		catch (e) {
 			return null;
@@ -44,7 +45,7 @@ var charpick = {
 	},
 
 	setIntegerPref : function(key, val) {
-		this.prefManager.setIntPref("extensions.charpick." + key, val);
+		this.prefManager.setIntPref(key, val);
 	},
 
 	getClipboard : function() {
