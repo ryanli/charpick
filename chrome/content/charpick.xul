@@ -10,7 +10,7 @@
 	<stringbundle id="charpick-strings" src="chrome://charpick/locale/charpick.properties" />
 </stringbundleset>
 
-<!-- Firefox -->
+<!-- Navigator -->
 <toolbox id="navigator-toolbox">
 	<toolbar id="charpick-toolbar" />
 </toolbox>

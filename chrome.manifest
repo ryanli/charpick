@@ -1,5 +1,6 @@
 content charpick chrome/content/
 overlay chrome://browser/content/browser.xul chrome://charpick/content/charpick.xul
+overlay chrome://navigator/content/navigator.xul chrome://charpick/content/charpick.xul
 overlay chrome://messenger/content/messenger.xul chrome://charpick/content/charpick.xul
 overlay chrome://messenger/content/addressbook/addressbook.xul chrome://charpick/content/charpick.xul
 overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://charpick/content/charpick.xul
