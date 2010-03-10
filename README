@@ -1,22 +1,18 @@
-Character Palette is an extension for inputing special characters,
-licensed under GNU GPLv3.
-It's compatible with Firefox and Thunderbird.
+Character Palette is an extension for Mozilla applications, 
+used for inputing special characters.
+It's compatible with Firefox and Thunderbird, SeaMonkey.
+
+Character Palette is licensed under GNU GPLv3.
 
 Homepage: http://github.com/ryanli/charpick
 
 This toolbar is a port of the GNOME Character Palette applet.
 
-For official stable versions, you could download at the following AMO link:
+For official stable versions, you could download at github:
 http://github.com/ryanli/charpick/downloads
 
 It's also hosted at addons.mozilla.org:
 https://addons.mozilla.org/en-US/firefox/addon/60146
-For version 0.3 or before, you could download it here:
-https://addons.mozilla.org/en-US/firefox/addon/8138
-
-Since we changed the software id in version 0.4, we strongly recommend you NOT
-to use versions before 0.4.
-
 
 Character Palette uses git as its version control system, you can get the latest
 development files with the following command:
