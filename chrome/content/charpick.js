@@ -155,26 +155,26 @@ var charpick = {
 
 // palette operations begin
 	splitPaletteList : function(palettes) {
-		var index = 0;
 		var ret = new Array();
-		while (index < palettes.length) {
-			var current = new String();
-			while (index < palettes.length) {
-				if (palettes[index] != ";") {
-					current += palettes[index];
-					++index;
+		var current = new String();
+		for (var index = 0; index <= palettes.length; ++index) {
+			if (index >= palettes.length || palettes[index] == ";") {
+				// semicolon is the separator of two palettes
+				// go on to proceed next palette
+				if (current.length > 0) {
+					ret.push(current);
 				}
-				else if (index < palettes.length - 1 && palettes[index + 1] == ";") {
-					current += ";";
-					index += 2;
-				}
-				else {
-					++index;
-					break;
+				current = new String();
+			}
+			else if (palettes[index] == "\\") {
+				// we use backslash to escape special characters
+				if (index < palettes.length) {
+					current += palettes[++index];
 				}
 			}
-			if (current.length) {
-				ret.push(current);
+			else {
+				// normal character
+				current += palettes[index];
 			}
 		}
 		return ret;
@@ -185,7 +185,7 @@ var charpick = {
 		for (var index in palettes) {
 			// ignore empty palettes
 			if (palettes[index]) {
-				merged += palettes[index].replace(/;/g, ";;") + ";";
+				merged += palettes[index].replace(/\\/g, "\\\\").replace(/;/g, "\\;") + ";";
 			}
 		}
 		return merged;
