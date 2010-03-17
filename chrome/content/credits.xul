@@ -31,15 +31,17 @@
 			</tabpanel>
 			<tabpanel>
 				<vbox flex="1">
-					<description>ca-AD: el_libre (http://www.catmidia.cat)</description>
-					<description>de-DE: erglo</description>
-					<description>hu-HU: Mikes Kaszmán István</description>
-					<description>ja-JP: drry</description>
-					<description>ko-kR: Wtspout(용오름)</description>
-					<description>pl-PL: Wacław Jacek</description>
-					<description>ru-RU: Evgeny Lavrov &lt;EvgenyLavrov@gmail.com&gt;</description>
-					<description>sr-RS: Kacnepcku PC</description>
-					<description>tr-TR: MRTCVK</description>
+					<description>ca: el_libre (http://www.catmidia.cat)</description>
+					<description>de: erglo</description>
+					<description>es-ES: RigoNet</description>
+					<description>hu: Mikes Kaszmán István</description>
+					<description>ja: drry</description>
+					<description>ko: Wtspout(용오름)</description>
+					<description>pl: Wacław Jacek</description>
+					<description>pt-BR: humbertosartini</description>
+					<description>ru: Evgeny Lavrov &lt;EvgenyLavrov@gmail.com&gt;</description>
+					<description>sr: Kacnepcku PC</description>
+					<description>tr: MRTCVK</description>
 					<description>zh-CN: Ryan Li &lt;ryan@ryanium.com&gt;</description>
 				</vbox>
 			</tabpanel>

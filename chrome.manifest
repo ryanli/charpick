@@ -5,19 +5,19 @@ overlay chrome://messenger/content/messenger.xul chrome://charpick/content/charp
 overlay chrome://messenger/content/addressbook/addressbook.xul chrome://charpick/content/charpick.xul
 overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://charpick/content/charpick.xul
 
-locale charpick ca-AD chrome/locale/ca-AD/
-locale charpick de-DE chrome/locale/de-DE/
+locale charpick ca chrome/locale/ca/
+locale charpick de chrome/locale/de/
 locale charpick en-US chrome/locale/en-US/
 locale charpick es-ES chrome/locale/es-ES/
-locale charpick fr-FR chrome/locale/fr-FR/
-locale charpick hu-HU chrome/locale/hu-HU/
+locale charpick fr chrome/locale/fr/
+locale charpick hu chrome/locale/hu/
 locale charpick ja chrome/locale/ja/
-locale charpick ko-KR chrome/locale/ko-KR/
-locale charpick nl-NL chrome/locale/nl-NL/
-locale charpick pl-PL chrome/locale/pl-PL/
+locale charpick ko chrome/locale/ko/
+locale charpick nl chrome/locale/nl/
+locale charpick pl chrome/locale/pl/
 locale charpick pt-BR chrome/locale/pt-BR/
-locale charpick ru-RU chrome/locale/ru-RU/
-locale charpick sr-RS chrome/locale/sr-RS/
-locale charpick tr-TR chrome/locale/tr-TR/
-locale charpick uk-UA chrome/locale/uk-UA/
+locale charpick ru chrome/locale/ru/
+locale charpick sr chrome/locale/sr/
+locale charpick tr chrome/locale/tr/
+locale charpick uk chrome/locale/uk/
 locale charpick zh-CN chrome/locale/zh-CN/
