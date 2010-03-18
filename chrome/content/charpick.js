@@ -1,7 +1,5 @@
 var charpick = {
 
-	version : "0.4",
-
 	selected : "",
 	selectedText : "",
 
@@ -372,23 +370,6 @@ var charpick = {
 	},
 // preferences dialog end
 
-// first run begin
-	getWikiURI : function() {
-		var host = "http://wiki.github.com/ryanli/charpick/";
-		var version = this.version.replace(/\./g, "");
-		var uri = host + "version-" + version;
-		return uri;
-	},
-
-	firstRun : function() {
-		var version = this.getStringPref("version");
-		if (version !== this.version) {
-			this.setStringPref("version", this.version);
-			gBrowser.selectedTab = gBrowser.addTab(charpick.getWikiURI());
-		}
-	},
-// first run end
-
 // listener begin
 // Note: the keyword `this' should not be used in event listeners
 //       use charpick instead.
@@ -420,7 +401,6 @@ var charpick = {
 		charpick.prefs.addObserver("", charpick, false);
 
 		charpick.loadPalettes();
-		charpick.firstRun();
 	},
 
 	terminate : function() {
