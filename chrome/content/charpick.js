@@ -45,6 +45,10 @@ var charpick = {
 		this.prefs.setIntPref(key, val);
 	},
 
+	/*
+		return type: {Global: String(), Selection: String()};
+		value false means the corresponding clipboard is unavailable
+	*/
 	getClipboard : function() {
 		try {
 			var ret = new Object();
@@ -75,7 +79,7 @@ var charpick = {
 				}
 			}
 			catch (e) {
-				ret.Global = false;
+				ret.Global = null;
 			}
 
 			// kSelectionClipboard - only for X
@@ -98,7 +102,7 @@ var charpick = {
 				}
 			}
 			catch (e) {
-				ret.Selection = false;
+				ret.Selection = null;
 			}
 
 			return ret;
@@ -294,17 +298,6 @@ var charpick = {
 		this.selected = "";
 		this.selectedText = "";
 	},
-
-	clipboardListener : function() {
-		var text = charpick.selectedText;
-		var selection = charpick.getClipboard();
-		if (text) {
-			if ((selection.Global !== false && selection.Global !== text)
-				|| (selection.Selection !== false && selection.Selection !== text)) {
-				charpick.clearSelection();
-			}
-		}
-	},
 // toolbar actions end
 
 // preferences dialog begin
@@ -399,6 +392,18 @@ var charpick = {
 // listener begin
 // Note: the keyword `this' should not be used in event listeners
 //       use charpick instead.
+
+	clipboardListener : function() {
+		var text = charpick.selectedText;
+		var selection = charpick.getClipboard();
+		if (text) {
+			if ((selection.Global !== false && selection.Global !== text)
+				|| (selection.Selection !== false && selection.Selection !== text)) {
+				charpick.clearSelection();
+			}
+		}
+	},
+
 	observe : function(subject, topic, data) {
 		if (topic === "nsPref:changed" && data === "palettes") {
 			// reload the palettes whenever the value of
