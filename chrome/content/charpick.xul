@@ -35,7 +35,7 @@
 	label="&characterpalette;" grippytooltiptext="&characterpalette;" toolbarname="&characterpalette.toolbar;">
 
 	<toolbarbutton id="charpick-menu" type="menu" label="&characterpalette;">
-		<menupopup id="charpick-popup" onpopupshowing="charpick.loadPalettes();">
+		<menupopup id="charpick-popup">
 
 			<menuseparator id="charpick-menu-separator" />
 

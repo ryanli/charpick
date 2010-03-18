@@ -6,15 +6,12 @@ var charpick = {
 	selectedText : "",
 
 // utils begin
-	prefManager : Components
-		.classes["@mozilla.org/preferences-service;1"]
-		.getService(Components.interfaces.nsIPrefService)
-		.getBranch("extensions.charpick."),
+	prefs : null,
 
 	getStringPref : function(key) {
 		var val;
 		try {
-			val = this.prefManager.
+			val = this.prefs.
 			getComplexValue(key, Components.interfaces.nsISupportsString)
 			.data;
 		}
@@ -29,14 +26,14 @@ var charpick = {
 			.classes["@mozilla.org/supports-string;1"]
 			.createInstance(Components.interfaces.nsISupportsString);
 		str.data = val;
-		this.prefManager
+		this.prefs
 			.setComplexValue(key, Components.interfaces.nsISupportsString, str);
 	},
 
 	getIntegerPref : function(key) {
 		var val;
 		try {
-			val = this.prefManager.getIntPref(key);
+			val = this.prefs.getIntPref(key);
 		}
 		catch (e) {
 			return null;
@@ -45,7 +42,7 @@ var charpick = {
 	},
 
 	setIntegerPref : function(key, val) {
-		this.prefManager.setIntPref(key, val);
+		this.prefs.setIntPref(key, val);
 	},
 
 	getClipboard : function() {
@@ -400,14 +397,35 @@ var charpick = {
 // first run end
 
 // listener begin
+// Note: the keyword `this' should not be used in event listeners
+//       use charpick instead.
+	observe : function(subject, topic, data) {
+		if (topic === "nsPref:changed" && data === "palettes") {
+			// reload the palettes whenever the value of
+			// extensions.charpick.palettes is changed.
+			charpick.loadPalettes();
+		}
+	},
+
 	init : function() {
+		charpick.prefs = Components.classes["@mozilla.org/preferences-service;1"]
+			.getService(Components.interfaces.nsIPrefService)
+			.getBranch("extensions.charpick.");
+		charpick.prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
+		charpick.prefs.addObserver("", charpick, false);
+
 		charpick.loadPalettes();
 		charpick.firstRun();
+	},
+
+	terminate : function() {
+		charpick.prefs.removeObserver("", charpick);
 	}
 // listener end
 };
 
 window.addEventListener("load", charpick.init, false);
+window.addEventListener("unload", charpick.terminate, false);
 
 // We need many event listeners in order to monitor clipboard change.
 // Besides user-triggered copy events, external applications and scripts
