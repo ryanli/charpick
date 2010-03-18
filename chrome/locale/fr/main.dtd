@@ -1,5 +1,33 @@
 <!ENTITY characterpalette "Palette de caractères">
 <!ENTITY characterpalette.toolbar "Barre de la palette de caractères">
+<!ENTITY preferences "Préférences">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "Aide">
+<!ENTITY help.accesskey "A">
 <!ENTITY about "À propos">
+<!ENTITY about.accesskey "o">
 <!ENTITY about.characterpalette "À propos de la palette de caractères">
+<!ENTITY description "Une barre pour choisir les caractères spéciaux qui ne sont pas sur votre clavier.">
+<!ENTITY licence "Publiée sous licence  GNU General Public v3">
+<!ENTITY copyright "© 2008–2010 Ryan Li et alii">
+<!ENTITY credits "Crédits">
+<!ENTITY written.by "Créée par">
+<!ENTITY documented.by "Documentation par">
+<!ENTITY translated.by "Traduction par">
+<!ENTITY characterpalette.preferences "Préférences de l'extension Character Palette">
+<!ENTITY palettes "Palettes :">
+<!ENTITY palettes.accesskey "P">
+<!ENTITY add "Ajouter">
+<!ENTITY add.accesskey "A">
+<!ENTITY edit "Modifier">
+<!ENTITY edit.accesskey "M">
+<!ENTITY delete "Supprimer">
+<!ENTITY delete.accesskey "S">
+<!ENTITY paste.middle.click "Coller avec le clic-milieu (molette)">
+<!ENTITY paste.middle.click.accesskey "o">
+<!ENTITY add.palette "Ajouter une palette">
+<!ENTITY edit.palette "Modifier une palette">
+<!ENTITY new.palette.label "Nouvelle palette :">
+<!ENTITY new.palette.accesskey "N">
+<!ENTITY edit.palette.label "Modifier la palette :">
+<!ENTITY edit.palette.accesskey "M">
