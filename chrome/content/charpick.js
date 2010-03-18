@@ -357,9 +357,11 @@ var charpick = {
 			if (selectedIndex >= list.itemCount) {
 				selectedIndex = list.itemCount - 1;
 			}
-			var next = list.getItemAtIndex(selectedIndex);
-			list.ensureElementIsVisible(next);
-			list.selectItem(next);
+			if (selectedIndex >= 0) {
+				var next = list.getItemAtIndex(selectedIndex);
+				list.ensureElementIsVisible(next);
+				list.selectItem(next);
+			}
 		}
 		charpick.listToPref();
 	},
