@@ -329,7 +329,9 @@ var charpick = {
 		window.openDialog("chrome://charpick/content/add-palette.xul",
 			"charpick-add-palette-dialog", "centerscreen,chrome,modal", params);
 		if (params.add) {
-			list.appendItem(params.palette);
+			var last = list.appendItem(params.palette);
+			list.ensureElementIsVisible(last);
+			list.selectItem(last);
 		}
 		charpick.listToPref();
 	},
@@ -350,7 +352,14 @@ var charpick = {
 	deletePalette : function() {
 		var list = document.getElementById("charpick-palette-list");
 		if (list.selectedItem) {
-			list.removeItemAt(list.selectedIndex);
+			var selectedIndex = list.selectedIndex;
+			list.removeItemAt(selectedIndex);
+			if (selectedIndex >= list.itemCount) {
+				selectedIndex = list.itemCount - 1;
+			}
+			var next = list.getItemAtIndex(selectedIndex);
+			list.ensureElementIsVisible(next);
+			list.selectItem(next);
 		}
 		charpick.listToPref();
 	},
