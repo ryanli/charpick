@@ -222,7 +222,7 @@ var charpick = {
 
 		if (palettes.length > 0) {
 			var selected = charpick.getIntegerPref("selected");
-			if (selected == null || selected > palettes.length) {
+			if (selected == null || selected >= palettes.length) {
 				selected = 0;
 			}
 
