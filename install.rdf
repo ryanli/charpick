@@ -9,7 +9,29 @@
 		<em:version>0.4</em:version>
 		<em:type>2</em:type>
 		<em:description>Toolbar for selecting strange characters that are not on my keyboard.</em:description>
-		<em:creator>Ryan Li</em:creator>
+
+		<em:creator>Ryan Li &lt;ryan@ryanium.com&gt;</em:creator>
+
+		<!-- Authors of the GNOME applet -->
+		<em:contributor>Alexandre Muñiz &lt;munizao@xprt.net&gt;</em:contributor>
+		<em:contributor>Kevin Vandersloot</em:contributor>
+
+		<em:contributor>Brett Zamir</em:contributor>
+
+		<em:translator>ca: el_libre (http://www.catmidia.cat)</em:translator>
+		<em:translator>de: erglo</em:translator>
+		<em:translator>es-ES: RigoNet</em:translator>
+		<em:translator>fr: delphine</em:translator>
+		<em:translator>hu: Mikes Kaszmán István</em:translator>
+		<em:translator>ja: drry</em:translator>
+		<em:translator>ko: Wtspout(용오름)</em:translator>
+		<em:translator>pl: Wacław Jacek</em:translator>
+		<em:translator>pt-BR: humbertosartini</em:translator>
+		<em:translator>ru: Evgeny Lavrov &lt;EvgenyLavrov@gmail.com&gt;</em:translator>
+		<em:translator>sr: Kacnepcku PC</em:translator>
+		<em:translator>tr: MRTCVK</em:translator>
+		<em:translator>zh-CN: Ryan Li &lt;ryan@ryanium.com&gt;</em:translator>
+
 		<em:homepageURL>http://github.com/ryanli/charpick</em:homepageURL>
 		<em:optionsURL>chrome://charpick/content/preferences.xul</em:optionsURL>
 		<em:aboutURL>chrome://charpick/content/about.xul</em:aboutURL>
