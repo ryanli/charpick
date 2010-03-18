@@ -213,37 +213,47 @@ var charpick = {
 // toolbar actions begin
 	loadPalettes : function() {
 		var palettes = charpick.getPalettes();
+
 		var popup = document.getElementById("charpick-popup");
 		var separator = document.getElementById("charpick-menu-separator");
 
-		while (popup.getElementsByClassName("charset").length) {
-			popup.removeChild(popup.getElementsByClassName("charset")[0]);
+		while (popup.getElementsByClassName("charpick-palette").length) {
+			popup.removeChild(popup.getElementsByClassName("charpick-palette")[0]);
 		}
 
-		for (var index in palettes) {
-			var palette = document.createElement("menuitem");
-			palette.setAttribute("class", "charset");
-			palette.setAttribute("group", "charset");
-			palette.setAttribute("type", "radio");
-			palette.setAttribute("oncommand", "charpick.selectPalette(" + index + ", this.label);");
-			palette.setAttribute("label", palettes[index]);
-			popup.insertBefore(palette, separator);
+		if (palettes.length > 0) {
+			var selected = charpick.getIntegerPref("selected");
+			if (selected == null || selected > palettes.length) {
+				selected = 0;
+			}
+
+			for (var index in palettes) {
+				var palette = document.createElement("menuitem");
+				palette.setAttribute("id", "charpick-palette-" + index);
+				palette.setAttribute("class", "charpick-palette");
+				palette.setAttribute("group", "charpick-palette");
+				palette.setAttribute("type", "radio");
+				palette.setAttribute("oncommand", "charpick.selectPalette(" + index + ");");
+				palette.setAttribute("label", palettes[index]);
+				popup.insertBefore(palette, separator);
+			}
+
+			charpick.selectPalette(selected);
 		}
-		var selected = 0;
-		if (charpick.getIntegerPref("selected")) {
-			selected = charpick.getIntegerPref("selected");
-		}
-		if (!popup.getElementsByClassName("charset")[selected]) {
-			selected = 0;
-		}
-		popup.getElementsByClassName("charset")[selected].setAttribute("checked", "true");
-		charpick.selectPalette(selected, palettes[selected]);
 	},
 
-	selectPalette : function(index, charset) {
+	selectPalette : function(index) {
 		this.selected = "";
 		this.selectedText = "";
 		charpick.setIntegerPref("selected", index);
+
+		var palette = document.getElementById("charpick-palette-" + index);
+		if (!palette) {
+			return;
+		}
+		palette.setAttribute("checked", "true");
+		var paletteLabel = palette.getAttribute("label");
+
 		var container = document.getElementById("charpick-buttons");
 		while (container.childNodes.length) {
 			container.removeChild(container.firstChild);
@@ -251,7 +261,7 @@ var charpick = {
 
 		var copyString = document.getElementById("charpick-strings").getString("copy");
 
-		var charArray = charpick.splitPalette(charset);
+		var charArray = charpick.splitPalette(paletteLabel);
 		for (var index in charArray) {
 			var charButton = document.createElement("toolbarbutton");
 			charButton.setAttribute("id", "charpick-char-" + index);
