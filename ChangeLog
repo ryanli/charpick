@@ -1,77 +1,88 @@
+==================== 0.4.1 ====================
+2010-03-18  Ryan Li <ryan@ryanium.com>
+	* charpick.js: no longer opening a first-run page.
+	* charpick.{js,xul}: use nsIPrefBranch2 to observe preference change.
+	* charpick.js: prevented error when there is no element left in listbox.
+	* charpick.js: auto-select element after adding/deleting palette.
+	* locale: locale updates.
+2010-03-17  Ryan Li <ryan@ryanium.com>
+	* locale, chrome.manifest: some locale name changes.
+2010-03-10  Ryan Li <ryan@ryanium.com>
+	* *: support for SeaMonkey.
+2010-02-16  Ryan Li <ryan@ryanium.com>
+	* *: support for Thunderbird.
+2010-02-11  Ryan Li <ryan@ryanium.com>
+	* preferences.xul: used groupbox and changed flex for a better layout.
+2010-01-23  Ryan Li <ryan@ryanium.com>
+	* preferences.xul: used prefwindow for native preferences dialog.
+2010-01-21  Ryan Li <ryan@ryanium.com>
+	* install.rdf: optionsURL added in install.rdf.
+2010-01-21  Brett Zamir <brettz9@yahoo.com>
+	* charpick.js: support for non-BMP characters.
+
 ==================== 0.4 ====================
 2010-01-08  Ryan Li <ryan@ryanium.com>
-	* *: Changed character-palette/characterpalette
-		to charpick.
+	* *: changed character-palette/characterpalette to charpick.
 	* install.rdf: changed ID to charpick@ryanium.com.
-	* chrome/content/charpick.xul, charpick.js:
-		Copy directly after pushing the buttons.
-	* chrome/content/about.xul, credits.xul:
-		About dialog modified, and added credits dialog.
-	* chrome/content/help.html, help.css:
-		Moved help page to GitHub.
-	* chrome/content/preferences.xul:
-		Option for pasting with middle-clicks.
-	* chrome/content/logo.png, logo-large.png:
-		Logo updates.
-	* chrome/locale: Locale updates.
+	* charpick.{js,xul}: copy directly after pushing the buttons.
+	* about.xul, credits.xul: about dialog modified, and added credits dialog.
+	* help.html, help.css: moved help page to GitHub.
+	* preferences.xul: option for pasting with middle-clicks.
+	* logo.png, logo-large.png: Logo updates.
+	* locale: locale updates.
 
 ==================== 0.3 ====================
 
 2009-11-18  Ryan Li <ryan@ryanium.com>
 
-	* chrome/content/*: Fully customizable toolbar,
-		with default palettes set to the GNOME one's.
-	* chrome/content/style.css: Unicode characters
-		can now display correctly.
-	* chrome/content/help.*: Use a help page as
-		a substitution of the previous dialog.
+	* *: fully customizable toolbar, with
+		default palettes set to the GNOME one's.
+	* style.css: Unicode characters can now display correctly.
+	* help.*: use a help page as a substitution of the previous dialog.
 
 ==================== 0.2.2 ====================
 
 2009-11-03  Ryan Li <ryan@ryanium.com>
 
-	* chrome/content/style.css: Fixed the bug that menus
-		are displayed in red when using themes.
+	* style.css: Fixed the bug that menus are
+		displayed in red when using themes.
 		Thanks for Alan Martin who points out this bug.
-	* install.rdf: Homepage URL also changed to the AMO one.
-	* chrome/content/about.xul: Translator's name get listed
-		in about dialog.
+	* install.rdf: homepage URL also changed to the AMO one.
+	* about.xul: translator's name get listed in about dialog.
 
 ==================== 0.2.1 ====================
 
 2009-10-08  Ryan Li <ryan@ryanium.com>
 
-	* chrome.manifest: Missing hu-HU declarating in chrome.manifest fixed.
+	* chrome.manifest: missing hu-HU declarating in chrome.manifest fixed.
 		Thanks Mikes Kaszmán István for mentioning this.
-	* chrome/locale/*: New locales for ru-RU and sr-RS.
+	* locale: new locales for ru-RU and sr-RS.
 
 ==================== 0.2 ====================
 
 2009-01-28  Ryan Li <ryan@ryanium.com>
 
-	* chrome/content/*: User interface improved,
-		with a input field containing the characters
+	* *: user interface improved, with a input field containing the characters
 		you want and easy to copy.
-	* chrome/locale/*: Locales for ca-AD, de-DE, hu-HU, nl-NL,
-		pl-PL, pt-BR, tr-TR and uk-UA.
+	* locale: new locales: ca-AD, de-DE, hu-HU, nl-NL, pl-PL, pt-BR,
+		tr-TR and uk-UA.
 	* *: A brief introduction is added.
-	* chrome/content/style.css: The bug that some characters
-		were improperly displayed, esp. under GNOME, solved.
+	* style.css: the bug that some characters were improperly displayed,
+		esp. under GNOME, fixed.
 
 ==================== 0.1.1 ====================
 
 2008-07-16  Ryan Li <ryan@ryanium.com>
 
-	* chrome/locale/*/charpick.properties: Description localized.
-	* chrome/locale/*: Locales for fr-FR, ja-JP, ko-KR, zh-CN.
+	* charpick.properties: Description localized.
+	* locale: new locales: fr-FR, ja-JP, ko-KR, zh-CN.
 
 ==================== 0.1 ====================
 
 2008-07-16  Ryan Li <ryan@ryanium.com>
-	* chrome/locale/character-palette.js: Fixed incompatibility with
-		`textarea's.
+	* character-palette.js: fixed incompatibility with `textarea's.
 
 ==================== 0.0 ====================
 
 2008-07-16  Ryan Li <ryan@ryanium.com>
-	* *: First version of Character Palette.
+	* *: first version of Character Palette.

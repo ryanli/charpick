@@ -6,7 +6,7 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:name>Character Palette</em:name>
 		<em:id>charpick@ryanium.com</em:id>
-		<em:version>0.4</em:version>
+		<em:version>0.4.1</em:version>
 		<em:type>2</em:type>
 		<em:description>Toolbar for selecting strange characters that are not on my keyboard.</em:description>
 
