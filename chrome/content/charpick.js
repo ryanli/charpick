@@ -220,25 +220,26 @@ var charpick = {
 			popup.removeChild(popup.getElementsByClassName("charpick-palette")[0]);
 		}
 
-		if (palettes.length > 0) {
-			var selected = charpick.getIntegerPref("selected");
-			if (selected == null || selected >= palettes.length) {
-				selected = 0;
-			}
-
-			for (var index in palettes) {
-				var palette = document.createElement("menuitem");
-				palette.setAttribute("id", "charpick-palette-" + index);
-				palette.setAttribute("class", "charpick-palette");
-				palette.setAttribute("group", "charpick-palette");
-				palette.setAttribute("type", "radio");
-				palette.setAttribute("oncommand", "charpick.selectPalette(" + index + ");");
-				palette.setAttribute("label", palettes[index]);
-				popup.insertBefore(palette, separator);
-			}
-
-			charpick.selectPalette(selected);
+		for (var index in palettes) {
+			var palette = document.createElement("menuitem");
+			palette.setAttribute("id", "charpick-palette-" + index);
+			palette.setAttribute("class", "charpick-palette");
+			palette.setAttribute("group", "charpick-palette");
+			palette.setAttribute("type", "radio");
+			palette.setAttribute("oncommand", "charpick.selectPalette(" + index + ");");
+			palette.setAttribute("label", palettes[index]);
+			popup.insertBefore(palette, separator);
 		}
+
+		// Select the last-selected palette according to value from preferences,
+		// or if the value is larger than palette num, select the first.
+		// If there are no palettes at all(palettes.length == 0), selectPalette()
+		// will clear the buttons.
+		var selected = charpick.getIntegerPref("selected");
+		if (selected == null || selected >= palettes.length) {
+			selected = 0;
+		}
+		charpick.selectPalette(selected);
 	},
 
 	selectPalette : function(index) {
@@ -246,17 +247,17 @@ var charpick = {
 		this.selectedText = "";
 		charpick.setIntegerPref("selected", index);
 
+		var container = document.getElementById("charpick-buttons");
+		while (container.childNodes.length) {
+			container.removeChild(container.firstChild);
+		}
+
 		var palette = document.getElementById("charpick-palette-" + index);
 		if (!palette) {
 			return;
 		}
 		palette.setAttribute("checked", "true");
 		var paletteLabel = palette.getAttribute("label");
-
-		var container = document.getElementById("charpick-buttons");
-		while (container.childNodes.length) {
-			container.removeChild(container.firstChild);
-		}
 
 		var copyString = document.getElementById("charpick-strings").getString("copy");
 
