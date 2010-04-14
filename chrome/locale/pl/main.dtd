@@ -1,15 +1,33 @@
 <!ENTITY characterpalette "Paleta znaków">
 <!ENTITY characterpalette.toolbar "Character Palette">
 <!ENTITY preferences "Preferencje">
+<!ENTITY preferences.accesskey "P">
 <!ENTITY help "Pomoc">
+<!ENTITY help.accesskey "c">
 <!ENTITY about "O rozszerzeniu">
+<!ENTITY about.accesskey "O">
 <!ENTITY about.characterpalette "Character Palette - informacje">
+<!ENTITY description "Pasek narzędzi pozwalający na wstawianie znaków, które nie znajdują się na klawiaturze.">
+<!ENTITY licence "Rozszerzenie wydane zostało na licencji GNU General Public Licence v3">
+<!ENTITY copyright "© 2008–2010 Ryan Li i inni">
+<!ENTITY credits "Autorzy">
+<!ENTITY written.by "Programowanie:">
+<!ENTITY documented.by "Dokumentacja:">
+<!ENTITY translated.by "Tłumaczenie:">
 <!ENTITY characterpalette.preferences "Character Palette - preferencje">
 <!ENTITY palettes "Palety:">
+<!ENTITY palettes.accesskey "P">
 <!ENTITY add "Dodaj">
+<!ENTITY add.accesskey "D">
 <!ENTITY edit "Edytuj">
+<!ENTITY edit.accesskey "E">
 <!ENTITY delete "Usuń">
+<!ENTITY delete.accesskey "U">
+<!ENTITY paste.middle.click "Wklej po kliknięciu środkowego przycisku myszy">
+<!ENTITY paste.middle.click.accesskey "W">
 <!ENTITY add.palette "Dodaj paletę">
 <!ENTITY edit.palette "Edytuj paletę">
 <!ENTITY new.palette.label "Nowa paleta:">
+<!ENTITY new.palette.accesskey "N">
 <!ENTITY edit.palette.label "Edytuj paletę:">
+<!ENTITY edit.palette.accesskey "E">
