@@ -18,6 +18,7 @@ locale charpick pl chrome/locale/pl/
 locale charpick pt-BR chrome/locale/pt-BR/
 locale charpick ru chrome/locale/ru/
 locale charpick sr chrome/locale/sr/
+locale charpick sv-SE chrome/locale/sv-SE/
 locale charpick tr chrome/locale/tr/
 locale charpick uk chrome/locale/uk/
 locale charpick zh-CN chrome/locale/zh-CN/

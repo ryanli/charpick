@@ -1,0 +1,33 @@
+<!ENTITY characterpalette "Teckenpalett">
+<!ENTITY characterpalette.toolbar "Teckenpalett-verktygsfältet">
+<!ENTITY preferences "Inställningar">
+<!ENTITY preferences.accesskey "I">
+<!ENTITY help "Hjälp">
+<!ENTITY help.accesskey "H">
+<!ENTITY about "Om">
+<!ENTITY about.accesskey "O">
+<!ENTITY about.characterpalette "Om Character Palette">
+<!ENTITY description "Verktygsfält för att välja udda tecken som inte finns på mitt tangentbord.">
+<!ENTITY licence "Släppt under GNU General Public Licence v3">
+<!ENTITY copyright "© 2008–2010 Ryan Li et al.">
+<!ENTITY credits "Tack till">
+<!ENTITY written.by "Skapat av">
+<!ENTITY documented.by "Dokumenterat av">
+<!ENTITY translated.by "Översatt av">
+<!ENTITY characterpalette.preferences "Inställningar för Character Palette">
+<!ENTITY palettes "Paletter:">
+<!ENTITY palettes.accesskey "P">
+<!ENTITY add "Lägg till">
+<!ENTITY add.accesskey "L">
+<!ENTITY edit "Redigera">
+<!ENTITY edit.accesskey "R">
+<!ENTITY delete "Ta bort">
+<!ENTITY delete.accesskey "T">
+<!ENTITY paste.middle.click "Klistra in med mittenklick">
+<!ENTITY paste.middle.click.accesskey "m">
+<!ENTITY add.palette "Lägg till palett">
+<!ENTITY edit.palette "Redigera palett">
+<!ENTITY new.palette.label "Ny palett:">
+<!ENTITY new.palette.accesskey "N">
+<!ENTITY edit.palette.label "Redigera palett:">
+<!ENTITY edit.palette.accesskey "R">
